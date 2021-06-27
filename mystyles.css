@@ -1,0 +1,312 @@
+/*all file format*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin:auto;
+    overflow-x:hidden;
+    background-color: #E2E2E2;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+div.wrapper {
+    /*margin: 0 15px;*/
+    margin: 0 auto 0;/*make responsive site*/
+    width: auto;
+    float:center;
+    /*background-color: red;
+     */
+}
+
+/*navigation bar config*/
+header.htop nav {
+    width: 100%;
+    height: 80px;
+    background-color: #FFF;
+}
+
+header.htop{
+    position: sticky;
+    top: 0;
+}
+
+header.htop ul {
+
+}
+
+header.htop ul li {
+    list-style: none;
+    display: inline-block;
+    float: left;
+    line-height: 80px;
+}
+
+header.htop ul li a {
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "Gill Sans", sans-serif;
+    color: #1E1E1E;
+    padding: 0 20px;
+}
+
+/*navigation bar effect*/
+header.htop ul li a:hover,
+header.htop ul li a.active{
+    color: #FFFFFD;
+    background-color:#1F88A7;
+    border-radius:5px;
+}
+
+header.htop li:before{
+    content:" ";
+    position:absolute;
+    height:10%;
+    width:0%;
+    background-color:red;
+    top:auto;
+    transition: all 0.5s;
+}
+
+header.htop li:after{
+    content:" ";
+    position:absolute;
+    height:10%;
+    width:0;
+    background-color:#0D7CFF;
+    bottom:auto;
+    transition: all 0.5s;
+}
+
+header.htop a:before{
+    position:absolute;
+    content:"";
+    height:10%;
+    width:0;
+    background-color:#0D7CFF;
+    bottom:20%;
+    transition: all 0.3s;
+}
+
+header.htop li:hover:before{
+/*header.htop li:hover:after{*/
+/*header.htop li:hover a:before{*/
+    width:3%;
+}
+
+/*header.htop ul li a:hover{
+    background-color: #C0C0C0;
+}
+
+header.htop .active{
+    border-bottom:3px #FFF solid;
+}*/
+
+/*title-name section config*/
+div.top h2{
+    padding:10px;
+    text-align: center;
+    /*background-color:#e5e5e5;*/
+}
+
+/*title middle section config*/
+div.middle{
+
+}
+
+/*title bottom section config*/
+div.bot{
+    text-align: center;
+    padding:10px;
+}
+
+/*image in index config*/
+img {
+    border: solid 5px #CCC;
+}
+
+div.myphoto{
+}
+
+/*description config*/
+div.description h3 {
+    text-align:justify;
+    padding: 15px 0 0 0;
+}
+
+div.description p {
+    text-align: justify;
+    font-family: "Gill Sans", sans-serif;
+    font-size: 15px;
+    padding:5px 15px 0;
+}
+div.description p a{
+    text-decoration: none;
+}
+
+div.description ul{
+    list-style-position: inside;
+    font-family: "Gill Sans", sans-serif;
+}
+
+div.description ul li{
+    text-align:justify;
+}
+
+
+/*domains of study config*/
+div.domains h3 {
+    text-align:justify;
+    padding: 15px 0 0 0;
+}
+
+div.domains p{
+    text-align: justify;
+    font-family: "Gill Sans", sans-serif;
+    font-size: 15px;
+    padding:5px 15px 0;
+}
+
+div.domains ul.a {
+    font-family: "Gill Sans", sans-serif;
+    list-style-position: inside;
+}
+
+div.domains ul.b {
+    font-family: "Gill Sans", sans-serif;
+    list-style-position: inside;
+    padding: 0 0 0 20px;
+}
+
+div.domains ul li a{
+    text-decoration: none;
+}
+
+/*contact config*/
+div.contact h3{
+    text-align: justify;
+    padding: 15px 0 0 0;
+}
+
+div.contact h5{
+    text-align:justify;
+    padding:20px 0;
+}
+
+div.contact p {
+    text-align: justify;
+    font-family: "Gill Sans", sans-serif;
+    font-size: 15px;
+    padding:5px 15px 0;
+}
+
+div.contact p a {
+    text-decoration: none;
+}
+
+/*clear after boxes config*/
+div.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+div.box{
+    float:left;
+    width: 25%;
+    font-size: 15px;
+    padding:15px 15px 15px;
+    box-sizing: border-box;
+}
+
+/*about me section config*/
+div.aboutme h2{
+    padding: 10px;    
+    text-align: center;
+}
+
+div.aboutme h3{
+    padding: 10px;    
+    text-align: center;
+}
+
+div.aboutme h4{
+    text-align: center;
+}
+
+div.aboutme p{
+    text-align: center;
+    font-family: "Gill Sans", sans-serif;
+}
+
+div.aboutme table,tr,td {
+    text-align: center;
+    border: none; /*1px solid black;*/
+    border-collapse:collapse;
+    font-family: "Gill Sans", sans-serif;
+    font-size: 15px;
+}
+
+div.aboutme tr,td {
+    padding: 10px 10px;    
+    text-align:center;
+    width:450px;
+    /*word-break:break-all;*/
+    /*overflow-wrap:break-word;*/
+}
+
+div.aboutme table,tr,td,a {
+    text-decoration: none;
+}
+
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*table.center tr{
+    border:3px;
+    border-style:solid; 
+    border-color:#FF0000;
+    padding:4px;
+    padding:15px 15px;
+    text-align:justify;
+    vertical-align:top;
+}*/
+
+hr.line1 {
+    border:1px dashed black;
+    /*border-top: 1px dashed #f00;
+    border-bottom: 2px solid #0f0;
+    height: 4px;
+    */
+}
+
+/*publications section config*/
+div.publications ol li{
+    text-align: justify;
+    font-size: 15px;
+    list-style-position: inside;
+    margin-left:auto;
+    margin-right:auto;
+    width: 1150px;
+}
+
+div.publications h2{
+    padding: 10px;    
+    text-align: center;
+}
+
+div.publications h3{
+    padding: 10px;    
+    text-align: center;
+}
+
+@media screen and (min-width:600px){
+    div.wrapper{
+        font-size:15px;
+    }
+}
