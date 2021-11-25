@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.4)  22 OCT 2021 09:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.4)  16 NOV 2021 19:50
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -339,27 +339,27 @@ File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Info: Redefining \degres on input line 30.
-LaTeX Info: Redefining \dots on input line 30.
-LaTeX Info: Redefining \up on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Info: Redefining \degres on input line 32.
+LaTeX Info: Redefining \dots on input line 32.
+LaTeX Info: Redefining \up on input line 32.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -395,7 +395,7 @@ LaTeX Info: Redefining \up on input line 30.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 30.
+Package hyperref Info: Link coloring OFF on input line 32.
 (/usr/local/texlive/2021basic/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -408,9 +408,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count287
 )
-LaTeX Info: Redefining \ref on input line 30.
-LaTeX Info: Redefining \pageref on input line 30.
-LaTeX Info: Redefining \nameref on input line 30.
+LaTeX Info: Redefining \ref on input line 32.
+LaTeX Info: Redefining \pageref on input line 32.
+LaTeX Info: Redefining \nameref on input line 32.
  (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
@@ -419,159 +419,153 @@ LaTeX Info: Redefining \nameref on input line 30.
 ! Undefined control sequence.
 <argument> ...age}[ht]{0.45\textwidth } \faSignIn 
                                                   \ \textbf {\textit {PhD. i...
-l.52                 }
+l.59                 }
                       
 ? 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 52.
+(Font)              <7> on input line 59.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 52.
-! Undefined control sequence.
-<argument> \faStreetView 
-                         
-l.52                 }
-                      
-? 
+(Font)              <5> on input line 59.
 ! Undefined control sequence.
 <recently read> \Email 
                        
-l.52                 }
+l.59                 }
                       
 ? 
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 5
-2.
+9.
 (/usr/local/texlive/2021basic/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 ! Undefined control sequence.
-<recently read> \Mobilefone 
-                            
-l.52                 }
+<recently read> \textb 
+                       
+l.59                 }
                       
 ? 
 ! Undefined control sequence.
 <recently read> \faRefresh 
                            
-l.52                 }
+l.59                 }
                       
 ? 
 
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 52--53
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 59--60
  [][] 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 56.
+(Font)              <14.4> on input line 62.
+! Undefined control sequence.
+<recently read> \RHD 
+                     
+l.62 ...RHD$ \underline{Current Situation} $\LHD$}
+                                                  
+? 
+! Undefined control sequence.
+<recently read> \LHD 
+                     
+l.62 ...RHD$ \underline{Current Situation} $\LHD$}
+                                                  
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--88
+
+ []
+
+
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 63--91
+[] 
+ []
+
 ! Undefined control sequence.
 <recently read> \LEFTCIRCLE 
                             
-l.56 ...nderline{Current Position} $\RIGHTCIRCLE$}
+l.91 ...line{Employment Situation} $\RIGHTCIRCLE$}
                                                   
 ? 
 ! Undefined control sequence.
 <recently read> \RIGHTCIRCLE 
                              
-l.56 ...nderline{Current Position} $\RIGHTCIRCLE$}
+l.91 ...line{Employment Situation} $\RIGHTCIRCLE$}
                                                   
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--78
+Underfull \hbox (badness 10000) in paragraph at lines 115--115
 
  []
 
 
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 57--82
+Underfull \hbox (badness 10000) in paragraph at lines 138--138
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--160
+
+ []
+
+
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 92--164
+[]
+ []
+
+
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 92--164
+[]
+ []
+
+
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 92--164
 [] 
  []
 
 ! Undefined control sequence.
 <recently read> \RHD 
                      
-l.82 ...$ \underline{Subjects of Research} $\LHD$}
+l.164 ... \underline{Subjects of Research} $\LHD$}
                                                   
 ? 
 ! Undefined control sequence.
 <recently read> \LHD 
                      
-l.82 ...$ \underline{Subjects of Research} $\LHD$}
+l.164 ... \underline{Subjects of Research} $\LHD$}
                                                   
 ? 
 
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 83--104
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 165--191
 [] 
  []
 
 ! Undefined control sequence.
 <recently read> \RHD 
                      
-l.104 ...ring $\RHD$ \underline{Education} $\LHD$}
+l.191 ...ring $\RHD$ \underline{Education} $\LHD$}
                                                   
 ? 
 ! Undefined control sequence.
 <recently read> \LHD 
                      
-l.104 ...ring $\RHD$ \underline{Education} $\LHD$}
+l.191 ...ring $\RHD$ \underline{Education} $\LHD$}
                                                   
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--128
-[]\T1/cmr/bx/n/8 October/2015--
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 128--128
+Underfull \hbox (badness 10000) in paragraph at lines 215--215
 
  []
 
 
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 105--180
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 192--267
 []
  []
 
 
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 105--180
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 192--267
 []
  []
 
 
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 105--180
-[] 
- []
-
-! Undefined control sequence.
-<recently read> \RHD 
-                     
-l.180 ...ering $\RHD$ \underline{Teaching} $\LHD$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \LHD 
-                     
-l.180 ...ering $\RHD$ \underline{Teaching} $\LHD$}
-                                                  
-? 
-
-Underfull \hbox (badness 10000) in paragraph at lines 200--200
-[]\T1/cmr/bx/n/8 October--
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 220--220
-[]\T1/cmr/bx/n/8 September--
- []
-
-
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 181--241
-[]
- []
-
-
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 181--241
-[]
- []
-
-
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 181--241
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 192--267
 [] 
  []
 
@@ -581,180 +575,94 @@ Overfull \hbox (10.1325pt too wide) in paragraph at lines 181--241
 ! Undefined control sequence.
 <recently read> \RHD 
                      
-l.294 ...derline{Others Research Projects} $\LHD$}
+l.267 ...ering $\RHD$ \underline{Teaching} $\LHD$}
                                                   
 ? 
 ! Undefined control sequence.
 <recently read> \LHD 
                      
-l.294 ...derline{Others Research Projects} $\LHD$}
+l.267 ...ering $\RHD$ \underline{Teaching} $\LHD$}
                                                   
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--338
-[]\T1/cmr/bx/n/8 January--
- []
-
-
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 295--397
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 268--328
 []
  []
 
 
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 295--397
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 268--328
+[]
+ []
+
+
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 268--328
 [] 
  []
 
 ! Undefined control sequence.
 <recently read> \RHD 
                      
-l.397 ...ering $\RHD$ \underline{Speeches} $\LHD$}
+l.484 ...ering $\RHD$ \underline{Speeches} $\LHD$}
                                                   
 ? 
 ! Undefined control sequence.
 <recently read> \LHD 
                      
-l.397 ...ering $\RHD$ \underline{Speeches} $\LHD$}
+l.484 ...ering $\RHD$ \underline{Speeches} $\LHD$}
                                                   
 ? 
 
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 398--480
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 485--567
 []
  []
 
 
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 398--480
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 485--567
 []
  []
 
 
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 398--480
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 485--567
 []
  []
 
 
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 398--480
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 485--567
 [] 
  []
 
-! Undefined control sequence.
-<recently read> \RHD 
-                     
-l.482 ...ring $\RHD$ \underline{Languages} $\LHD$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \LHD 
-                     
-l.482 ...ring $\RHD$ \underline{Languages} $\LHD$}
-                                                  
-? 
-
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 484--509
-[] 
- []
-
-! Undefined control sequence.
-<recently read> \RHD 
-                     
-l.509 ...RHD$ \underline{Technical Skills} $\LHD$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \LHD 
-                     
-l.509 ...RHD$ \underline{Technical Skills} $\LHD$}
-                                                  
-? 
-
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 511--519
-[] 
- []
-
-! Undefined control sequence.
-<recently read> \RHD 
-                     
-l.519 ...$ \underline{Academic References} $\LHD$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \LHD 
-                     
-l.519 ...$ \underline{Academic References} $\LHD$}
-                                                  
-? 
-! Undefined control sequence.
-<recently read> \Email 
-                       
-l.537 		}
-         
-? 
-! Undefined control sequence.
-<recently read> \faServer 
-                          
-l.537 		}
-         
-? 
-! Undefined control sequence.
-<recently read> \Email 
-                       
-l.554 		}
-         
-? 
-! Undefined control sequence.
-<recently read> \faServer 
-                          
-l.554 		}
-         
-? 
 No file main.bbl.
-
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 520--559
-[]
- []
-
-
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 520--559
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 520--559
-
- []
-
 [2] [3] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 9614 strings out of 480445
- 142185 string characters out of 5892392
- 477303 words of memory out of 5000000
- 26783 multiletter control sequences out of 15000+600000
+ 9605 strings out of 480445
+ 142093 string characters out of 5892392
+ 474458 words of memory out of 5000000
+ 26777 multiletter control sequences out of 15000+600000
  414351 words of font info for 44 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  71i,10n,74p,298b,424s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/jluis/Library/texlive/2021basic/texmf-var/fonts/pk/ljfour/jknappen/e
-c/ecrm0700.600pk> </Users/jluis/Library/texlive/2021basic/texmf-var/fonts/pk/lj
-four/jknappen/ec/ecti1000.600pk> </Users/jluis/Library/texlive/2021basic/texmf-
-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </Users/jluis/Library/texlive/2
-021basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0800.600pk> </Users/jluis/Li
-brary/texlive/2021basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> <
+c/ecti1000.600pk> </Users/jluis/Library/texlive/2021basic/texmf-var/fonts/pk/lj
+four/jknappen/ec/ecbx1000.600pk> </Users/jluis/Library/texlive/2021basic/texmf-
+var/fonts/pk/ljfour/jknappen/ec/ecbx0800.600pk> </Users/jluis/Library/texlive/2
+021basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </Users/jluis/Li
+brary/texlive/2021basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> <
 /Users/jluis/Library/texlive/2021basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ec
-tt1000.600pk> </Users/jluis/Library/texlive/2021basic/texmf-var/fonts/pk/ljfour
-/jknappen/ec/ecrm0800.600pk> </Users/jluis/Library/texlive/2021basic/texmf-var/
-fonts/pk/ljfour/jknappen/ec/ecti0800.600pk> </Users/jluis/Library/texlive/2021b
-asic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </Users/jluis/Librar
-y/texlive/2021basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0700.600pk> </Use
-rs/jluis/Library/texlive/2021basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi10
-00.600pk> </Users/jluis/Library/texlive/2021basic/texmf-var/fonts/pk/ljfour/jkn
-appen/ec/ecbx1728.600pk></usr/local/texlive/2021basic/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (3 pages, 108862 bytes).
+rm0800.600pk> </Users/jluis/Library/texlive/2021basic/texmf-var/fonts/pk/ljfour
+/jknappen/ec/ecti0800.600pk> </Users/jluis/Library/texlive/2021basic/texmf-var/
+fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </Users/jluis/Library/texlive/2021b
+asic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0700.600pk> </Users/jluis/Librar
+y/texlive/2021basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1000.600pk> </Use
+rs/jluis/Library/texlive/2021basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx17
+28.600pk></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb>
+Output written on main.pdf (3 pages, 100948 bytes).
 PDF statistics:
- 428 PDF objects out of 1000 (max. 8388607)
- 101 compressed objects within 2 object streams
- 14 named destinations out of 1000 (max. 500000)
+ 393 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
+ 11 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
