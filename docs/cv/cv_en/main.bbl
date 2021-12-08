@@ -1,0 +1,60 @@
+\begin{thebibliography}{1}
+
+\bibitem{vilchis2021autonomous}
+Jos{\'e}-Luis Vilchis-Medina, Karen Godary-D{\'e}jean, and Charles Lesire.
+\newblock Autonomous decision-making with incomplete information and safety
+  rules based on non-monotonic reasoning.
+\newblock {\em IEEE Robotics and Automation Letters}, 6(4):8357--8362, 2021.
+
+\bibitem{medinaresilient}
+Jos{\'e} Luis~Vilchis Medina, Pierre Siegel, Vincent Risch, and Andrei
+  Doncescu.
+\newblock A resilient behavior approach based on non-monotonic logic.
+\newblock {\em Journ{\'e}es d'Intelligence Artificielle Fondamentale}, page~16,
+  2020.
+
+\bibitem{medina2019resilient}
+Jos{\'e} Luis~Vilchis Medina, Pierre Siegel, Vincent Risch, and Andrei
+  Doncescu.
+\newblock A resilient behavior approach based on non-monotonic logic.
+\newblock In {\em Mexican International Conference on Artificial Intelligence},
+  pages 403--413. Springer, 2019.
+
+\bibitem{medina2019}
+Jos{\'e} Luis~Vilchis Medina, Pierre Siegel, Vincent Risch, and Andrei
+  Doncescu.
+\newblock An implementation of a nonmonotonic logic in an embedded computer for
+  a motor-glider.
+\newblock In {\em 35th International Conference on Logic Programming (ICLP)}.
+  Accepted, 2019.
+
+\bibitem{medina2018intelligent}
+Jos{\'e} Luis~Vilchis Medina, Pierre Siegel, Vincent Risch, and Andrei
+  Doncescu.
+\newblock Intelligent and adaptive system based on a non-monotonic logic for an
+  autonomous motor-glider.
+\newblock In {\em 2018 15th International Conference on Control, Automation,
+  Robotics and Vision (ICARCV)}, pages 442--447. IEEE, 2018.
+
+\bibitem{vmsd18}
+Jos{\'e} Luis~Vilchis Medina, Pierre Siegel, and Andrei Doncescu.
+\newblock Non-monotonie et resilience: Application au pilotage d'un
+  motor-planeur autonome.
+\newblock {\em Journ{\'e}es d'Intelligence Artificielle Fondamentale}, 12:6,
+  2018.
+
+\bibitem{medina2017pilotage}
+Jos{\'e}-Luis~Vilchis Medina, Pierre Siegel, and Andrei Doncescu.
+\newblock Contr{\^o}le de vol d’un planeur bas{\'e} sur une logique
+  non-monotone.
+\newblock In {\em Journ{\'e}es Francophones sur la Planification, la
+  D{\'e}cision et l'Apprentissage pour la conduite de syst{\`e}mes (JFPDA
+  2017)}, 2017.
+
+\bibitem{medina2017autonomous}
+Vilchis Medina, Pierre Siegel, and Andrei Doncescu.
+\newblock Autonomous aerial vehicle based on non-monotonic logic.
+\newblock In {\em 3rd International Conference on Vehicle Technology and
+  Intelligent Transport Systems (VEHITS)}, page~6p, 2017.
+
+\end{thebibliography}
