@@ -43,17 +43,36 @@
         <hr>
         <div class="aboutme">
             <h3> &#x1F4D4 Teaching &#x1F4D4</h3>
-            <hr>
-            <h4 style="text-align:center;padding:5px;"> &#x22A2 2 0 2 3 - 2 0
-                2 4 &#x22A3</h4>
+
             <tr>
                 <td colspan="3">
                     <hr class="line1">
                 </td>
             </tr>
 
+            <p style="padding:8px;">
+            <b>(Click on the year to display content)</b>
+            </p>
 
-          <div>
+            <hr>
+
+            <div class="tab">
+                <button class="tablinks"
+                        onclick="openCourse(event,'201516')">2015-2016</button>
+                <button class="tablinks"
+                        onclick="openCourse(event,'201617')">2016-2017</button>
+                <button class="tablinks"
+                        onclick="openCourse(event,'201819')">2018-2019</button>
+                <button class="tablinks"
+                        onclick="openCourse(event,'202122')">2021-2022</button>
+                <button class="tablinks"
+                        onclick="openCourse(event,'202223')">2022-2023</button>
+                <button class="tablinks"
+                        onclick="openCourse(event,'202324')"
+                        id="defaultOpen">2023-2024</button>
+            </div>
+
+            <div id="202324" class="tabcontent">
               <table class="center">
                     <tr>
                         <td style="text-align:right;">
@@ -75,15 +94,7 @@
                 </table>
             </div>
 
-            <hr>
-            <h4 style="text-align:center;padding:5px;"> &#x22A2 2 0 2 2 - 2 0 2
-                3 &#x22A3</h4>
-            <tr>
-                <td colspan="3">
-                    <hr class="line1">
-                </td>
-            </tr>
-          <div>
+            <div id="202223" class="tabcontent">
               <table class="center">
                     <tr>
                         <td style="text-align:right;">
@@ -102,16 +113,7 @@
                             S4
                         </td>
                     </tr>
-                </table>
-            </div>
-            <tr>
-                <td colspan="3">
-                    <hr class="line1">
-                </td>
-            </tr>
 
-          <div>
-              <table class="center">
                     <tr>
                         <td style="text-align:right;">
                             <!--<p style="width:90%;text-align:justify;padding:0 0
@@ -129,18 +131,7 @@
                             S4
                         </td>
                     </tr>
-                </table>
-            </div>
 
-            <tr>
-                <td colspan="3">
-                    <hr class="line1">
-                </td>
-            </tr>
-
-
-          <div>
-              <table class="center">
                     <tr>
                         <td style="text-align:right;">
                             <!--<p style="width:90%;text-align:justify;padding:0 0
@@ -158,16 +149,7 @@
                             S3
                         </td>
                     </tr>
-                </table>
-            </div>
-            <tr>
-                <td colspan="3">
-                    <hr class="line1">
-                </td>
-            </tr>
 
-          <div>
-              <table class="center">
                     <tr style="border-bottom-width: 0px;border-top-width: 0px;">
                         <td style="text-align:right;">
                             <!--<p style="width:90%;text-align:justify;padding:0 0
@@ -188,16 +170,7 @@
                 </table>
             </div>
 
-
-            <hr>
-            <h4 style="text-align:center;padding:5px;"> &#x22A2 2 0 2 1 - 2 0 2 2 &#x22A3</h4>
-            <tr>
-                <td colspan="3">
-                    <hr class="line1">
-                </td>
-            </tr>
-
-          <div>
+            <div id="202122" class="tabcontent">
               <table class="center">
                     <tr style="border-bottom-width: 0px;border-top-width: 0px;">
                         <td style="text-align:right;">
@@ -216,11 +189,7 @@
                             S3 / 14h
                         </td>
                     </tr>
-                </table>
-            </div>
 
-        <div>
-              <table class="center">
                     <tr>
                         <td style="text-align:right;">
                             <!--<p style="width:90%;text-align:justify;padding:0 0
@@ -241,16 +210,7 @@
                 </table>
             </div>
 
-
-            <hr>
-            <h4 style="text-align:center;padding:5px;"> &#x22A2 2 0 1 8 - 2 0 1
-                9 &#x22A3</h4>
-            <tr>
-                <td colspan="3">
-                    <hr class="line1">
-                </td>
-            </tr>
-          <div>
+            <div id="201819" class="tabcontent">
               <table class="center">
                     <tr>
                         <td style="text-align:right;">
@@ -269,11 +229,7 @@
                             S4 / 10.00h
                         </td>
                     </tr>
-                </table>
-            </div>
 
-         <div>
-              <table class="center">
                     <tr>
                         <td style="text-align:right;">
                             <!--<p style="width:90%;text-align:justify;padding:0 0
@@ -291,11 +247,7 @@
                             S4 / 15.00h
                         </td>
                     </tr>
-                </table>
-            </div>
 
-         <div>
-              <table class="center">
                     <tr>
                         <td style="text-align:right;">
                             <!--<p style="width:90%;text-align:justify;padding:0 0
@@ -313,11 +265,7 @@
                             S5 / 12.00h
                         </td>
                     </tr>
-                </table>
-            </div> 
 
-         <div>
-              <table class="center">
                     <tr>
                         <td style="text-align:right;">
                             <!--<p style="width:90%;text-align:justify;padding:0 0
@@ -335,10 +283,7 @@
                             S1 / 22.00h
                         </td>
                     </tr>
-                </table>
-            </div> 
-         <div>
-              <table class="center">
+
                     <tr>
                         <td style="text-align:right;">
                             <!--<p style="width:90%;text-align:justify;padding:0 0
@@ -356,11 +301,7 @@
                             S4 / 22.67h
                         </td>
                     </tr>
-                </table>
-            </div> 
 
-         <div>
-              <table class="center">
                     <tr>
                         <td style="text-align:right;">
                             <!--<p style="width:90%;text-align:justify;padding:0 0
@@ -378,12 +319,8 @@
                             S4 / 16.00h
                         </td>
                     </tr>
-                </table>
-            </div> 
 
 
-         <div>
-              <table class="center">
                     <tr>
                         <td style="text-align:right;">
                             <!--<p style="width:90%;text-align:justify;padding:0 0
@@ -401,11 +338,7 @@
                             S4 / 4.00h
                         </td>
                     </tr>
-                </table>
-            </div> 
 
-         <div>
-              <table class="center">
                     <tr>
                         <td style="text-align:right;">
                             <!--<p style="width:90%;text-align:justify;padding:0 0
@@ -423,11 +356,7 @@
                             S6 / 13.33h
                         </td>
                     </tr>
-                </table>
-            </div> 
 
-         <div>
-              <table class="center">
                     <tr>
                         <td style="text-align:right;">
                             <!--<p style="width:90%;text-align:justify;padding:0 0
@@ -445,12 +374,8 @@
                             S1 / 24.00h
                         </td>
                     </tr>
-                </table>
-            </div> 
 
 
-         <div>
-              <table class="center">
                     <tr>
                         <td style="text-align:right;">
                             <!--<p style="width:90%;text-align:justify;padding:0 0
@@ -468,11 +393,7 @@
                             S2 / 16.00h
                         </td>
                     </tr>
-                </table>
-            </div> 
 
-         <div>
-              <table class="center">
                     <tr>
                         <td style="text-align:right;">
                             <!--<p style="width:90%;text-align:justify;padding:0 0
@@ -491,17 +412,9 @@
                         </td>
                     </tr>
                 </table>
-            </div> 
+            </div>
 
-
-            <hr>
-            <h4 style="text-align:center;padding:5px;"> &#x22A2 2 0 1 6 - 2 0 1 7 &#x22A3</h3>
-            <tr>
-                <td colspan="3">
-                    <hr class="line1">
-                </td>
-            </tr>
-          <div>
+            <div id="201617" class="tabcontent">
               <table class="center">
                     <tr>
                         <td style="text-align:right;">
@@ -522,16 +435,8 @@
                     </tr>
                 </table>
             </div>
- 
 
-            <hr>
-            <h4 style="text-align:center;padding:5px;"> &#x22A2 2 0 1 5 - 2 0 1 6 &#x22A3</h3>
-            <tr>
-                <td colspan="3">
-                    <hr class="line1">
-                </td>
-            </tr>
-            <div>
+            <div id="201516" class="tabcontent">
                 <table class="center">
                     <tr>
                         <td style="text-align:right;">
@@ -550,10 +455,7 @@
                             S6 / 20.00h
                         </td>
                     </tr>
-                </table>
-            </div>
-           <div>
-                <table class="center">
+
                     <tr>
                         <td style="text-align:right;">
                             <!--<p style="width:90%;text-align:justify;padding:0 0
@@ -573,6 +475,7 @@
                     </tr>
                 </table>
             </div>
+
                          
 <!--
             <table class="center">
@@ -629,5 +532,27 @@
             &#169; Copyright - May 2021 by José-Luis.</a>
         </div>
     </div>
+
+    <script>
+        function openCourse(evt, courseName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                                    tabcontent[i].style.display = "none";
+                                  }
+                          tablinks =
+                        document.getElementsByClassName("tablinks");
+                    for (i = 0; i < tablinks.length; i++) {
+                                    tablinks[i].className =
+                                    tablinks[i].className.replace(" active",
+                                                "");
+          }
+          document.getElementById(courseName).style.display = "block";
+          evt.currentTarget.className += " active";
+                }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
 </body>
 </html>
