@@ -20,64 +20,85 @@
 \usepackage{multicol}%para las columns
 \usepackage{hyperref}
 \usepackage{marvosym,fontawesome}%other symb
-%\usepackage{wasysym}
+\usepackage{wasysym}
 
-\usepackage{amssymb}
+\usepackage[backend=bibtex,style=numeric,sorting=ydnt]{biblatex}
+
+% Count total number of entries in each refsection
+\AtDataInput{%
+  \csnumgdef{entrycount:\therefsection}{%
+    \csuse{entrycount:\therefsection}+1}}
+
+% Print the labelnumber as the total number of entries in the
+% current refsection, minus the actual labelnumber, plus one
+\DeclareFieldFormat{labelnumber}{\mkbibdesc{#1}}    
+\newrobustcmd*{\mkbibdesc}[1]{%
+  \number\numexpr\csuse{entrycount:\therefsection}+1-#1\relax}
+
+\addbibresource[label=biblatex]{../mybiblio.bib}
+%\addbibresource[label=base]{xampl.bib}
 
 %\usepackage{pifont}
 %\DeclareFontFamily{U}{nkarta}{}
 %\DeclareFontShape{U}{nkarta}{m}{n}{<-> nkarta}{}
    
 %\setlength{\columnsep}{1cm}%separacion de las columns
-\renewcommand{\bibsection}{\section*{\centering \underline{Publications}}}
+\renewcommand{\bibsection}{\section*{\centering \underline{$\RHD$ Publications $\LHD$}}}
+
 %//////////////////////////////////////////////////////////////////////////////
 \begin{document}
     \noindent 
     \begin{center}
         {\LARGE \textbf{Curriculum Vitae}}\\[0.6cm]
-        {\Large \textbf{Mr. José-Luis Vilchis-Medina}}\\[0.3cm]
+        {\Large \textbf{José-Luis Vilchis-Medina}}\\[0.3cm]
         \fbox{\parbox{\textwidth}{
             \begin{minipage}[ht]{0.45\textwidth}
-                \faSignIn\ \textbf{\textit{Ph.D. in Computer
-                Science\footnote{(Artificial Intelligence \& Logic)}}}\\
-                %\faSignIn\ \textbf{\textit{blacktriangleleft. in Artificial Intelligence}}\\
-                %\href{https://goo.gl/maps/K9uwWNHGXht}{\faStreetView}\
-                \hspace*{0.4cm} \\
-                \hspace*{0.4cm} \\
-                \hspace*{0.4cm}
+                \faSignIn\ \textbf{\textit{PhD. in Computer
+                Science\footnote{(based-logic Artificial Intelligence)}}}\\
+                %\faSignIn\ \textbf{\textit{PhD. in Artificial Intelligence}}\\
+                %\href{https://goo.gl/maps/K9uwWNHGXht}{\faStreetView}
+                \hspace*{0.4cm}\href{https://www.google.fr/maps/@48.4189159,-4.4714398,232m/data=!3m1!1e3?entry=ttu}{ENSTA Bretagne}\\
+                \hspace*{0.4cm}2, Rue François Verny\\
+                \hspace*{0.4cm}29200, Brest, France
+                %\hspace*{0.4cm}France
             \end{minipage}
             \hspace{4em}
             \begin{minipage}[ht]{0.45\textwidth}
                 \begin{flushleft}
                     %\textbf{\Email}
+                    \textbf{Office :}
+                    Building M-113\\
+                    
                     \textbf{Email : }
                     \texttt{\href{mailto:jose.vilchis@ensta-bretagne.fr}{jose.vilchis@ensta-bretagne.fr}}\\
+                    
                    	%\textbf{\faServer} Web: \href{http://pageperso.lif.univ-mrs.fr/~joseluis.vilchismedina/}{pageperso.lif.univ-mrs.fr}\\
 					%\textbf{\Mobilefone} \texttt{+33 07 54 25 44 66}\\
-                    \textbf{Website: }\href{https://jluisvim.github.io/jlvm.github.io/}{\texttt{jluisvim.github.io}}\\
-                    \textbf{Office : } \\
-                    \faRefresh \underline{\textbf{Updated : }August 2023}
+                    \textbf{Website: }\href{https://jluisvim.github.io}{\texttt{jluisvim.github.io}}\\
+                    %\textbf{Office : } 01.038, Building Bougainville\\
+                    \faRefresh \underline{\textbf{Updated : }September 2024}
                 \end{flushleft}
             \end{minipage}
         }
         }
     \end{center}
 %******************************************************************************************************
-    \section*{\centering $\blacktriangleright$ \underline{Current Situation} $\blacktriangleleft$}
+    \section*{\centering $\RHD$ \underline{Current Situation} $\LHD$}
     \noindent 
     \fbox{\parbox{\textwidth}{
         \begin{minipage}[ht]{0.2\textwidth}
-            \footnotesize{\textbf{Sep-2023/present}}\\%(\emph{scheduled date of the thesis dissertation})
+            \footnotesize{\textbf{Sep-2023/today}}\\%(\emph{scheduled date of the thesis dissertation})
         \end{minipage}
         \hspace{1em}
         \begin{minipage}[ht]{0.52\textwidth}
             \begin{center}
-                \textbf{\href{https://www.univ-amu.fr}{French  Naval Academy}}\\
+                \textbf{\href{https://www.ensta-bretagne.fr/fr}{ENSTA Bretagne}}\\
                                     %\href{http://www.lis-lab.fr}{\textbf{L}aboratoire d'\textbf{I}nformatique et \textbf{S}ystèmes} (LIS)\\
 %                                        \href{http://www.lis-lab.fr/cana/}{CAlcul NAturel team}\\[0.15cm]
 %                                        \textbf{A.T.E.R. (192h):}\\
-                \textit{Naval Academy Research Intitute (IRENav EA3634), MoTIM group.}\\
-                \textbf{Assistant Professor of Computer Science.}\\[0.15cm]
+                \textit{Lab-STICC (UMR 6285), \href{https://www.ensta-bretagne.fr/robex/}{ROBEX team}.}\\
+                \textbf{Researcher of Computer Science} working on multi-agents
+                coordination and behaviour simulation.\\[0.15cm]
             \end{center}
         \end{minipage}
         \hspace{1em}
@@ -87,8 +108,7 @@
     }
     }
 %******************************************************************************************************
-    \section*{\centering $\blacksquare$ \underline{Employment Situation}
-    $\blacksquare$}
+    \section*{\centering $\LEFTCIRCLE$ \underline{Employment Situation} $\RIGHTCIRCLE$}
     \noindent 
     \fbox{\parbox{\textwidth}{
         \begin{minipage}[ht]{0.2\textwidth}
@@ -97,11 +117,11 @@
         \hspace{1em}
         \begin{minipage}[ht]{0.52\textwidth}
             \begin{center}
-                \textbf{\href{https://www.univ-amu.fr}{French  Naval Academy}}\\
+                \textbf{\href{https://www.ecole-navale.fr/}{French  Naval Academy}}\\
                                     %\href{http://www.lis-lab.fr}{\textbf{L}aboratoire d'\textbf{I}nformatique et \textbf{S}ystèmes} (LIS)\\
 %                                        \href{http://www.lis-lab.fr/cana/}{CAlcul NAturel team}\\[0.15cm]
 %                                        \textbf{A.T.E.R. (192h):}\\
-                \textit{Naval Academy Research Intitute (IRENav EA3634), MoTIM group.}\\
+                \textit{French Naval Academy Research Institute (IRENav EA3634), MoTIM group.}\\
                 \textbf{Assistant Professor of Computer Science.}\\[0.15cm]
             \end{center}
         \end{minipage}
@@ -119,11 +139,11 @@
         \hspace{1em}
         \begin{minipage}[ht]{0.52\textwidth}
             \begin{center}
-                \textbf{\href{https://www.univ-amu.fr}{ONERA-The French Aerospace Lab}}\\
+                \textbf{\href{https://www.onera.fr/fr}{ONERA-The French Aerospace Lab}}\\
                                     %\href{http://www.lis-lab.fr}{\textbf{L}aboratoire d'\textbf{I}nformatique et \textbf{S}ystèmes} (LIS)\\
 %                                        \href{http://www.lis-lab.fr/cana/}{CAlcul NAturel team}\\[0.15cm]
 %                                        \textbf{A.T.E.R. (192h):}\\
-                \textit{DTIS, SEAS group.}\\
+                \textit{\href{https://www.onera.fr/fr/dtis}{DTIS -- Traitement de l'information et systèmes}, Systèmes Embarqués, Autonomes et Sûrs (SEAS) unit.}\\
                 \textbf{Postdoctoral position}\\[0.15cm]
             \end{center}
         \end{minipage}
@@ -140,11 +160,11 @@
         \hspace{1em}
         \begin{minipage}[ht]{0.52\textwidth}
             \begin{center}
-                \textbf{\href{https://www.univ-amu.fr}{University of Montpellier}}\\
+                \textbf{\href{https://www.lirmm.fr/}{Laboratoire d’Informatique, de Robotique et de Microélectronique de Montpellier – LIRMM}}\\
                     %\href{http://www.lis-lab.fr}{\textbf{L}aboratoire d'\textbf{I}nformatique et \textbf{S}ystèmes} (LIS)\\
-                \href{http://www.lis-lab.fr/cana/}{CAlcul NAturel team}\\[0.15cm]
-                \textbf{A.T.E.R. (192h):}\\
-                \textit{LIRMM, EXPLORE group.}\\
+                %\href{http://www.lis-lab.fr/cana/}{CAlcul NAturel team}\\[0.15cm]
+                %\textbf{A.T.E.R. (192h):}\\
+                \href{https://www.lirmm.fr/equipes/explore/}{\textit{EXPLORE team.}}\\
                 \textbf{Postdoctoral position}\\[0.15cm]
             \end{center}
         \end{minipage}
@@ -164,9 +184,10 @@
                 \textbf{\href{https://www.univ-amu.fr}{Aix-Marseille Université}}\\
                     %\href{http://www.lis-lab.fr}{\textbf{L}aboratoire d'\textbf{I}nformatique et \textbf{S}ystèmes} (LIS)\\
                 \href{http://www.lis-lab.fr/cana/}{CAlcul NAturel team}\\[0.15cm]
-                \textbf{A.T.E.R. (192h):}\\
                 \textit{Faculty of Sciences, Bachelor in Computer Science.}\\
-                \textbf{Teaching-Research position (ATER)}\\[0.15cm]
+                %\textbf{A.T.E.R. (192h):}\\
+                
+                \textbf{Teaching-Research position (ATER $\approx$ 192H)}\\[0.15cm]
             \end{center}
         \end{minipage}
         \hspace{1em}
@@ -176,27 +197,35 @@
         }
         }
 %******************************************************************************************************
-    \section*{\centering $\blacktriangleright$ \underline{Subjects of Research} $\blacktriangleleft$}
+    \section*{\centering $\RHD$ \underline{Research Interest} $\LHD$}
     \noindent 
     \fbox{\parbox{\textwidth}{
         \begin{multicols}{2}
             \begin{description}
-                \item[$\bullet$] \textit{Knowledge Representation and Reasoning}
-                \item[$\bullet$] \textit{Non-monotonic Reasoning}
-                \item[$\bullet$] \textit{Non-classical Logics}
+                \item[$\bullet$] \textit{Knowledge Representation \& Reasoning}
+                \item[$\bullet$] \textit{Non-classical Reasoning}
+                \item[$\bullet$] \textit{Logic \& Proof Theory}
+                %\item[$\bullet$] \textit{Non-classical Logics}
+                %\item[$\bullet$] \textit{Qualitative and Automated Reasoning}
             \end{description}
             \columnbreak
             \begin{description}
+                %\item[$\bullet$] \textit{Declarative Programming}
+                \item[$\bullet$] \textit{Planning and Decision Theory}
+                \item[$\bullet$] \textit{Autonomous--Intelligent Agents}
+                \item[$\bullet$] \textit{Embedded Systems}
                 %%\item[$\bullet$] Reasoning about Actions and Change
-                \item[$\bullet$] \textit{Logic Programming}
-                \item[$\bullet$] \textit{Decision Theory}
-                \item[$\bullet$] \textit{Resilience Theory}
+                %\item[$\bullet$] \textit{Resilience Theory}
             \end{description}
         \end{multicols}
+%Reasoning about Actions and Changes, Planning, Scheduling	
+%Knowledge Representation and Reasoning 
+%    (Argumentation, Logic Programming, Nonmonotonic Reasoning)
+%Autonomous Agents, Robotics, and Control Theory
         }
         }
 %******************************************************************************************************
-    \section*{\centering $\blacktriangleright$ \underline{Education} $\blacktriangleleft$}
+    \section*{\centering $\RHD$ \underline{Education} $\LHD$}
     \noindent 
     \fbox{\parbox{\textwidth}{
         \begin{minipage}[ht]{0.2\textwidth}
@@ -205,13 +234,25 @@
         \hspace{1em}
         \begin{minipage}[ht]{0.52\textwidth}
             \begin{center}
-                \underline{\textbf{blacktriangleleft. in Computer Science}}\\
+                \underline{\textbf{PhD. in Computer Science}}\\
                 \href{http://www.lis-lab.fr}{\textbf{L}aboratoire d'\textbf{I}nformatique et \textbf{S}ystèmes} (LIS)\\
                 \href{http://www.lis-lab.fr/cana/}{CAlcul NAturel team}\\[0.15cm]
                 \textbf{Title:}\\
-                \textit{Modeling of Resilient System in Default Logic. Application to Solar Power UAV.}\\[0.15cm]
-                \textbf{Supervisors:}\\
-                \href{https://dblp.uni-trier.de/pers/hd/s/Siegel:Pierre}{Pierre SIEGEL} and \href{https://www.researchgate.net/profile/Andrei_Doncescu}{Andrei DONCESCU}\\
+                \href{https://www.theses.fr/2018AIXM0567}{\textit{Modeling of Resilient System in Default Logic. Application to Solar Power UAV.}}
+                \\[0.15cm]
+                %\textbf{Supervisors:}\\
+                %\href{https://dblp.uni-trier.de/pers/hd/s/Siegel:Pierre}{Pierre SIEGEL} and \href{https://www.researchgate.net/profile/Andrei_Doncescu}{Andrei DONCESCU}\\
+                (\textbf{Supervisor})
+						\href{https://pageperso.lis-lab.fr/~pierre.siegel/}{\underline{PR Pierre Siegel}}, LIS, Marseille\\
+					   (\textbf{co-Supervisor})
+					   \href{https://www.researchgate.net/profile/Andrei-Doncescu-2}{\underline{PR Andrei Doncescu}}, LAAS, Toulouse\\
+					   (\textit{Rapporteur})
+						\href{http://www.cril.univ-artois.fr/~sais/}{\underline{PR Lakhdar Saïs}}, CRIL, Lens\\
+						(\textit{Rapporteur})
+						\href{https://www.researchgate.net/profile/Jacques-Demongeot}{\underline{PR Jacques Demongeot}}, Université Grenoble Alpes\\
+					\href{https://scholar.google.fr/citations?user=CPwNXK4AAAAJ&hl=fr}{\underline{PR Amal El Fallah Seghrouchni}}, LIP6, Paris\\
+						\href{http://lacroix.univ-tln.fr/Accueil.html}{\underline{PR Yves Lacroix}}, Université de Toulon\\
+						\href{https://pageperso.lis-lab.fr/vincent.risch/}{\underline{MCF Vincent Risch}}, LIS, Marseille
             \end{center}
         \end{minipage}
         \hspace{1em}
@@ -271,7 +312,8 @@
     }
     }
 %*****************************************************************************************************
-    \section*{\centering $\blacktriangleright$ \underline{Teaching} $\blacktriangleleft$}
+\iffalse
+    \section*{\centering $\RHD$ \underline{Teaching} $\LHD$}
     \noindent
     \fbox{\parbox{\textwidth}{
         \begin{minipage}[ht]{0.2\textwidth}
@@ -332,9 +374,10 @@
         \end{minipage}
         }
         }
+         \fi
 %\iffalse
 %%******************************************************************************************************
-%        \section*{\centering $\blacktriangleright$ \underline{Professional Experience} $\blacktriangleleft$}
+%        \section*{\centering $\RHD$ \underline{Professional Experience} $\LHD$}
 %        \noindent
 %                \fbox{\parbox{\linewidth}{
 %                                \begin{minipage}[ht]{0.2\textwidth}
@@ -382,7 +425,7 @@
 %                        }
 %                }
 %%******************************************************************************************************
-%        \section*{\centering $\blacktriangleright$ \underline{Others Research Projects} $\blacktriangleleft$}
+%        \section*{\centering $\RHD$ \underline{Others Research Projects} $\LHD$}
 %        \noindent
 %                \fbox{\parbox{\linewidth}{
 %                                \begin{minipage}[ht]{0.2\textwidth}
@@ -471,23 +514,23 @@
 %                }
 %
 %******************************************************************************************************
-    \section*{\centering $\blacktriangleright$ \underline{Price -- Awards} $\blacktriangleleft$}
+    \section*{\centering $\RHD$ \underline{Price -- Awards} $\LHD$}
     \noindent
     \fbox{\parbox{\textwidth}{
         \centering{\textbf{High academic achievement by the National Evaluation Center (CENEVAL)}}\\[0.2cm]
         Universidad Autónoma de Baja California, Promotion 2012\\
-        B.Sc. in Electronic Engineering, Honors.
+        B.Sc. in Electronic Engineering.
         }
         }
     \noindent 
     \fbox{\parbox{\textwidth}{
         \centering{\textbf{Mexico-France Exchange Engineers Technology (MEXFITEC)}}\\[0.2cm]
-        Electronic and Signal Processing, 2nd scholar year.\\
-        INP-ENSEEIHT
+        Electronic and Signal Processing, 1-year exchange (BAC+4) at INP-ENSEEIHT.
         }       
         }
 %******************************************************************************************************
-    \section*{\centering $\blacktriangleright$ \underline{Speeches} $\blacktriangleleft$}
+\iffalse
+    \section*{\centering $\RHD$ \underline{Speeches} $\LHD$}
     \noindent 
     \fbox{\parbox{\textwidth}{
         \begin{minipage}[ht]{0.2\textwidth}
@@ -569,8 +612,9 @@
         \end{minipage}
         }
         }
+        \fi
 %******************************************************************************************************
-	\section*{\centering $\blacktriangleright$ \underline{Languages} $\blacktriangleleft$}
+	\section*{\centering $\RHD$ \underline{Languages} $\LHD$}
 	\noindent
     \fbox{\parbox{\textwidth}{
         \begin{center}
@@ -589,25 +633,52 @@
             \end{minipage}
             \begin{minipage}[ht]{0.25\linewidth}
                 \textbf{Portugais}\\
-                Basic-Intermediate level
+                %Basic-
+                Intermediate level
             \end{minipage}
         \end{center}
         }
         }
 %******************************************************************************************************
-    \section*{\centering $\blacktriangleright$ \underline{Technical Skills} $\blacktriangleleft$}
+    \section*{\centering $\RHD$ \underline{Technical Skills} $\LHD$}
     \noindent
     \fbox{\parbox{\textwidth}{
 		\begin{center}
 			\textbf{Text editor:} \LaTeX, Vim; \textbf{Programming languages:} 
-            Prolog, C/C++, Python, Bash, HTML/CSS, PHP, MySQL, MATLAB;
-            \textbf{OS:} macOS, Linux; 
+            Prolog, C/C++, Python, Bash, HTML, Matlab, ROS2/Gazebo;
+            \textbf{Operating System:} macOS, Linux, Windows (less usage)
 		\end{center}
+		}
+		}
+%******************************************************************************************************
+    \section*{\centering $\RHD$ \underline{Supervision} $\LHD$}
+    \noindent
+    \fbox{\parbox{\textwidth}{
+    \begin{itemize}
+%        \item \textbf{2023}
+%        \begin{itemize}
+%            \item Post-doctoral Students:
+%            \begin{description}
+%                \item[$\bullet$] \textit{Youcef Belkhier co-supervised with Jean-Frédéric Charpentier and Florent Becker (18 months). Working on ``Multisource energy management system in a naval environment'', École navale.}
+%            \end{description}
+%        \end{itemize}
+        
+        \item \textbf{2022}
+        \begin{itemize}
+            \item Master Students:
+            \begin{description}
+                \item[$\bullet$] \textit{Tom Ravaud from ParisTech, Master 1, research internship (6 months). Working on ``Automatic docking of a drone on a mobile platform using ROS2''.}
+                \item[$\bullet$] \textit{Maelys Lupin from ENIB, Master 1,
+                    mentored projet (4 months). Working on ``Modeling of a
+                    hexapod robot using ROS2''.}
+            \end{description}
+        \end{itemize}
+    \end{itemize}
 		}
 		}
 \iffalse
 %******************************************************************************************************
-		\section*{\centering $\blacktriangleright$ \underline{Academic References} $\blacktriangleleft$}
+		\section*{\centering $\RHD$ \underline{Academic References} $\LHD$}
 		        \noindent 
 		        \fbox{\parbox{\textwidth}{
 		                \begin{minipage}[ht]{0.52\textwidth}
@@ -646,9 +717,15 @@
 \fi
 %******************************************************************************************************
 %       \printbibliography[title={Publications}]
-		\bibliographystyle{unsrt}
-		\bibliography{../mybiblio}
+		%\bibliographystyle{unsrt}
+		%\bibliography{mybiblio}
 		
-		\nocite{*}
+		%\nocite{*}
+
+  %\begin{refsection}[biblatex]
+  \nocite{*}
+  \printbibliography[title={\section*{\centering \underline{$\RHD$ Publications $\LHD$}}}]
+%\end{refsection}
 %******************************************************************************************************
 \end{document}
+

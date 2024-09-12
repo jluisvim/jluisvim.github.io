@@ -1,67 +1,360 @@
-\begin{thebibliography}{1}
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\bibitem{vilchis22}
-Jos{\'e}~Luis Vilchis~Medina.
-\newblock Evaluation and identification of properties in a set of information
-  through qualitative and non-monotonic reasoning.
-\newblock {\em The 6th International Conference on Computer Science and
-  Artificial Intelligence (CSAI, abstract only)}, 2022.
+\datalist[entry]{ydnt/global//global/global}
+  \entry{vilchis22}{article}{}
+    \name{author}{1}{}{%
+      {{hash=VMJL}{%
+         family={Vilchis\bibnamedelima Medina},
+         familyi={V\bibinitperiod\bibinitdelim M\bibinitperiod},
+         given={Jos{\'e}\bibnamedelima Luis},
+         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{VMJL1}
+    \strng{fullhash}{VMJL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{7}
+    \field{sortinithash}{7}
+    \field{title}{Evaluation and Identification of Properties in a Set of
+  Information through Qualitative and Non-monotonic Reasoning}
+    \field{journaltitle}{The 6th International Conference on Computer Science
+  and Artificial Intelligence (CSAI, abstract only)}
+    \field{year}{2022}
+  \endentry
 
-\bibitem{vilchis2021autonomous}
-Jos{\'e}-Luis Vilchis-Medina, Karen Godary-D{\'e}jean, and Charles Lesire.
-\newblock Autonomous decision-making with incomplete information and safety
-  rules based on non-monotonic reasoning.
-\newblock {\em IEEE Robotics and Automation Letters}, 6(4):8357--8362, 2021.
+  \entry{vilchis2021autonomous}{article}{}
+    \name{author}{3}{}{%
+      {{hash=VMJL}{%
+         family={Vilchis-Medina},
+         familyi={V\bibinithyphendelim M\bibinitperiod},
+         given={Jos{\'e}-Luis},
+         giveni={J\bibinithyphendelim L\bibinitperiod},
+      }}%
+      {{hash=GDK}{%
+         family={Godary-D{\'e}jean},
+         familyi={G\bibinithyphendelim D\bibinitperiod},
+         given={Karen},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=LC}{%
+         family={Lesire},
+         familyi={L\bibinitperiod},
+         given={Charles},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{VMJLGDKLC1}
+    \strng{fullhash}{VMJLGDKLC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{7}
+    \field{sortinithash}{7}
+    \field{number}{4}
+    \field{pages}{8357\bibrangedash 8362}
+    \field{title}{Autonomous Decision-Making With Incomplete Information and
+  Safety Rules Based on Non-Monotonic Reasoning}
+    \field{volume}{6}
+    \field{journaltitle}{IEEE Robotics and Automation Letters}
+    \field{year}{2021}
+  \endentry
 
-\bibitem{medinaresilient}
-Jos{\'e} Luis~Vilchis Medina, Pierre Siegel, Vincent Risch, and Andrei
-  Doncescu.
-\newblock A resilient behavior approach based on non-monotonic logic.
-\newblock {\em Journ{\'e}es d'Intelligence Artificielle Fondamentale}, page~16,
-  2020.
+  \entry{medinaresilient}{article}{}
+    \name{author}{4}{}{%
+      {{hash=MJLV}{%
+         family={Medina},
+         familyi={M\bibinitperiod},
+         given={Jos{\'e} Luis\bibnamedelima Vilchis},
+         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim
+  V\bibinitperiod},
+      }}%
+      {{hash=SP}{%
+         family={Siegel},
+         familyi={S\bibinitperiod},
+         given={Pierre},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=RV}{%
+         family={Risch},
+         familyi={R\bibinitperiod},
+         given={Vincent},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=DA}{%
+         family={Doncescu},
+         familyi={D\bibinitperiod},
+         given={Andrei},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MJLV+1}
+    \strng{fullhash}{MJLVSPRVDA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{7}
+    \field{sortinithash}{7}
+    \field{pages}{16}
+    \field{title}{A Resilient Behavior Approach Based on Non-monotonic Logic}
+    \field{journaltitle}{Journ{\'e}es d'Intelligence Artificielle Fondamentale}
+    \field{year}{2020}
+  \endentry
 
-\bibitem{medina2019resilient}
-Jos{\'e} Luis~Vilchis Medina, Pierre Siegel, Vincent Risch, and Andrei
-  Doncescu.
-\newblock A resilient behavior approach based on non-monotonic logic.
-\newblock In {\em Mexican International Conference on Artificial Intelligence},
-  pages 403--413. Springer, 2019.
+  \entry{medina2019resilient}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=MJLV}{%
+         family={Medina},
+         familyi={M\bibinitperiod},
+         given={Jos{\'e} Luis\bibnamedelima Vilchis},
+         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim
+  V\bibinitperiod},
+      }}%
+      {{hash=SP}{%
+         family={Siegel},
+         familyi={S\bibinitperiod},
+         given={Pierre},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=RV}{%
+         family={Risch},
+         familyi={R\bibinitperiod},
+         given={Vincent},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=DA}{%
+         family={Doncescu},
+         familyi={D\bibinitperiod},
+         given={Andrei},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{MJLV+1}
+    \strng{fullhash}{MJLVSPRVDA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{7}
+    \field{sortinithash}{7}
+    \field{booktitle}{Mexican International Conference on Artificial
+  Intelligence}
+    \field{pages}{403\bibrangedash 413}
+    \field{title}{A Resilient Behavior Approach Based on Non-monotonic Logic}
+    \field{year}{2019}
+  \endentry
 
-\bibitem{medina2019}
-Jos{\'e} Luis~Vilchis Medina, Pierre Siegel, Vincent Risch, and Andrei
-  Doncescu.
-\newblock An implementation of a nonmonotonic logic in an embedded computer for
-  a motor-glider.
-\newblock In {\em 35th International Conference on Logic Programming (ICLP)}.
-  Accepted, 2019.
+  \entry{medina2019}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=MJLV}{%
+         family={Medina},
+         familyi={M\bibinitperiod},
+         given={Jos{\'e} Luis\bibnamedelima Vilchis},
+         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim
+  V\bibinitperiod},
+      }}%
+      {{hash=SP}{%
+         family={Siegel},
+         familyi={S\bibinitperiod},
+         given={Pierre},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=RV}{%
+         family={Risch},
+         familyi={R\bibinitperiod},
+         given={Vincent},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=DA}{%
+         family={Doncescu},
+         familyi={D\bibinitperiod},
+         given={Andrei},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {Accepted}%
+    }
+    \strng{namehash}{MJLV+1}
+    \strng{fullhash}{MJLVSPRVDA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{7}
+    \field{sortinithash}{7}
+    \field{booktitle}{35th International Conference on Logic Programming
+  (ICLP)}
+    \field{title}{An Implementation of a Nonmonotonic Logic in an Embedded
+  Computer for a Motor-glider}
+    \field{year}{2019}
+  \endentry
 
-\bibitem{medina2018intelligent}
-Jos{\'e} Luis~Vilchis Medina, Pierre Siegel, Vincent Risch, and Andrei
-  Doncescu.
-\newblock Intelligent and adaptive system based on a non-monotonic logic for an
-  autonomous motor-glider.
-\newblock In {\em 2018 15th International Conference on Control, Automation,
-  Robotics and Vision (ICARCV)}, pages 442--447. IEEE, 2018.
+  \entry{vmsd18}{article}{}
+    \name{author}{3}{}{%
+      {{hash=MJLV}{%
+         family={Medina},
+         familyi={M\bibinitperiod},
+         given={Jos{\'e} Luis\bibnamedelima Vilchis},
+         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim
+  V\bibinitperiod},
+      }}%
+      {{hash=SP}{%
+         family={Siegel},
+         familyi={S\bibinitperiod},
+         given={Pierre},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=DA}{%
+         family={Doncescu},
+         familyi={D\bibinitperiod},
+         given={Andrei},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MJLVSPDA1}
+    \strng{fullhash}{MJLVSPDA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{7}
+    \field{sortinithash}{7}
+    \field{pages}{6}
+    \field{title}{Non-monotonie et Resilience: Application au Pilotage d'un
+  Motor-planeur Autonome}
+    \field{volume}{12}
+    \field{journaltitle}{Journ{\'e}es d'Intelligence Artificielle Fondamentale}
+    \field{year}{2018}
+  \endentry
 
-\bibitem{vmsd18}
-Jos{\'e} Luis~Vilchis Medina, Pierre Siegel, and Andrei Doncescu.
-\newblock Non-monotonie et resilience: Application au pilotage d'un
-  motor-planeur autonome.
-\newblock {\em Journ{\'e}es d'Intelligence Artificielle Fondamentale}, 12:6,
-  2018.
+  \entry{medina2018intelligent}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=MJLV}{%
+         family={Medina},
+         familyi={M\bibinitperiod},
+         given={Jos{\'e} Luis\bibnamedelima Vilchis},
+         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim
+  V\bibinitperiod},
+      }}%
+      {{hash=SP}{%
+         family={Siegel},
+         familyi={S\bibinitperiod},
+         given={Pierre},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=RV}{%
+         family={Risch},
+         familyi={R\bibinitperiod},
+         given={Vincent},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=DA}{%
+         family={Doncescu},
+         familyi={D\bibinitperiod},
+         given={Andrei},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{MJLV+1}
+    \strng{fullhash}{MJLVSPRVDA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{7}
+    \field{sortinithash}{7}
+    \field{booktitle}{2018 15th International Conference on Control,
+  Automation, Robotics and Vision (ICARCV)}
+    \field{pages}{442\bibrangedash 447}
+    \field{title}{Intelligent and Adaptive System based on a Non-monotonic
+  Logic for an Autonomous Motor-glider}
+    \field{year}{2018}
+  \endentry
 
-\bibitem{medina2017pilotage}
-Jos{\'e}-Luis~Vilchis Medina, Pierre Siegel, and Andrei Doncescu.
-\newblock Contr{\^o}le de vol d’un planeur bas{\'e} sur une logique
-  non-monotone.
-\newblock In {\em Journ{\'e}es Francophones sur la Planification, la
+  \entry{medina2017pilotage}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=MJLV}{%
+         family={Medina},
+         familyi={M\bibinitperiod},
+         given={Jos{\'e}-Luis\bibnamedelima Vilchis},
+         giveni={J\bibinithyphendelim L\bibinitperiod\bibinitdelim
+  V\bibinitperiod},
+      }}%
+      {{hash=SP}{%
+         family={Siegel},
+         familyi={S\bibinitperiod},
+         given={Pierre},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=DA}{%
+         family={Doncescu},
+         familyi={D\bibinitperiod},
+         given={Andrei},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MJLVSPDA1}
+    \strng{fullhash}{MJLVSPDA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{7}
+    \field{sortinithash}{7}
+    \field{booktitle}{Journ{\'e}es Francophones sur la Planification, la
   D{\'e}cision et l'Apprentissage pour la conduite de syst{\`e}mes (JFPDA
-  2017)}, 2017.
+  2017)}
+    \field{title}{Contr{\^o}le de Vol d’un Planeur Bas{\'e} sur une Logique
+  Non-monotone}
+    \field{year}{2017}
+  \endentry
 
-\bibitem{medina2017autonomous}
-Vilchis Medina, Pierre Siegel, and Andrei Doncescu.
-\newblock Autonomous aerial vehicle based on non-monotonic logic.
-\newblock In {\em 3rd International Conference on Vehicle Technology and
-  Intelligent Transport Systems (VEHITS)}, page~6p, 2017.
-
-\end{thebibliography}
+  \entry{medina2017autonomous}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=MV}{%
+         family={Medina},
+         familyi={M\bibinitperiod},
+         given={Vilchis},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=SP}{%
+         family={Siegel},
+         familyi={S\bibinitperiod},
+         given={Pierre},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=DA}{%
+         family={Doncescu},
+         familyi={D\bibinitperiod},
+         given={Andrei},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MVSPDA1}
+    \strng{fullhash}{MVSPDA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{7}
+    \field{sortinithash}{7}
+    \field{booktitle}{3rd International Conference on Vehicle Technology and
+  Intelligent Transport Systems (VEHITS)}
+    \field{pages}{6p}
+    \field{title}{Autonomous Aerial Vehicle Based on Non-Monotonic Logic}
+    \field{year}{2017}
+  \endentry
+\enddatalist
+\endinput
