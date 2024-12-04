@@ -6,14 +6,24 @@ if [ "$#" -ne 1 ]; then
     exit 1
 fi
 
+# Definir los datos importantes
+AUTOR="jlvm"
+COPYRIGHT="© 2024 jlvm"
+
 # Solicita al usuario que ingrese los metadatos
 read -p "Ingrese el comentario: " COMENTARIO
-read -p "Ingrese el autor: " AUTOR
 read -p "Ingrese el título: " TITULO
 
 # Agregar metadatos a la imagen
 exiftool -overwrite_original \
--Comment="$COMENTARIO" \
 -Author="$AUTOR" \
+-Copyright="$COPYRIGHT" \
 -Title="$TITULO" \
+-Comment="$COMENTARIO" \
 "$1"
+
+if [ $? -eq 0 ]; then
+    echo "Metadatos agregados correctamente."
+else
+    echo "Error al agregar metadatos."
+fi
