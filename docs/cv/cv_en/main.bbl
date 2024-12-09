@@ -17,13 +17,35 @@
 \endgroup
 
 \datalist[entry]{ydnt/global//global/global}
+  \entry{vilchis24}{article}{}
+    \name{author}{1}{}{%
+      {{hash=VMJL}{%
+         family={Vilchis-Medina},
+         familyi={V\bibinithyphendelim M\bibinitperiod},
+         given={Jos{\'e}-Luis},
+         giveni={J\bibinithyphendelim L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{VMJL1}
+    \strng{fullhash}{VMJL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{7}
+    \field{sortinithash}{7}
+    \field{title}{Building Intelligent Databases through Similarity:
+  Interaction of Logical and Qualitative Reasoning (accepted)}
+    \field{journaltitle}{The 7th International Conference on Algorithms,
+  Computing and Artificial Intelligence (ACAI), 2024}
+    \field{year}{2024}
+  \endentry
+
   \entry{vilchis22}{article}{}
     \name{author}{1}{}{%
       {{hash=VMJL}{%
-         family={Vilchis\bibnamedelima Medina},
-         familyi={V\bibinitperiod\bibinitdelim M\bibinitperiod},
-         given={Jos{\'e}\bibnamedelima Luis},
-         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+         family={Vilchis-Medina},
+         familyi={V\bibinithyphendelim M\bibinitperiod},
+         given={Jos{\'e}-Luis},
+         giveni={J\bibinithyphendelim L\bibinitperiod},
       }}%
     }
     \strng{namehash}{VMJL1}
