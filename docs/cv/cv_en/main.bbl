@@ -3,8 +3,8 @@
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
-% This file may safely be deleted. It will be recreated as
-% required.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
 %
 \begingroup
 \makeatletter
@@ -16,367 +16,376 @@
   {}
 \endgroup
 
-\datalist[entry]{ydnt/global//global/global}
-  \entry{vilchis24}{article}{}
-    \name{author}{1}{}{%
-      {{hash=VMJL}{%
-         family={Vilchis-Medina},
-         familyi={V\bibinithyphendelim M\bibinitperiod},
-         given={Jos{\'e}-Luis},
-         giveni={J\bibinithyphendelim L\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{VMJL1}
-    \strng{fullhash}{VMJL1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{7}
-    \field{sortinithash}{7}
-    \field{title}{Building Intelligent Databases through Similarity:
-  Interaction of Logical and Qualitative Reasoning (accepted)}
-    \field{journaltitle}{The 7th International Conference on Algorithms,
-  Computing and Artificial Intelligence (ACAI), 2024}
-    \field{year}{2024}
-  \endentry
 
-  \entry{vilchis22}{article}{}
-    \name{author}{1}{}{%
-      {{hash=VMJL}{%
-         family={Vilchis-Medina},
-         familyi={V\bibinithyphendelim M\bibinitperiod},
-         given={Jos{\'e}-Luis},
-         giveni={J\bibinithyphendelim L\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{VMJL1}
-    \strng{fullhash}{VMJL1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{7}
-    \field{sortinithash}{7}
-    \field{title}{Evaluation and Identification of Properties in a Set of
-  Information through Qualitative and Non-monotonic Reasoning}
-    \field{journaltitle}{The 6th International Conference on Computer Science
-  and Artificial Intelligence (CSAI, abstract only)}
-    \field{year}{2022}
-  \endentry
-
-  \entry{vilchis2021autonomous}{article}{}
-    \name{author}{3}{}{%
-      {{hash=VMJL}{%
-         family={Vilchis-Medina},
-         familyi={V\bibinithyphendelim M\bibinitperiod},
-         given={Jos{\'e}-Luis},
-         giveni={J\bibinithyphendelim L\bibinitperiod},
-      }}%
-      {{hash=GDK}{%
-         family={Godary-D{\'e}jean},
-         familyi={G\bibinithyphendelim D\bibinitperiod},
-         given={Karen},
-         giveni={K\bibinitperiod},
-      }}%
-      {{hash=LC}{%
-         family={Lesire},
-         familyi={L\bibinitperiod},
-         given={Charles},
-         giveni={C\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {IEEE}%
-    }
-    \strng{namehash}{VMJLGDKLC1}
-    \strng{fullhash}{VMJLGDKLC1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{7}
-    \field{sortinithash}{7}
-    \field{number}{4}
-    \field{pages}{8357\bibrangedash 8362}
-    \field{title}{Autonomous Decision-Making With Incomplete Information and
-  Safety Rules Based on Non-Monotonic Reasoning}
-    \field{volume}{6}
-    \field{journaltitle}{IEEE Robotics and Automation Letters}
-    \field{year}{2021}
-  \endentry
-
-  \entry{medinaresilient}{article}{}
-    \name{author}{4}{}{%
-      {{hash=MJLV}{%
-         family={Medina},
-         familyi={M\bibinitperiod},
-         given={Jos{\'e} Luis\bibnamedelima Vilchis},
-         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim
-  V\bibinitperiod},
-      }}%
-      {{hash=SP}{%
-         family={Siegel},
-         familyi={S\bibinitperiod},
-         given={Pierre},
-         giveni={P\bibinitperiod},
-      }}%
-      {{hash=RV}{%
-         family={Risch},
-         familyi={R\bibinitperiod},
-         given={Vincent},
-         giveni={V\bibinitperiod},
-      }}%
-      {{hash=DA}{%
-         family={Doncescu},
-         familyi={D\bibinitperiod},
-         given={Andrei},
-         giveni={A\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{MJLV+1}
-    \strng{fullhash}{MJLVSPRVDA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{7}
-    \field{sortinithash}{7}
-    \field{pages}{16}
-    \field{title}{A Resilient Behavior Approach Based on Non-monotonic Logic}
-    \field{journaltitle}{Journ{\'e}es d'Intelligence Artificielle Fondamentale}
-    \field{year}{2020}
-  \endentry
-
-  \entry{medina2019resilient}{inproceedings}{}
-    \name{author}{4}{}{%
-      {{hash=MJLV}{%
-         family={Medina},
-         familyi={M\bibinitperiod},
-         given={Jos{\'e} Luis\bibnamedelima Vilchis},
-         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim
-  V\bibinitperiod},
-      }}%
-      {{hash=SP}{%
-         family={Siegel},
-         familyi={S\bibinitperiod},
-         given={Pierre},
-         giveni={P\bibinitperiod},
-      }}%
-      {{hash=RV}{%
-         family={Risch},
-         familyi={R\bibinitperiod},
-         given={Vincent},
-         giveni={V\bibinitperiod},
-      }}%
-      {{hash=DA}{%
-         family={Doncescu},
-         familyi={D\bibinitperiod},
-         given={Andrei},
-         giveni={A\bibinitperiod},
-      }}%
-    }
-    \list{organization}{1}{%
-      {Springer}%
-    }
-    \strng{namehash}{MJLV+1}
-    \strng{fullhash}{MJLVSPRVDA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{7}
-    \field{sortinithash}{7}
-    \field{booktitle}{Mexican International Conference on Artificial
-  Intelligence}
-    \field{pages}{403\bibrangedash 413}
-    \field{title}{A Resilient Behavior Approach Based on Non-monotonic Logic}
-    \field{year}{2019}
-  \endentry
-
-  \entry{medina2019}{inproceedings}{}
-    \name{author}{4}{}{%
-      {{hash=MJLV}{%
-         family={Medina},
-         familyi={M\bibinitperiod},
-         given={Jos{\'e} Luis\bibnamedelima Vilchis},
-         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim
-  V\bibinitperiod},
-      }}%
-      {{hash=SP}{%
-         family={Siegel},
-         familyi={S\bibinitperiod},
-         given={Pierre},
-         giveni={P\bibinitperiod},
-      }}%
-      {{hash=RV}{%
-         family={Risch},
-         familyi={R\bibinitperiod},
-         given={Vincent},
-         giveni={V\bibinitperiod},
-      }}%
-      {{hash=DA}{%
-         family={Doncescu},
-         familyi={D\bibinitperiod},
-         given={Andrei},
-         giveni={A\bibinitperiod},
-      }}%
-    }
-    \list{organization}{1}{%
-      {Accepted}%
-    }
-    \strng{namehash}{MJLV+1}
-    \strng{fullhash}{MJLVSPRVDA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{7}
-    \field{sortinithash}{7}
-    \field{booktitle}{35th International Conference on Logic Programming
-  (ICLP)}
-    \field{title}{An Implementation of a Nonmonotonic Logic in an Embedded
-  Computer for a Motor-glider}
-    \field{year}{2019}
-  \endentry
-
-  \entry{vmsd18}{article}{}
-    \name{author}{3}{}{%
-      {{hash=MJLV}{%
-         family={Medina},
-         familyi={M\bibinitperiod},
-         given={Jos{\'e} Luis\bibnamedelima Vilchis},
-         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim
-  V\bibinitperiod},
-      }}%
-      {{hash=SP}{%
-         family={Siegel},
-         familyi={S\bibinitperiod},
-         given={Pierre},
-         giveni={P\bibinitperiod},
-      }}%
-      {{hash=DA}{%
-         family={Doncescu},
-         familyi={D\bibinitperiod},
-         given={Andrei},
-         giveni={A\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{MJLVSPDA1}
-    \strng{fullhash}{MJLVSPDA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{7}
-    \field{sortinithash}{7}
-    \field{pages}{6}
-    \field{title}{Non-monotonie et Resilience: Application au Pilotage d'un
-  Motor-planeur Autonome}
-    \field{volume}{12}
-    \field{journaltitle}{Journ{\'e}es d'Intelligence Artificielle Fondamentale}
-    \field{year}{2018}
-  \endentry
-
-  \entry{medina2018intelligent}{inproceedings}{}
-    \name{author}{4}{}{%
-      {{hash=MJLV}{%
-         family={Medina},
-         familyi={M\bibinitperiod},
-         given={Jos{\'e} Luis\bibnamedelima Vilchis},
-         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim
-  V\bibinitperiod},
-      }}%
-      {{hash=SP}{%
-         family={Siegel},
-         familyi={S\bibinitperiod},
-         given={Pierre},
-         giveni={P\bibinitperiod},
-      }}%
-      {{hash=RV}{%
-         family={Risch},
-         familyi={R\bibinitperiod},
-         given={Vincent},
-         giveni={V\bibinitperiod},
-      }}%
-      {{hash=DA}{%
-         family={Doncescu},
-         familyi={D\bibinitperiod},
-         given={Andrei},
-         giveni={A\bibinitperiod},
-      }}%
-    }
-    \list{organization}{1}{%
-      {IEEE}%
-    }
-    \strng{namehash}{MJLV+1}
-    \strng{fullhash}{MJLVSPRVDA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{7}
-    \field{sortinithash}{7}
-    \field{booktitle}{2018 15th International Conference on Control,
-  Automation, Robotics and Vision (ICARCV)}
-    \field{pages}{442\bibrangedash 447}
-    \field{title}{Intelligent and Adaptive System based on a Non-monotonic
-  Logic for an Autonomous Motor-glider}
-    \field{year}{2018}
-  \endentry
-
-  \entry{medina2017pilotage}{inproceedings}{}
-    \name{author}{3}{}{%
-      {{hash=MJLV}{%
-         family={Medina},
-         familyi={M\bibinitperiod},
-         given={Jos{\'e}-Luis\bibnamedelima Vilchis},
-         giveni={J\bibinithyphendelim L\bibinitperiod\bibinitdelim
-  V\bibinitperiod},
-      }}%
-      {{hash=SP}{%
-         family={Siegel},
-         familyi={S\bibinitperiod},
-         given={Pierre},
-         giveni={P\bibinitperiod},
-      }}%
-      {{hash=DA}{%
-         family={Doncescu},
-         familyi={D\bibinitperiod},
-         given={Andrei},
-         giveni={A\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{MJLVSPDA1}
-    \strng{fullhash}{MJLVSPDA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{7}
-    \field{sortinithash}{7}
-    \field{booktitle}{Journ{\'e}es Francophones sur la Planification, la
-  D{\'e}cision et l'Apprentissage pour la conduite de syst{\`e}mes (JFPDA
-  2017)}
-    \field{title}{Contr{\^o}le de Vol d’un Planeur Bas{\'e} sur une Logique
-  Non-monotone}
-    \field{year}{2017}
-  \endentry
-
-  \entry{medina2017autonomous}{inproceedings}{}
-    \name{author}{3}{}{%
-      {{hash=MV}{%
-         family={Medina},
-         familyi={M\bibinitperiod},
-         given={Vilchis},
-         giveni={V\bibinitperiod},
-      }}%
-      {{hash=SP}{%
-         family={Siegel},
-         familyi={S\bibinitperiod},
-         given={Pierre},
-         giveni={P\bibinitperiod},
-      }}%
-      {{hash=DA}{%
-         family={Doncescu},
-         familyi={D\bibinitperiod},
-         given={Andrei},
-         giveni={A\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{MVSPDA1}
-    \strng{fullhash}{MVSPDA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{7}
-    \field{sortinithash}{7}
-    \field{booktitle}{3rd International Conference on Vehicle Technology and
-  Intelligent Transport Systems (VEHITS)}
-    \field{pages}{6p}
-    \field{title}{Autonomous Aerial Vehicle Based on Non-Monotonic Logic}
-    \field{year}{2017}
-  \endentry
-\enddatalist
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{vmsd18}{article}{}
+      \name{author}{3}{}{%
+        {{hash=f3edd0f746bb63e42c8faba6d3690f61}{%
+           family={Medina},
+           familyi={M\bibinitperiod},
+           given={José\bibnamedelimb Luis\bibnamedelima Vilchis},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=43223448793b72f32fe0be6df7a89526}{%
+           family={Siegel},
+           familyi={S\bibinitperiod},
+           given={Pierre},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b931d8e32c4b25feab85c6e87fdf0307}{%
+           family={Doncescu},
+           familyi={D\bibinitperiod},
+           given={Andrei},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{92f03414eb9be8695a861b9a4646af66}
+      \strng{fullhash}{92f03414eb9be8695a861b9a4646af66}
+      \strng{bibnamehash}{92f03414eb9be8695a861b9a4646af66}
+      \strng{authorbibnamehash}{92f03414eb9be8695a861b9a4646af66}
+      \strng{authornamehash}{92f03414eb9be8695a861b9a4646af66}
+      \strng{authorfullhash}{92f03414eb9be8695a861b9a4646af66}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journées d'Intelligence Artificielle Fondamentale}
+      \field{title}{Non-monotonie et Resilience: Application au Pilotage d'un Motor-planeur Autonome}
+      \field{volume}{12}
+      \field{year}{2018}
+      \true{nocite}
+      \field{pages}{6}
+      \range{pages}{1}
+    \endentry
+    \entry{medina2019resilient}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=f3edd0f746bb63e42c8faba6d3690f61}{%
+           family={Medina},
+           familyi={M\bibinitperiod},
+           given={José\bibnamedelimb Luis\bibnamedelima Vilchis},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=43223448793b72f32fe0be6df7a89526}{%
+           family={Siegel},
+           familyi={S\bibinitperiod},
+           given={Pierre},
+           giveni={P\bibinitperiod}}}%
+        {{hash=4bbed3873f797867f5681a1c083a21d9}{%
+           family={Risch},
+           familyi={R\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod}}}%
+        {{hash=b931d8e32c4b25feab85c6e87fdf0307}{%
+           family={Doncescu},
+           familyi={D\bibinitperiod},
+           given={Andrei},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{3a5a13bb50ae2e915b96b88fbc757c0f}
+      \strng{fullhash}{120a5aa72f16db4649bda46b03ac654c}
+      \strng{bibnamehash}{3a5a13bb50ae2e915b96b88fbc757c0f}
+      \strng{authorbibnamehash}{3a5a13bb50ae2e915b96b88fbc757c0f}
+      \strng{authornamehash}{3a5a13bb50ae2e915b96b88fbc757c0f}
+      \strng{authorfullhash}{120a5aa72f16db4649bda46b03ac654c}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Mexican International Conference on Artificial Intelligence}
+      \field{title}{A Resilient Behavior Approach Based on Non-monotonic Logic}
+      \field{year}{2019}
+      \true{nocite}
+      \field{pages}{403\bibrangedash 413}
+      \range{pages}{11}
+    \endentry
+    \entry{medinaresilient}{article}{}
+      \name{author}{4}{}{%
+        {{hash=f3edd0f746bb63e42c8faba6d3690f61}{%
+           family={Medina},
+           familyi={M\bibinitperiod},
+           given={José\bibnamedelimb Luis\bibnamedelima Vilchis},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=43223448793b72f32fe0be6df7a89526}{%
+           family={Siegel},
+           familyi={S\bibinitperiod},
+           given={Pierre},
+           giveni={P\bibinitperiod}}}%
+        {{hash=4bbed3873f797867f5681a1c083a21d9}{%
+           family={Risch},
+           familyi={R\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod}}}%
+        {{hash=b931d8e32c4b25feab85c6e87fdf0307}{%
+           family={Doncescu},
+           familyi={D\bibinitperiod},
+           given={Andrei},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3a5a13bb50ae2e915b96b88fbc757c0f}
+      \strng{fullhash}{120a5aa72f16db4649bda46b03ac654c}
+      \strng{bibnamehash}{3a5a13bb50ae2e915b96b88fbc757c0f}
+      \strng{authorbibnamehash}{3a5a13bb50ae2e915b96b88fbc757c0f}
+      \strng{authornamehash}{3a5a13bb50ae2e915b96b88fbc757c0f}
+      \strng{authorfullhash}{120a5aa72f16db4649bda46b03ac654c}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journées d'Intelligence Artificielle Fondamentale}
+      \field{title}{A Resilient Behavior Approach Based on Non-monotonic Logic}
+      \field{year}{2020}
+      \true{nocite}
+      \field{pages}{16}
+      \range{pages}{1}
+    \endentry
+    \entry{medina2019}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=f3edd0f746bb63e42c8faba6d3690f61}{%
+           family={Medina},
+           familyi={M\bibinitperiod},
+           given={José\bibnamedelimb Luis\bibnamedelima Vilchis},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=43223448793b72f32fe0be6df7a89526}{%
+           family={Siegel},
+           familyi={S\bibinitperiod},
+           given={Pierre},
+           giveni={P\bibinitperiod}}}%
+        {{hash=4bbed3873f797867f5681a1c083a21d9}{%
+           family={Risch},
+           familyi={R\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod}}}%
+        {{hash=b931d8e32c4b25feab85c6e87fdf0307}{%
+           family={Doncescu},
+           familyi={D\bibinitperiod},
+           given={Andrei},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Accepted}%
+      }
+      \strng{namehash}{3a5a13bb50ae2e915b96b88fbc757c0f}
+      \strng{fullhash}{120a5aa72f16db4649bda46b03ac654c}
+      \strng{bibnamehash}{3a5a13bb50ae2e915b96b88fbc757c0f}
+      \strng{authorbibnamehash}{3a5a13bb50ae2e915b96b88fbc757c0f}
+      \strng{authornamehash}{3a5a13bb50ae2e915b96b88fbc757c0f}
+      \strng{authorfullhash}{120a5aa72f16db4649bda46b03ac654c}
+      \field{extraname}{3}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{35th International Conference on Logic Programming (ICLP)}
+      \field{title}{An Implementation of a Nonmonotonic Logic in an Embedded Computer for a Motor-glider}
+      \field{year}{2019}
+      \true{nocite}
+    \endentry
+    \entry{medina2018intelligent}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=f3edd0f746bb63e42c8faba6d3690f61}{%
+           family={Medina},
+           familyi={M\bibinitperiod},
+           given={José\bibnamedelimb Luis\bibnamedelima Vilchis},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=43223448793b72f32fe0be6df7a89526}{%
+           family={Siegel},
+           familyi={S\bibinitperiod},
+           given={Pierre},
+           giveni={P\bibinitperiod}}}%
+        {{hash=4bbed3873f797867f5681a1c083a21d9}{%
+           family={Risch},
+           familyi={R\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod}}}%
+        {{hash=b931d8e32c4b25feab85c6e87fdf0307}{%
+           family={Doncescu},
+           familyi={D\bibinitperiod},
+           given={Andrei},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{3a5a13bb50ae2e915b96b88fbc757c0f}
+      \strng{fullhash}{120a5aa72f16db4649bda46b03ac654c}
+      \strng{bibnamehash}{3a5a13bb50ae2e915b96b88fbc757c0f}
+      \strng{authorbibnamehash}{3a5a13bb50ae2e915b96b88fbc757c0f}
+      \strng{authornamehash}{3a5a13bb50ae2e915b96b88fbc757c0f}
+      \strng{authorfullhash}{120a5aa72f16db4649bda46b03ac654c}
+      \field{extraname}{4}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2018 15th International Conference on Control, Automation, Robotics and Vision (ICARCV)}
+      \field{title}{Intelligent and Adaptive System based on a Non-monotonic Logic for an Autonomous Motor-glider}
+      \field{year}{2018}
+      \true{nocite}
+      \field{pages}{442\bibrangedash 447}
+      \range{pages}{6}
+    \endentry
+    \entry{medina2017pilotage}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=1e81fe08f71e67a388ad1fbf9fca90e4}{%
+           family={Medina},
+           familyi={M\bibinitperiod},
+           given={José-Luis\bibnamedelima Vilchis},
+           giveni={J\bibinithyphendelim L\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=43223448793b72f32fe0be6df7a89526}{%
+           family={Siegel},
+           familyi={S\bibinitperiod},
+           given={Pierre},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b931d8e32c4b25feab85c6e87fdf0307}{%
+           family={Doncescu},
+           familyi={D\bibinitperiod},
+           given={Andrei},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{6c66aa80910b681a44dce6db15e04603}
+      \strng{fullhash}{6c66aa80910b681a44dce6db15e04603}
+      \strng{bibnamehash}{6c66aa80910b681a44dce6db15e04603}
+      \strng{authorbibnamehash}{6c66aa80910b681a44dce6db15e04603}
+      \strng{authornamehash}{6c66aa80910b681a44dce6db15e04603}
+      \strng{authorfullhash}{6c66aa80910b681a44dce6db15e04603}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Journées Francophones sur la Planification, la Décision et l'Apprentissage pour la conduite de systèmes (JFPDA 2017)}
+      \field{title}{Contrôle de Vol d’un Planeur Basé sur une Logique Non-monotone}
+      \field{year}{2017}
+      \true{nocite}
+    \endentry
+    \entry{medina2017autonomous}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=bf6066001792236ce101bd575f522056}{%
+           family={Medina},
+           familyi={M\bibinitperiod},
+           given={Vilchis},
+           giveni={V\bibinitperiod}}}%
+        {{hash=43223448793b72f32fe0be6df7a89526}{%
+           family={Siegel},
+           familyi={S\bibinitperiod},
+           given={Pierre},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b931d8e32c4b25feab85c6e87fdf0307}{%
+           family={Doncescu},
+           familyi={D\bibinitperiod},
+           given={Andrei},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{7643cfccd5f6e1e48d86c2c66b7c5c5d}
+      \strng{fullhash}{7643cfccd5f6e1e48d86c2c66b7c5c5d}
+      \strng{bibnamehash}{7643cfccd5f6e1e48d86c2c66b7c5c5d}
+      \strng{authorbibnamehash}{7643cfccd5f6e1e48d86c2c66b7c5c5d}
+      \strng{authornamehash}{7643cfccd5f6e1e48d86c2c66b7c5c5d}
+      \strng{authorfullhash}{7643cfccd5f6e1e48d86c2c66b7c5c5d}
+      \field{extraname}{3}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{3rd International Conference on Vehicle Technology and Intelligent Transport Systems (VEHITS)}
+      \field{title}{Autonomous Aerial Vehicle Based on Non-Monotonic Logic}
+      \field{year}{2017}
+      \true{nocite}
+      \field{pages}{6p}
+      \range{pages}{-1}
+    \endentry
+    \entry{vilchis24}{article}{}
+      \name{author}{1}{}{%
+        {{hash=2cd9d645d17bb57d4e2e1481ebd3dfb6}{%
+           family={Vilchis-Medina},
+           familyi={V\bibinithyphendelim M\bibinitperiod},
+           given={José-Luis},
+           giveni={J\bibinithyphendelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{2cd9d645d17bb57d4e2e1481ebd3dfb6}
+      \strng{fullhash}{2cd9d645d17bb57d4e2e1481ebd3dfb6}
+      \strng{bibnamehash}{2cd9d645d17bb57d4e2e1481ebd3dfb6}
+      \strng{authorbibnamehash}{2cd9d645d17bb57d4e2e1481ebd3dfb6}
+      \strng{authornamehash}{2cd9d645d17bb57d4e2e1481ebd3dfb6}
+      \strng{authorfullhash}{2cd9d645d17bb57d4e2e1481ebd3dfb6}
+      \field{extraname}{1}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The 7th International Conference on Algorithms, Computing and Artificial Intelligence (ACAI), 2024}
+      \field{title}{Building Intelligent Databases through Similarity: Interaction of Logical and Qualitative Reasoning (to appear)}
+      \field{year}{2024}
+      \true{nocite}
+    \endentry
+    \entry{vilchis22}{article}{}
+      \name{author}{1}{}{%
+        {{hash=2cd9d645d17bb57d4e2e1481ebd3dfb6}{%
+           family={Vilchis-Medina},
+           familyi={V\bibinithyphendelim M\bibinitperiod},
+           given={José-Luis},
+           giveni={J\bibinithyphendelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{2cd9d645d17bb57d4e2e1481ebd3dfb6}
+      \strng{fullhash}{2cd9d645d17bb57d4e2e1481ebd3dfb6}
+      \strng{bibnamehash}{2cd9d645d17bb57d4e2e1481ebd3dfb6}
+      \strng{authorbibnamehash}{2cd9d645d17bb57d4e2e1481ebd3dfb6}
+      \strng{authornamehash}{2cd9d645d17bb57d4e2e1481ebd3dfb6}
+      \strng{authorfullhash}{2cd9d645d17bb57d4e2e1481ebd3dfb6}
+      \field{extraname}{2}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The 6th International Conference on Computer Science and Artificial Intelligence (CSAI, abstract only)}
+      \field{title}{Evaluation and Identification of Properties in a Set of Information through Qualitative and Non-monotonic Reasoning}
+      \field{year}{2022}
+      \true{nocite}
+    \endentry
+    \entry{vilchis2021autonomous}{article}{}
+      \name{author}{3}{}{%
+        {{hash=2cd9d645d17bb57d4e2e1481ebd3dfb6}{%
+           family={Vilchis-Medina},
+           familyi={V\bibinithyphendelim M\bibinitperiod},
+           given={José-Luis},
+           giveni={J\bibinithyphendelim L\bibinitperiod}}}%
+        {{hash=aca129000883406772c8165c724db753}{%
+           family={Godary-Déjean},
+           familyi={G\bibinithyphendelim D\bibinitperiod},
+           given={Karen},
+           giveni={K\bibinitperiod}}}%
+        {{hash=f90b4562093bb049afbc5190a05fb151}{%
+           family={Lesire},
+           familyi={L\bibinitperiod},
+           given={Charles},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{35c347edfe09c0b41e4d06a35b93a264}
+      \strng{fullhash}{35c347edfe09c0b41e4d06a35b93a264}
+      \strng{bibnamehash}{35c347edfe09c0b41e4d06a35b93a264}
+      \strng{authorbibnamehash}{35c347edfe09c0b41e4d06a35b93a264}
+      \strng{authornamehash}{35c347edfe09c0b41e4d06a35b93a264}
+      \strng{authorfullhash}{35c347edfe09c0b41e4d06a35b93a264}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Robotics and Automation Letters}
+      \field{number}{4}
+      \field{title}{Autonomous Decision-Making With Incomplete Information and Safety Rules Based on Non-Monotonic Reasoning}
+      \field{volume}{6}
+      \field{year}{2021}
+      \true{nocite}
+      \field{pages}{8357\bibrangedash 8362}
+      \range{pages}{6}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
+

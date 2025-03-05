@@ -6,7 +6,7 @@
 %       26/oct/2021: current situation in Brest,FR
 %//////////////////////////////////////////////////////////////////////////
 \documentclass{article}
-\usepackage{natbib}
+%\usepackage{natbib}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
@@ -22,7 +22,8 @@
 \usepackage{marvosym,fontawesome}%other symb
 \usepackage{wasysym}
 
-\usepackage[backend=bibtex,style=numeric,sorting=ydnt]{biblatex}
+%\usepackage[backend=biber,style=numeric,sorting=ydnt]{biblatex}
+\usepackage[backend=biber]{biblatex}
 
 % Count total number of entries in each refsection
 \AtDataInput{%
@@ -35,7 +36,8 @@
 \newrobustcmd*{\mkbibdesc}[1]{%
   \number\numexpr\csuse{entrycount:\therefsection}+1-#1\relax}
 
-\addbibresource[label=biblatex]{../mybiblio.bib}
+%\addbibresource[label=biblatex]{../mybiblio.bib}
+\addbibresource[]{main.bib}
 %\addbibresource[label=base]{xampl.bib}
 
 %\usepackage{pifont}
@@ -43,7 +45,7 @@
 %\DeclareFontShape{U}{nkarta}{m}{n}{<-> nkarta}{}
    
 %\setlength{\columnsep}{1cm}%separacion de las columns
-\renewcommand{\bibsection}{\section*{\centering \underline{$\RHD$ Publications $\LHD$}}}
+%\renewcommand{\bibsection}{\section*{\centering \underline{$\RHD$ Publications $\LHD$}}}
 
 %//////////////////////////////////////////////////////////////////////////////
 \begin{document}
@@ -57,7 +59,8 @@
                 Science\footnote{(based-logic Artificial Intelligence)}}}\\
                 %\faSignIn\ \textbf{\textit{PhD. in Artificial Intelligence}}\\
                 %\href{https://goo.gl/maps/K9uwWNHGXht}{\faStreetView}
-                \hspace*{0.4cm}\href{https://www.google.fr/maps/@48.4189159,-4.4714398,232m/data=!3m1!1e3?entry=ttu}{ENSTA Bretagne}\\
+                \hspace*{0.4cm}\href{https://www.google.fr/maps/@48.4189159,-4.4714398,232m/data=!3m1!1e3?entry=ttu}{ENSTA
+                -- Institut Polytechnique de Paris}\\
                 \hspace*{0.4cm}2, Rue François Verny\\
                 \hspace*{0.4cm}29200, Brest, France
                 %\hspace*{0.4cm}France
@@ -70,13 +73,13 @@
                     Building M-113\\
                     
                     \textbf{Email : }
-                    \texttt{\href{mailto:jose.vilchis@ensta-bretagne.fr}{jose.vilchis@ensta-bretagne.fr}}\\
+                    \texttt{\href{mailto:jose.vilchis@ensta.fr}{jose.vilchis@ensta.fr}}\\
                     
                    	%\textbf{\faServer} Web: \href{http://pageperso.lif.univ-mrs.fr/~joseluis.vilchismedina/}{pageperso.lif.univ-mrs.fr}\\
 					%\textbf{\Mobilefone} \texttt{+33 07 54 25 44 66}\\
                     \textbf{Website: }\href{https://jluisvim.github.io}{\texttt{jluisvim.github.io}}\\
                     %\textbf{Office : } 01.038, Building Bougainville\\
-                    \faRefresh \underline{\textbf{Updated : }September 2024}
+                    \faRefresh \underline{\textbf{Updated : }January 2025}
                 \end{flushleft}
             \end{minipage}
         }
@@ -92,7 +95,8 @@
         \hspace{1em}
         \begin{minipage}[ht]{0.52\textwidth}
             \begin{center}
-                \textbf{\href{https://www.ensta-bretagne.fr/fr}{ENSTA Bretagne}}\\
+                \textbf{\href{https://www.ensta-bretagne.fr/fr}{ENSTA --
+                Institut Polytechnique de Paris}}\\
                                     %\href{http://www.lis-lab.fr}{\textbf{L}aboratoire d'\textbf{I}nformatique et \textbf{S}ystèmes} (LIS)\\
 %                                        \href{http://www.lis-lab.fr/cana/}{CAlcul NAturel team}\\[0.15cm]
 %                                        \textbf{A.T.E.R. (192h):}\\
@@ -203,17 +207,20 @@
         \begin{multicols}{2}
             \begin{description}
                 \item[$\bullet$] \textit{Knowledge Representation \& Reasoning}
-                \item[$\bullet$] \textit{Non-classical Reasoning}
-                \item[$\bullet$] \textit{Logic \& Proof Theory}
+                \item[$\bullet$] \textit{Non-monotonic Reasoning}
+                %\item[$\bullet$] \textit{Logic \& Proof Theory}
                 %\item[$\bullet$] \textit{Non-classical Logics}
                 %\item[$\bullet$] \textit{Qualitative and Automated Reasoning}
             \end{description}
             \columnbreak
             \begin{description}
                 %\item[$\bullet$] \textit{Declarative Programming}
-                \item[$\bullet$] \textit{Planning and Decision Theory}
+                %\item[$\bullet$] \textit{Planning and Decision Theory}
+                %\item[$\bullet$] \textit{Behavioral Simulation}
                 \item[$\bullet$] \textit{Autonomous--Intelligent Agents}
-                \item[$\bullet$] \textit{Embedded Systems}
+                \item[$\bullet$] \textit{Logic \& Proof Theory}
+                %\item[$\bullet$] \textit{Planning and Decision Theory}
+                %\item[$\bullet$] \textit{Embedded Systems}
                 %%\item[$\bullet$] Reasoning about Actions and Change
                 %\item[$\bullet$] \textit{Resilience Theory}
             \end{description}
@@ -667,10 +674,12 @@
         \begin{itemize}
             \item Master Students:
             \begin{description}
-                \item[$\bullet$] \textit{Tom Ravaud from ParisTech, Master 1, research internship (6 months). Working on ``Automatic docking of a drone on a mobile platform using ROS2''.}
+                \item[$\bullet$] \textit{Tom Ravaud from ParisTech, Master 1,
+                    research internship (6 months). Working on ``Automatic
+                    docking of a drone on a mobile platform using ROS2--GAZEBO''.}
                 \item[$\bullet$] \textit{Maelys Lupin from ENIB, Master 1,
                     mentored projet (4 months). Working on ``Modeling of a
-                    hexapod robot using ROS2''.}
+                    hexapod robot using ROS2--GAZEBO''.}
             \end{description}
         \end{itemize}
     \end{itemize}

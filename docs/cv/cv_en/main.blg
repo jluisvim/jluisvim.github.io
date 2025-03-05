@@ -1,65 +1,15 @@
-This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
-Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: main.aux
-The style file: biblatex.bst
-Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
-Reallocated global_strs (elt_size=200001) to 20 items from 10.
-Reallocated glb_str_end (elt_size=4) to 20 items from 10.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Database file #1: main-blx.bib
-Database file #2: ../mybiblio.bib
-Biblatex version: 3.17
-Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 11 entries,
-            6399 wiz_defined-function locations,
-            1254 strings with 11150 characters,
-and the built_in function-call counts, 112715 in all, are:
-= -- 8755
-> -- 3671
-< -- 371
-+ -- 5041
-- -- 2800
-* -- 7939
-:= -- 14577
-add.period$ -- 0
-call.type$ -- 11
-change.case$ -- 120
-chr.to.int$ -- 164
-cite$ -- 20
-duplicate$ -- 9374
-empty$ -- 9082
-format.name$ -- 809
-if$ -- 20958
-int.to.chr$ -- 0
-int.to.str$ -- 44
-missing$ -- 0
-newline$ -- 361
-num.names$ -- 476
-pop$ -- 3817
-preamble$ -- 1
-purify$ -- 198
-quote$ -- 0
-skip$ -- 1973
-stack$ -- 0
-substring$ -- 18096
-swap$ -- 1609
-text.length$ -- 336
-text.prefix$ -- 10
-top$ -- 1
-type$ -- 362
-warning$ -- 0
-while$ -- 1388
-width$ -- 0
-write$ -- 351
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'main.blg'
+[36] biber:340> INFO - === Wed Feb 12, 2025, 16:57:48
+[43] Biber.pm:418> INFO - Reading 'main.bcf'
+[73] Biber.pm:969> INFO - Using all citekeys in bib section 0
+[79] Biber.pm:4383> INFO - Processing section 0
+[84] Biber.pm:4574> INFO - Looking for bibtex file 'main.bib' for section 0
+[84] bibtex.pm:1713> INFO - LaTeX decoding ...
+[89] bibtex.pm:1518> INFO - Found BibTeX data source 'main.bib'
+[136] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[136] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[136] Biber.pm:4203> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'fr-FR'
+[136] Biber.pm:4209> INFO - No sort tailoring available for locale 'fr-FR'
+[140] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[144] bbl.pm:757> INFO - Output to main.bbl
