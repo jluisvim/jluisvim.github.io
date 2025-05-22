@@ -109,11 +109,11 @@ class PublicationGenerator:
         """Generate publication links"""
         links = []
         if "url" in entry:
-            links.append(f'<a href="{entry["url"]}" class="publication-link">PDF</a>')
+            links.append(f'<a href="{entry["url"]}" target="_blank" class="publication-link">PDF</a>')
         if "doi" in entry:
-            links.append(f'<a href="https://doi.org/{entry["doi"]}" class="publication-link">DOI</a>')
+            links.append(f'<a href="https://doi.org/{entry["doi"]}" target="_blank" class="publication-link">DOI</a>')
         if "arxiv" in entry:
-            links.append(f'<a href="https://arxiv.org/abs/{entry["arxiv"]}" class="publication-link">arXiv</a>')
+            links.append(f'<a href="https://arxiv.org/abs/{entry["arxiv"]}" target="_blank" class="publication-link">arXiv</a>')
         return links
     
     def generate_publications_html(self, bib_db, color_coded=True):

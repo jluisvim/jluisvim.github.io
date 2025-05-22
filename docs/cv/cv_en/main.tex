@@ -22,8 +22,8 @@
 \usepackage{marvosym,fontawesome}%other symb
 \usepackage{wasysym}
 
-%\usepackage[backend=biber,style=numeric,sorting=ydnt]{biblatex}
-\usepackage[backend=biber]{biblatex}
+\usepackage[backend=biber,style=numeric,sorting=ydnt]{biblatex}
+% \usepackage[style=authoryear, backend=biber, sorting=ynt, language=auto]{biblatex}
 
 % Count total number of entries in each refsection
 \AtDataInput{%
@@ -36,8 +36,9 @@
 \newrobustcmd*{\mkbibdesc}[1]{%
   \number\numexpr\csuse{entrycount:\therefsection}+1-#1\relax}
 
-%\addbibresource[label=biblatex]{../mybiblio.bib}
-\addbibresource[]{main.bib}
+\addbibresource[]{../mybiblio.bib}
+% \addbibresource[label=biblatex]{../mybiblio.bib}
+% \addbibresource[]{main.bib}
 %\addbibresource[label=base]{xampl.bib}
 
 %\usepackage{pifont}
@@ -726,14 +727,14 @@
 \fi
 %******************************************************************************************************
 %       \printbibliography[title={Publications}]
-		%\bibliographystyle{unsrt}
 		%\bibliography{mybiblio}
 		
 		%\nocite{*}
 
   %\begin{refsection}[biblatex]
-  \nocite{*}
   \printbibliography[title={\section*{\centering \underline{$\RHD$ Publications $\LHD$}}}]
+  \nocite{*}
+%  		\bibliographystyle{plain}
 %\end{refsection}
 %******************************************************************************************************
 \end{document}
