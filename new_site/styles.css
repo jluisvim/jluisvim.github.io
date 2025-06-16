@@ -194,6 +194,7 @@ main section h2 {
     letter-spacing: -0.02em;
 }
 
+
 /* Línea decorativa bajo el título */
 main section h2::after {
     content: "";
@@ -233,6 +234,10 @@ main section:hover h2::after {
 
 #presentations h2::before {
     content: "\e53d"; /* Presentation */
+}
+
+#miscellaneous h2::before {
+    content: "\f7d9"; /* screwdriver-wrench     */
 }
 
 main section h2::before {
@@ -460,11 +465,11 @@ main section h2::before {
 }
 
 /* Items de publicación */
-.publication {
+/* .publication { */
 /*     margin-bottom: 2rem; */
 /*     padding-bottom: 1.5rem; */
 /*     border-bottom: 1px solid #f0f0f0; */
-}
+/* } */
 
 .publication:last-child {
     border-bottom: none;
@@ -611,6 +616,7 @@ main section h2::before {
 .conference-int-color { background-color: #FFB300; }  /* Amarillo mostaza (ej. IEEE) */  
 .conference-nat-color { background-color: #43A047; }  /* Verde esmeralda */  
 .preprint-color      { background-color: #6D4C41; }  /* Marrón café (como arXiv) */  
+
 /* ===== News Section ===== */
 .news-item {
     margin-bottom: 2rem;
@@ -637,6 +643,28 @@ main section h2::before {
     font-size: 0.8rem;
     color: #777;
 /*     border-top: 1px solid #eee; */
+}
+
+/*  ==== Misc Design ==== */
+.table-image {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.text-cell {
+    vertical-align: top;
+    padding-right: 20px;
+}
+
+.image-cell {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.image-cell-format {
+    max-width: 200px;
+    height: auto;
+    border-radius: 5px;
 }
 
 /* ===== Responsive Design ===== */
