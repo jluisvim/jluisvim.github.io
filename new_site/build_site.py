@@ -7,15 +7,25 @@ import shutil
 import os
 import csv
 from collections import defaultdict
+import re
 
 # Configuration
 CONFIG = {
     'COURSES_CSV': "courses.csv",
+    'PRESENTATIONS_CSV': "presentations.csv",
     'BIB_FILE': "mybiblio.bib",
     'TEMPLATE_FILE': "template_base.html",
     'OUTPUT_DIR': "dist",
     'CSS_FILE': "styles.css",
     'IMG_DIR': "../../imgs",
+    'NEWS_CSV': "news.csv",
+    'AUTHOR_VARIANTS': [
+        "José-Luis Vilchis-Medina",
+        "José-Luis Vilchis Medina",
+        "Vilchis-Medina, José-Luis",
+        "J.L. Vilchis-Medina",
+        "Vilchis-Medina, J.L.",
+        ] ,
     'DOMAIN_MAP': {
         "log": "Logic",
         "nmr": "NMR",
@@ -36,6 +46,7 @@ def sanitize_html(text):
                 .replace("<", "&lt;")
                 .replace(">", "&gt;")
                 .replace('"', "&quot;"))
+
 
 class PublicationGenerator:
     def __init__(self, config):
@@ -116,6 +127,41 @@ class PublicationGenerator:
             links.append(f'<a href="https://arxiv.org/abs/{entry["arxiv"]}" target="_blank" class="publication-link">arXiv</a>')
         return links
     
+    def normalize_name(self, name):
+        """Normalize author name for comparison"""
+        if not name:
+            return ""
+        # Remove punctuation and extra spaces
+        name = re.sub(r'[^\w\s]', '', name.strip().lower())
+        # Sort name parts to handle different order formats
+        parts = sorted(name.split())
+        return ' '.join(parts)
+    
+    def process_authors(self, authors_str):
+        """Process author string and highlight matching authors"""
+        if not authors_str:
+            return ""
+        
+        author_list = authors_str.split(" and ")
+        highlighted_authors = []
+        
+        for author in author_list:
+            normalized_author = self.normalize_name(author)
+            is_highlighted = False
+            
+            # Compare with all author variants from config
+            for variant in self.config.get('AUTHOR_VARIANTS', []):
+                if self.normalize_name(variant) == normalized_author:
+                    is_highlighted = True
+                    break
+            
+            if is_highlighted:
+                highlighted_authors.append(f'<u><strong>{sanitize_html(author)}</strong></u>')
+            else:
+                highlighted_authors.append(sanitize_html(author))
+        
+        return ", ".join(highlighted_authors)
+    
     def generate_publications_html(self, bib_db, color_coded=True):
         """Generate HTML for publications with optional color coding"""
         entries_by_year = defaultdict(list)
@@ -162,7 +208,7 @@ class PublicationGenerator:
             for entry in entries_by_year[year]:
                 pub_type = self.get_publication_type(entry) if color_coded else None
                 title = sanitize_html(entry.get("title", "Untitled"))
-                authors = sanitize_html(entry.get("author", "").replace(" and ", ", "))
+                authors = self.process_authors(entry.get("author", ""))
                 venue = self.build_venue_string(entry)
                 links = self.build_links(entry)
                 
@@ -226,6 +272,7 @@ class PublicationGenerator:
         }
         </script>
         """
+
 
 class TeachingGenerator:
     def __init__(self, config):
@@ -309,11 +356,138 @@ class TeachingGenerator:
         </script>
         """
 
+class NewsGenerator:
+    def __init__(self, config):
+        self.config = config
+    
+    def load_news(self):
+        """Carga CSV con eventos y links separados"""
+        try:
+            with open(self.config['NEWS_CSV'], mode='r', encoding='utf-8') as csvfile:
+                return sorted([
+                    {
+                        'date': datetime.strptime(row['date'], '%Y-%m-%d'),
+                        'event': row['event'].strip(),
+                        'link': row.get('link', '').strip()
+                    } for row in csv.DictReader(csvfile)
+                ], key=lambda x: x['date'], reverse=False)[:3]
+        except FileNotFoundError:
+            return []
+
+    def generate_news_html(self, news_items):
+        """Genera lista con links solo en el nombre del evento"""
+        if not news_items:
+            return ""
+        
+        items = []
+        for item in news_items:
+            event = sanitize_html(item['event'])
+            if item['link']:
+                event = f'<a href="{item["link"]}" target="_blank">{event}</a>'
+            
+            date_str = item['date'].strftime("%Y-%m-%d")
+            if item['date'].date() < datetime.now().date():
+                date_str = f'<del>{date_str}</del>'
+            
+            items.append(f'<li><b>{date_str}</b>: {event}</li>')
+        
+        return f'''
+<div class="updates">
+    <h2>Updates</h2>
+        <ul>
+            {"".join(items)}
+        </ul>
+</div>
+'''
+
+
+class PresentationGenerator:
+    def __init__(self, config):
+        self.config = config
+    
+    def load_presentations(self):
+        """Load presentations data from CSV"""
+        presentations_by_year = defaultdict(list)
+        
+        with open(self.config['PRESENTATIONS_CSV'], mode='r', encoding='utf-8') as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                year = row['Año']
+                presentations_by_year[year].append({
+                    'title': row['Título'],
+                    'event': row['Evento'],
+                    'location': row['Lugar'],
+                    'month': row['Mes'],
+                    'authors': row['Autores']
+                })
+        
+        return dict(presentations_by_year)
+    
+    def generate_presentations_html(self, presentations_data):
+        """Generate HTML for presentations with year tabs"""
+        years = sorted(presentations_data.keys(), reverse=True)
+        
+        html = ['<div class="presentations-container">']
+        html.append('<div class="presentation-tabs">')
+        
+        for i, year in enumerate(years):
+            active_class = " active" if i == 0 else ""
+            html.append(f'<button class="presentation-tab{active_class}" onclick="openPresentationTab(event, \'presentations-{year}\')">{year}</button>')
+        html.append('</div>')
+        
+        for i, year in enumerate(years):
+            display_style = "block" if i == 0 else "none"
+            
+            html.append(f'<div id="presentations-{year}" class="presentation-content" style="display:{display_style}">')
+            
+
+#                     <div class="presentation-authors">{presentation['authors']}</div>
+            for presentation in presentations_data[year]:
+                title = f"<b><em>{presentation['title']}</em></b>"
+                html.append(f"""
+                <div class="presentation-item">
+                    <h3 class="presentation-title">{title}</h3>
+                    <div class="presentation-meta">
+                        <span class="presentation-event">{presentation['event']}</span> | 
+                        <span class="presentation-location">{presentation['location']}</span> | 
+                        <span class="presentation-date">{presentation['month']} {year}</span>
+                    </div>
+                </div>
+                """)
+            
+            html.append('</div>')
+        
+        html.append('</div>')
+        return "\n".join(html)
+    
+    def generate_tab_script(self):
+        """Generate JavaScript for tab functionality"""
+        return """
+        <script>
+        function openPresentationTab(evt, tabId) {
+            const contents = document.getElementsByClassName("presentation-content");
+            for (let i = 0; i < contents.length; i++) {
+                contents[i].style.display = "none";
+            }
+            
+            const tabs = document.getElementsByClassName("presentation-tab");
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove("active");
+            }
+            
+            document.getElementById(tabId).style.display = "block";
+            evt.currentTarget.classList.add("active");
+        }
+        </script>
+        """
+
 class SiteBuilder:
     def __init__(self, config):
         self.config = config
         self.pub_gen = PublicationGenerator(config)
         self.teach_gen = TeachingGenerator(config)
+        self.news_gen = NewsGenerator(config)
+        self.pres_gen = PresentationGenerator(config)
     
     def build_site(self):
         """Main build function"""
@@ -326,6 +500,9 @@ class SiteBuilder:
         bib_db = self.pub_gen.load_bibtex()
         stats = self.pub_gen.generate_stats(bib_db)
         courses_data = self.teach_gen.load_courses()
+        news_items = self.news_gen.load_news()
+        presentations = self.pres_gen.load_presentations()
+#         pres_stats = self.pres_gen.generate_stats(presentations)
         
         # Read template
         with open(self.config['TEMPLATE_FILE'], "r", encoding="utf-8") as f:
@@ -338,7 +515,12 @@ class SiteBuilder:
         template = template.replace("<!-- PUB_SCRIPTS -->", self.pub_gen.add_tab_script())
         template = template.replace("<!-- COURSES_SECTION -->", self.teach_gen.generate_courses_html(courses_data))
         template = template.replace("<!-- COURSES_SCRIPT -->", self.teach_gen.generate_tab_script())
+        template = template.replace("<!-- NEWS_SECTION -->", self.news_gen.generate_news_html(news_items))  # Add this line
         
+        template = template.replace("<!-- PRESENTATIONS_SECTION -->", self.pres_gen.generate_presentations_html(presentations))
+#         template = template.replace("<!-- PRES_STATS -->", self.pres_gen.generate_stats_html(pres_stats))
+        template = template.replace("<!-- PRES_SCRIPTS -->", self.pres_gen.generate_tab_script())
+
         # Write output file
         output_path = os.path.join(self.config['OUTPUT_DIR'], "index.html")
         with open(output_path, "w", encoding="utf-8") as f:

@@ -1,0 +1,179 @@
+Año: 2024
+Tipo: Other
+Mes: March
+Evento: Université Bretagne Occidentale
+Título: Non-monotonic Reasoning and its Applications in Robotics
+Lugar: Brest, France
+Autores: José-Luis Vilchis-Medina
+---
+
+Año: 2023
+Tipo: Other
+Mes: Nov
+Evento: ENSTA Bretagne
+Título: Non-monotonic Reasoning in Robotics
+Lugar: Brest, France
+Autores: José-Luis Vilchis-Medina
+---
+
+Año: 2022
+Tipo: Other
+Mes: Dec
+Evento: French Naval Academy
+Título: Automatic Landing of a Drone : Modelling and Simulation
+Lugar: Lanveoc, France
+Autores: José-Luis Vilchis-Medina
+---
+
+Año: 2022
+Tipo: Other
+Mes: May
+Evento: French Naval Academy
+Título: Drones & Artificial Intelligence
+Lugar: Lanveoc, France
+Autores: José-Luis Vilchis-Medina
+---
+
+Año: 2022
+Tipo: Other
+Mes: April
+Evento: Université des Antilles
+Título: Autonomous Decision-Making with Incomplete Information and Safety Rules based on Non-Monotonic Reasoning
+Lugar: Guadeloupe, France (virtual)
+Autores: José-Luis Vilchis-Medina
+---
+
+Año: 2022
+Tipo: Other
+Mes: Feb
+Evento: Naval Academy Master Seminar
+Título: Drones and Applications
+Lugar: Brest, France
+Autores: José-Luis Vilchis-Medina
+---
+
+Año: 2021
+Tipo: Other
+Mes: Nov
+Evento: NMR 2021: 19th International Workshop on Non-Monotonic Reasoning
+Título: Autonomous Decision-Making with Incomplete Information and Safety Rules based on Non-Monotonic Reasoning
+Lugar: Hanoi, Vietnam (virtual)
+Autores: José-Luis Vilchis-Medina
+---
+
+Año: 2021
+Tipo: Other
+Mes: Sep
+Evento: 2021 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2021)
+Título: Autonomous Decision-Making with Incomplete Information and Safety Rules based on Non-Monotonic Reasoning
+Lugar: Prague, Czech Republic (virtual)
+Autores: José-Luis Vilchis-Medina
+---
+
+Año: 2021
+Tipo: Other
+Mes: July
+Evento: French Naval Academy Research Institute's seminar
+Título: Non-monotonic Logic Applications for Autonomous Agents
+Lugar: Brest, France
+Autores: José-Luis Vilchis-Medina
+---
+
+Año: 2021
+Tipo: Other
+Mes: June
+Evento: ONERA's seminar (SCALP research team)
+Título: Prise de décision autonome basé sur un raisonnement non-monotone
+Lugar: Toulouse, France (virtual)
+Autores: José-Luis Vilchis-Medina
+---
+
+Año: 2020
+Tipo: Other
+Mes: Jul
+Evento: 14° Journées d’Intelligence Artificielle Fondamentale (JIAF)
+Título: A Resilient Behavior Approach Based on Non-monotonic Logic
+Lugar: Angers, France (virtual)
+Autores: José-Luis Vilchis-Medina
+---
+
+Año: 2020
+Tipo: Other
+Mes: June
+Evento: GT Systèmes à Evénements Discrets (SED) du GdR MACS
+Título: Contrôleur décisionnel d'un robot sous marin en logique non-monotone comparaison avec des automates)
+Lugar: Nantes, France (virtual)
+Autores: José-Luis Vilchis-Medina
+---
+
+Año: 2019
+Tipo: Other
+Mes: Sep
+Evento: 35th International Conference on Logic Programming
+Título: An implementation of a non-monotonic logic in an embedded computer for a motor-glider 
+Lugar: Las Cruces, NM, USA
+Autores: José-Luis Vilchis-Medina
+---
+
+Año: 2019
+Tipo: Other
+Mes: Aug
+Evento: Universidad Autonoma de Baja California
+Título: Modeling of Resilient Systems in Non-monotonicLogic. Application to Solar Power UAV.
+Lugar: Ensenada, Mexico
+Autores: José-Luis Vilchis-Medina
+---
+
+Año: 2018
+Tipo: Other
+Mes: June
+Evento: 12° Journées d’Intelligence Artificielle Fondamentale (JIAF)
+Título: Non-monotonie et Resilience: Application au Pilotage d'un Moto-planeur Autonome
+Lugar: Amiens, France
+Autores: José-Luis Vilchis-Medina
+---
+
+Año: 2017
+Tipo: Other
+Mes: Nov
+Evento: LIS - LIRICA research group
+Título: Non-monotonic Reasoning and Uncertain Decision-Making : Application to an Autonomous-Glider.
+Lugar: Marseille, France
+Autores: José-Luis Vilchis-Medina
+---
+
+Año: 2017
+Tipo: Other
+Mes: July
+Evento: Journées Francophones sur la Planification, la Décision et l'Apprentissage pour la Conduite de Systèmes
+Título: Pilotage stable d’un planeur en utilisant une logique non-monotone
+Lugar: Caen, France
+Autores: José-Luis Vilchis-Medina
+---
+
+Año: 2017
+Tipo: Other
+Mes: June
+Evento: LIS - CANA research group
+Título: Modeling a Resilient System using Non-monotonic Logic
+Lugar: Marseille, France
+Autores: José-Luis Vilchis-Medina
+---
+
+Año: 2017
+Tipo: Other
+Mes: April
+Evento: 3rd International Conference on Vehicle Technology and Intelligent Transport Systems (VEHITS)
+Título: Autonomous aerial vehicle based on non-monotonic logic
+Lugar: Porto, Portugal
+Autores: José-Luis Vilchis-Medina
+---
+
+Año: 2017
+Tipo: Other
+Mes: Jan
+Evento: L’École Jeunes Chercheurs et Chercheuses en Informatique Mathématique
+Título: Applications of Non-monotonic Logic
+Lugar: Lyon, France
+Autores: José-Luis Vilchis-Medina
+---
