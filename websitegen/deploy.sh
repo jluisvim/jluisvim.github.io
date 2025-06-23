@@ -2,101 +2,88 @@
 
 # Academic Website Build & Deploy Script
 
-# Configuration
-PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-BUILD_SCRIPT="build_site.py"
-OUTPUT_DIR="dist"
-TARGET_DIR="../"  # Directory to copy the built site (one level up by default)
-GIT_BRANCH="main" # Default branch to push to
-
-# Colors for output
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-NC='\033[0m' # No Color
-
-# Function to display usage
+# Function to display usage information
 usage() {
-    echo -e "${YELLOW}Usage: $0 [options]${NC}"
-    echo "Options:"
-    echo "  -n, --no-copy      Build without copying to target directory"
-    echo "  -c, --commit       Automatically commit changes with timestamp"
-    echo "  -p, --push         Push to remote repository after commit"
-    echo "  -m <message>, --message=<message>  Custom commit message"
-    echo "  -b <branch>, --branch=<branch>     Specify git branch (default: main)"
-    echo "  -h, --help         Show this help message"
+    echo "Usage: $0 [-b <build_script>] [-d <destination>] [-g] [-h]"
+    echo "  -b <build_script> : Specify the build script to run (default: build_site.py)"
+    echo "  -d <destination>  : Specify the destination directory to copy the build output"
+    echo "  -g                : Perform git add, commit, and push operations"
+    echo "  -h                : Display this help message"
     exit 1
 }
 
-# Parse command line options
-NO_COPY=false
-AUTO_COMMIT=false
-AUTO_PUSH=false
-COMMIT_MESSAGE=""
+# Default values
+BUILD_SCRIPT="build_site.py"
+DESTINATION=""
+GIT_OPERATION=false
 
-while [[ "$#" -gt 0 ]]; do
-    case $1 in
-        -n|--no-copy) NO_COPY=true ;;
-        -c|--commit) AUTO_COMMIT=true ;;
-        -p|--push) AUTO_PUSH=true ;;
-        -m|--message) COMMIT_MESSAGE="$2"; shift ;;
-        -b|--branch) GIT_BRANCH="$2"; shift ;;
-        -h|--help) usage ;;
-        *) echo -e "${RED}Unknown parameter: $1${NC}"; usage ;;
+# Parse command-line arguments
+while getopts ":b:d:gh" opt; do
+    case ${opt} in
+        b )
+            BUILD_SCRIPT=$OPTARG
+            ;;
+        d )
+            DESTINATION=$OPTARG
+            ;;
+        g )
+            GIT_OPERATION=true
+            ;;
+        h )
+            usage
+            ;;
+        \? )
+            echo "Invalid option: -$OPTARG" >&2
+            usage
+            ;;
+        : )
+            echo "Option -$OPTARG requires an argument." >&2
+            usage
+            ;;
     esac
-    shift
 done
+shift $((OPTIND -1))
 
-# Build the site
-build_site() {
-    echo -e "${GREEN}Building site...${NC}"
-    cd "$PROJECT_DIR" || exit 1
-    python3 "$BUILD_SCRIPT"
-    
+# Run the build script
+echo "Running build script: $BUILD_SCRIPT"
+python3 $BUILD_SCRIPT
+
+if [ $? -ne 0 ]; then
+    echo "Build failed. Exiting."
+    exit 1
+fi
+
+# Copy the build output if a destination is specified
+if [ -n "$DESTINATION" ]; then
+    echo "Copying build output to: $DESTINATION"
+    cp -r dist/* "$DESTINATION/"
     if [ $? -ne 0 ]; then
-        echo -e "${RED}Build failed!${NC}"
+        echo "Copy failed. Exiting."
         exit 1
     fi
-}
+fi
 
-# Copy the output
-copy_output() {
-    if [ "$NO_COPY" = false ]; then
-        echo -e "${GREEN}Copying output to target directory...${NC}"
-        rsync -av --delete "$PROJECT_DIR/$OUTPUT_DIR/" "$TARGET_DIR"
-    else
-        echo -e "${YELLOW}Skipping copy to target directory${NC}"
+# Perform Git operations if requested
+if $GIT_OPERATION; then
+    echo "Performing git operations..."
+    git add .
+    if [ $? -ne 0 ]; then
+        echo "Git add failed. Exiting."
+        exit 1
     fi
-}
 
-# Git operations
-git_operations() {
-    if [ "$AUTO_COMMIT" = true ]; then
-        cd "$PROJECT_DIR" || exit 1
-        
-        # Generate commit message if not provided
-        if [ -z "$COMMIT_MESSAGE" ]; then
-            TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
-            COMMIT_MESSAGE="Site update: $TIMESTAMP"
-        fi
-        
-        echo -e "${GREEN}Committing changes...${NC}"
-        git add .
-        git commit -m "$COMMIT_MESSAGE"
-        
-        if [ "$AUTO_PUSH" = true ]; then
-            echo -e "${GREEN}Pushing to ${GIT_BRANCH}...${NC}"
-            git push origin "$GIT_BRANCH"
-        fi
+    read -p "Enter commit message: " COMMIT_MSG
+    git commit -m "$COMMIT_MSG"
+    if [ $? -ne 0 ]; then
+        echo "Git commit failed. Exiting."
+        exit 1
     fi
-}
 
-# Main execution
-main() {
-    build_site
-    copy_output
-    git_operations
-    echo -e "${GREEN}Deployment complete!${NC}"
-}
+    git push
+    if [ $? -ne 0 ]; then
+        echo "Git push failed. Exiting."
+        exit 1
+    fi
+fi
 
-main
+echo "Script completed successfully."
