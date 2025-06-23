@@ -11,14 +11,14 @@ import re
 
 # Configuration
 CONFIG = {
-    'COURSES_CSV': "courses.csv",
-    'PRESENTATIONS_CSV': "presentations.csv",
-    'BIB_FILE': "mybiblio.bib",
+    'COURSES_CSV': "data/courses.csv",
+    'PRESENTATIONS_CSV': "data/presentations.csv",
+    'NEWS_CSV': "data/news.csv",
+    'BIB_FILE': "data/mybiblio.bib",
     'TEMPLATE_FILE': "template_base.html",
     'OUTPUT_DIR': "dist",
     'CSS_FILE': "styles.css",
     'IMG_DIR': "../../imgs",
-    'NEWS_CSV': "news.csv",
     'AUTHOR_VARIANTS': [
         "José-Luis Vilchis-Medina",
         "José-Luis Vilchis Medina",

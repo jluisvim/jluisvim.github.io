@@ -53,9 +53,6 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-echo "Build completed successfully."
-read -p "Press Enter to continue..."
-
 # Copy the build output if a destination is specified
 if [ -n "$DESTINATION" ]; then
     echo "Copying build output to: $DESTINATION"
@@ -64,31 +61,33 @@ if [ -n "$DESTINATION" ]; then
         echo "Copy failed. Exiting."
         exit 1
     fi
-    echo "Copy completed successfully."
-    read -p "Press Enter to continue..."
 fi
 
 # Perform Git operations if requested
 if $GIT_OPERATION; then
-    echo "Ready to perform git operations."
-    read -p "Press Enter to continue..."
-
     echo "Performing git operations..."
     git status
+
+    # Pause before git add
+    read -p "Ready to perform 'git add .'. Press Enter to continue or Ctrl+C to abort..."
     git add .
     if [ $? -ne 0 ]; then
         echo "Git add failed. Exiting."
         exit 1
     fi
 
-    read -p "Enter commit message: " COMMIT_MSG
     git status
-    git commit -am "$COMMIT_MSG"
+
+    # Pause before git commit
+    read -p "Ready to perform 'git commit'. Enter commit message or press Ctrl+C to abort: " COMMIT_MSG
+    git commit -m "$COMMIT_MSG"
     if [ $? -ne 0 ]; then
         echo "Git commit failed. Exiting."
         exit 1
     fi
 
+    # Pause before git push
+    read -p "Ready to perform 'git push'. Press Enter to continue or Ctrl+C to abort..."
     git push
     if [ $? -ne 0 ]; then
         echo "Git push failed. Exiting."
