@@ -55,14 +55,3 @@ Edit the `CONFIG` dictionary in the script to:
    ```bash
    pip install bibtexparser
 
-## Deployment Automation
-
-The `deploy.sh` script automates the build and deployment process with Git integration. It handles:
-- Site building
-- Output copying
-- Version control operations
-
-### Basic Usage
-
-```bash
-./deploy.sh [options]
