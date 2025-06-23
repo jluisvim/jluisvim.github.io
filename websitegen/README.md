@@ -52,6 +52,17 @@ Edit the `CONFIG` dictionary in the script to:
 ## Usage
 
 1. Install required dependencies:
-   ```bash
-   pip install bibtexparser
 
+```bash
+   pip install bibtexparser
+```
+
+# Build and Deploy Script
+
+This script automates the process of building a website using a specified build script, optionally copying the build output to a destination directory, and performing Git operations such as `add`, `commit`, and `push`.
+
+## Usage
+
+```bash
+./build_and_deploy.sh [-b <build_script>] [-d <destination>] [-g] [-h]
+```
