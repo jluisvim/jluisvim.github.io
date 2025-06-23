@@ -53,6 +53,9 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
+echo "Build completed successfully."
+read -p "Press Enter to continue..."
+
 # Copy the build output if a destination is specified
 if [ -n "$DESTINATION" ]; then
     echo "Copying build output to: $DESTINATION"
@@ -61,10 +64,15 @@ if [ -n "$DESTINATION" ]; then
         echo "Copy failed. Exiting."
         exit 1
     fi
+    echo "Copy completed successfully."
+    read -p "Press Enter to continue..."
 fi
 
 # Perform Git operations if requested
 if $GIT_OPERATION; then
+    echo "Ready to perform git operations."
+    read -p "Press Enter to continue..."
+
     echo "Performing git operations..."
     git status
     git add .
