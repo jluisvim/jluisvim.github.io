@@ -73,7 +73,7 @@ if $GIT_OPERATION; then
     fi
 
     read -p "Enter commit message: " COMMIT_MSG
-    git commit -m "$COMMIT_MSG"
+    git commit -am "$COMMIT_MSG"
     if [ $? -ne 0 ]; then
         echo "Git commit failed. Exiting."
         exit 1
