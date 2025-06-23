@@ -66,6 +66,7 @@ fi
 # Perform Git operations if requested
 if $GIT_OPERATION; then
     echo "Performing git operations..."
+    git status
     git add .
     if [ $? -ne 0 ]; then
         echo "Git add failed. Exiting."
@@ -73,6 +74,7 @@ if $GIT_OPERATION; then
     fi
 
     read -p "Enter commit message: " COMMIT_MSG
+    git status
     git commit -am "$COMMIT_MSG"
     if [ $? -ne 0 ]; then
         echo "Git commit failed. Exiting."
