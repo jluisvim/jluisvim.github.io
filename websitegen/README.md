@@ -12,7 +12,7 @@ A Python script to generate a professional academic website from structured data
 
 ## Input Files
 
-The script requires the following input files:
+The script requires the following input files in data/ folder:
 
 1. **Bibliographic Data**:
    - `mybiblio.bib`: BibTeX file containing your publications
@@ -64,5 +64,5 @@ This script automates the process of building a website using a specified build 
 ## Usage
 
 ```bash
-./build_and_deploy.sh [-b <build_script>] [-d <destination>] [-g] [-h]
+./deploy.sh [-b <build_script>] [-d <destination>] [-g] [-h]
 ```
