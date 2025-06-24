@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import ttk, messagebox, filedialog
+from tkinter import ttk, messagebox, filedialog, simpledialog
 import subprocess
 import shutil
 import os
@@ -120,8 +120,13 @@ class AcademicWebsiteBuilder:
                 messagebox.showerror("Error", "Git add failed. Exiting.")
                 return
             
+            # Ask for commit message
+            commit_msg = simpledialog.askstring("Commit Message", "Enter commit message:", initialvalue="Automated commit")
+            if commit_msg is None:
+                messagebox.showerror("Error", "Commit message cannot be empty. Exiting.")
+                return
+            
             # Git commit
-            commit_msg = "Automated commit"
             if not run_command(f"git commit -m \"{commit_msg}\""):
                 messagebox.showerror("Error", "Git commit failed. Exiting.")
                 return
