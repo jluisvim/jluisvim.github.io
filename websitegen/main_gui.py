@@ -21,8 +21,8 @@ class AcademicWebsiteBuilder:
         self.root = root
         self.root.title("Academic Website Builder & CSV Editor")
         
-        self.build_script = "build_site.py"
-        self.destination = ""
+        self.build_script = "build_site.py" # Default value
+        self.destination = "../" # Default value
         self.git_operation = tk.BooleanVar(value=False)
         
         self.file_path = None
@@ -50,6 +50,42 @@ class AcademicWebsiteBuilder:
         self.create_csv_editor_widgets()
     
     def create_build_deploy_widgets(self):
+        # Main Frame for Build & Deploy Tab
+        main_frame = ttk.Frame(self.tab_build_deploy)
+        main_frame.pack(pady=10, padx=10, fill=tk.BOTH, expand=True)
+        
+        # Left Frame for Description
+        left_frame = ttk.Frame(main_frame)
+        left_frame.pack(side=tk.LEFT, padx=10, pady=10, fill=tk.BOTH, expand=True)
+        
+        # Description Label
+        description_label = ttk.Label(
+            left_frame,
+            text=(
+                "This tab allows you to build and deploy your academic website.\n\n"
+                "- Select the build script (default: build_site.py).\n"
+                "- Specify the destination directory to copy the build output.\n"
+                "- Check the box to perform Git operations (add, commit, push).\n"
+                "- Click 'Run Script' to execute the build, copy, and Git operations."
+            ),
+            wraplength=500,
+            justify=tk.LEFT
+        )
+        description_label.pack(pady=10, padx=10, fill=tk.BOTH, expand=True)
+        
+        # Right Frame for Git Log
+        right_frame = ttk.Frame(main_frame)
+        right_frame.pack(side=tk.RIGHT, padx=10, pady=10, fill=tk.BOTH, expand=True)
+        
+        # Git Log Label
+        git_log_label = ttk.Label(
+            right_frame,
+            text=self.get_git_log(),
+            wraplength=500,
+            justify=tk.LEFT
+        )
+        git_log_label.pack(pady=10, padx=10, fill=tk.BOTH, expand=True)
+        
         # Create a frame for selecting the build script
         build_script_frame = ttk.Frame(self.tab_build_deploy)
         build_script_frame.pack(pady=10, padx=10, fill=tk.X)
@@ -82,8 +118,47 @@ class AcademicWebsiteBuilder:
         # Create a button to run the script
         run_button = ttk.Button(self.tab_build_deploy, text="Run Script", command=self.run_script)
         run_button.pack(pady=20)
+        
+        # Exit Button
+        exit_button = ttk.Button(self.tab_build_deploy, text="Exit", command=self.exit_app)
+        exit_button.pack(pady=10)
     
     def create_csv_editor_widgets(self):
+        # Main Frame for CSV Editor Tab
+        main_frame = ttk.Frame(self.tab_csv_editor)
+        main_frame.pack(pady=10, padx=10, fill=tk.BOTH, expand=True)
+        
+        # Left Frame for Description
+        left_frame = ttk.Frame(main_frame)
+        left_frame.pack(side=tk.LEFT, padx=10, pady=10, fill=tk.BOTH, expand=True)
+        
+        # Description Label
+        description_label = ttk.Label(
+            left_frame,
+            text=(
+                "This tab allows you to edit CSV files.\n\n"
+                "- Open a CSV file.\n"
+                "- View, add, edit, and delete rows in the CSV file.\n"
+                "- Save changes to the CSV file."
+            ),
+            wraplength=500,
+            justify=tk.LEFT
+        )
+        description_label.pack(pady=10, padx=10, fill=tk.BOTH, expand=True)
+        
+        # Right Frame for Git Log
+        right_frame = ttk.Frame(main_frame)
+        right_frame.pack(side=tk.RIGHT, padx=10, pady=10, fill=tk.BOTH, expand=True)
+        
+        # Git Log Label
+        git_log_label = ttk.Label(
+            right_frame,
+            text=self.get_git_log(),
+            wraplength=500,
+            justify=tk.LEFT
+        )
+        git_log_label.pack(pady=10, padx=10, fill=tk.BOTH, expand=True)
+        
         # Create a frame for buttons
         button_frame = ttk.Frame(self.tab_csv_editor)
         button_frame.pack(pady=10)
@@ -109,6 +184,22 @@ class AcademicWebsiteBuilder:
         ttk.Button(action_frame, text="Add Row", command=self.add_row).grid(row=0, column=0, padx=5)
         ttk.Button(action_frame, text="Edit Row", command=self.edit_row).grid(row=0, column=1, padx=5)
         ttk.Button(action_frame, text="Delete Row", command=self.delete_row).grid(row=0, column=2, padx=5)
+        
+        # Exit Button
+        exit_button = ttk.Button(self.tab_csv_editor, text="Exit", command=self.exit_app)
+        exit_button.pack(pady=10)
+    
+    def get_git_log(self):
+        try:
+            result = run_command("git log --pretty=format:'%h - %an, %ar : %s' -n 3")
+            if result.returncode == 0:
+                commits = result.stdout.strip().split('\n')
+                commits.reverse() # Reverse the order of commits
+                return "Recent Commits:\n" + "\n".join(commits)
+            else:
+                return "No Git repository found or unable to retrieve commits."
+        except Exception as e:
+            return f"Error retrieving Git log: {e}"
     
     def browse_build_script(self):
         file_path = filedialog.askopenfilename(filetypes=[("Python Scripts", "*.py")])
@@ -253,6 +344,9 @@ class AcademicWebsiteBuilder:
         row_index = self.tree.index(selected_item[0])
         del self.data[row_index]
         self.update_treeview()
+    
+    def exit_app(self):
+        self.root.destroy()
 
 class AddRowDialog:
     def __init__(self, parent, headers, data, callback):
