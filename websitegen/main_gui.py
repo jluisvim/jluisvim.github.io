@@ -4,6 +4,9 @@ import subprocess
 import shutil
 import os
 import csv
+import requests
+from bs4 import BeautifulSoup
+from datetime import datetime
 
 def run_command(command, check=True):
     """Run a shell command and handle errors."""
@@ -16,18 +19,63 @@ def run_command(command, check=True):
         print(e.stderr)
         return False
 
+def get_weather_and_time(location):
+    """Get weather and time for a given location using web scraping with wttr.in."""
+    try:
+        url = f"https://wttr.in/{location}" 
+        response = requests.get(url)
+        response.raise_for_status()
+        
+        soup = BeautifulSoup(response.content, 'html.parser')
+        
+        # Extract the text content
+        pre_tag = soup.find('pre')
+        if pre_tag is None:
+            return f"Error retrieving weather data for {location}: <pre> tag not found"
+        
+        weather_text = pre_tag.text.strip()
+        
+        # Split the text to extract relevant information
+        lines = weather_text.split('\n')
+        
+        # Extract time and weather condition
+        time_line = lines[0].strip()
+        condition_line = lines[1].strip()
+        temp_line = lines[2].strip()
+        
+        # Extract time from the time line
+        current_time = time_line.split(': ')[1] if ': ' in time_line else "Time not available"
+        
+        # Extract temperature from the temp line
+        current_temp = temp_line.split(': ')[1] if ': ' in temp_line else "Temperature not available"
+        
+        # Extract condition from the condition line
+        current_condition = condition_line.split(': ')[1] if ': ' in condition_line else "Condition not available"
+        
+        return f"Location: {location.replace('+', ' ').title()}\nTime: {current_time}\nTemperature: {current_temp}\nCondition: {current_condition}\n\n"
+    except Exception as e:
+        return f"Error retrieving weather data for {location}: {e}"
+
 class AcademicWebsiteBuilder:
     def __init__(self, root):
         self.root = root
         self.root.title("Academic Website Builder & CSV Editor")
         
-        self.build_script = "build_site.py" # Default value
-        self.destination = "../" # Default value
+        self.build_script = "build_site.py"
+        self.destination = "../"
         self.git_operation = tk.BooleanVar(value=False)
         
         self.file_path = None
         self.data = []
         self.headers = []
+        
+        # Define variables for commit format and padding
+        self.commit_format = "%h : %s"
+        self.padding_x = 5
+        self.padding_y = 5
+        self.font_size = 9
+        
+        self.weather_info = ""
         
         self.create_widgets()
     
@@ -43,11 +91,20 @@ class AcademicWebsiteBuilder:
         self.tab_csv_editor = ttk.Frame(self.tab_control)
         self.tab_control.add(self.tab_csv_editor, text='CSV Editor')
         
+        # Tab for Weather Information
+        self.tab_weather = ttk.Frame(self.tab_control)
+        self.tab_control.add(self.tab_weather, text='Weather')
+        
         self.tab_control.pack(expand=1, fill="both")
         
         # Build & Deploy Tab Widgets
         self.create_build_deploy_widgets()
+        
+        # CSV Editor Tab Widgets
         self.create_csv_editor_widgets()
+        
+        # Weather Tab Widgets
+        self.create_weather_widgets()
     
     def create_build_deploy_widgets(self):
         # Main Frame for Build & Deploy Tab
@@ -55,8 +112,8 @@ class AcademicWebsiteBuilder:
         main_frame.pack(pady=10, padx=10, fill=tk.BOTH, expand=True)
         
         # Left Frame for Description
-        left_frame = ttk.Frame(main_frame)
-        left_frame.pack(side=tk.LEFT, padx=10, pady=10, fill=tk.BOTH, expand=True)
+        left_frame = ttk.Frame(main_frame, borderwidth=2, relief="groove")
+        left_frame.pack(side=tk.LEFT, padx=self.padding_x, pady=self.padding_y, fill=tk.BOTH, expand=True)
         
         # Description Label
         description_label = ttk.Label(
@@ -69,22 +126,28 @@ class AcademicWebsiteBuilder:
                 "- Click 'Run Script' to execute the build, copy, and Git operations."
             ),
             wraplength=500,
-            justify=tk.LEFT
+            justify=tk.LEFT,
+            font=("TkDefaultFont", self.font_size)
         )
-        description_label.pack(pady=10, padx=10, fill=tk.BOTH, expand=True)
+        description_label.pack(pady=self.padding_y, padx=self.padding_x, fill=tk.BOTH, expand=True)
+        
+        # Separator
+        separator = ttk.Separator(main_frame, orient="vertical")
+        separator.pack(side=tk.LEFT, fill=tk.Y, padx=self.padding_x)
         
         # Right Frame for Git Log
-        right_frame = ttk.Frame(main_frame)
-        right_frame.pack(side=tk.RIGHT, padx=10, pady=10, fill=tk.BOTH, expand=True)
+        right_frame = ttk.Frame(main_frame, borderwidth=2, relief="groove")
+        right_frame.pack(side=tk.RIGHT, padx=self.padding_x, pady=self.padding_y, fill=tk.BOTH, expand=True)
         
         # Git Log Label
         git_log_label = ttk.Label(
             right_frame,
-            text=self.get_git_log(),
+            text=self.get_git_log(format_str=self.commit_format),
             wraplength=500,
-            justify=tk.LEFT
+            justify=tk.LEFT,
+            font=("TkDefaultFont", self.font_size)
         )
-        git_log_label.pack(pady=10, padx=10, fill=tk.BOTH, expand=True)
+        git_log_label.pack(pady=self.padding_y, padx=self.padding_x, fill=tk.BOTH, expand=True)
         
         # Create a frame for selecting the build script
         build_script_frame = ttk.Frame(self.tab_build_deploy)
@@ -117,11 +180,11 @@ class AcademicWebsiteBuilder:
         
         # Create a button to run the script
         run_button = ttk.Button(self.tab_build_deploy, text="Run Script", command=self.run_script)
-        run_button.pack(pady=20)
+        run_button.pack(pady=10)
         
         # Exit Button
         exit_button = ttk.Button(self.tab_build_deploy, text="Exit", command=self.exit_app)
-        exit_button.pack(pady=10)
+        exit_button.pack(pady=self.padding_y)
     
     def create_csv_editor_widgets(self):
         # Main Frame for CSV Editor Tab
@@ -129,8 +192,8 @@ class AcademicWebsiteBuilder:
         main_frame.pack(pady=10, padx=10, fill=tk.BOTH, expand=True)
         
         # Left Frame for Description
-        left_frame = ttk.Frame(main_frame)
-        left_frame.pack(side=tk.LEFT, padx=10, pady=10, fill=tk.BOTH, expand=True)
+        left_frame = ttk.Frame(main_frame, borderwidth=2, relief="groove")
+        left_frame.pack(side=tk.LEFT, padx=self.padding_x, pady=self.padding_y, fill=tk.BOTH, expand=True)
         
         # Description Label
         description_label = ttk.Label(
@@ -142,22 +205,28 @@ class AcademicWebsiteBuilder:
                 "- Save changes to the CSV file."
             ),
             wraplength=500,
-            justify=tk.LEFT
+            justify=tk.LEFT,
+            font=("TkDefaultFont", self.font_size)
         )
-        description_label.pack(pady=10, padx=10, fill=tk.BOTH, expand=True)
+        description_label.pack(pady=self.padding_y, padx=self.padding_x, fill=tk.BOTH, expand=True)
+        
+        # Separator
+        separator = ttk.Separator(main_frame, orient="vertical")
+        separator.pack(side=tk.LEFT, fill=tk.Y, padx=self.padding_x)
         
         # Right Frame for Git Log
-        right_frame = ttk.Frame(main_frame)
-        right_frame.pack(side=tk.RIGHT, padx=10, pady=10, fill=tk.BOTH, expand=True)
+        right_frame = ttk.Frame(main_frame, borderwidth=2, relief="groove")
+        right_frame.pack(side=tk.RIGHT, padx=self.padding_x, pady=self.padding_y, fill=tk.BOTH, expand=True)
         
         # Git Log Label
         git_log_label = ttk.Label(
             right_frame,
-            text=self.get_git_log(),
+            text=self.get_git_log(format_str=self.commit_format),
             wraplength=500,
-            justify=tk.LEFT
+            justify=tk.LEFT,
+            font=("TkDefaultFont", self.font_size)
         )
-        git_log_label.pack(pady=10, padx=10, fill=tk.BOTH, expand=True)
+        git_log_label.pack(pady=self.padding_y, padx=self.padding_x, fill=tk.BOTH, expand=True)
         
         # Create a frame for buttons
         button_frame = ttk.Frame(self.tab_csv_editor)
@@ -187,19 +256,81 @@ class AcademicWebsiteBuilder:
         
         # Exit Button
         exit_button = ttk.Button(self.tab_csv_editor, text="Exit", command=self.exit_app)
-        exit_button.pack(pady=10)
+        exit_button.pack(pady=self.padding_y)
     
-    def get_git_log(self):
+    def create_weather_widgets(self):
+        # Main Frame for Weather Tab
+        main_frame = ttk.Frame(self.tab_weather)
+        main_frame.pack(pady=10, padx=10, fill=tk.BOTH, expand=True)
+        
+        # Left Frame for Description
+        left_frame = ttk.Frame(main_frame, borderwidth=2, relief="groove")
+        left_frame.pack(side=tk.LEFT, padx=self.padding_x, pady=self.padding_y, fill=tk.BOTH, expand=True)
+        
+        # Description Label
+        description_label = ttk.Label(
+            left_frame,
+            text=(
+                "This tab displays the current weather and time for different locations.\n\n"
+                "- Click 'Update Weather and Time' to refresh the information."
+            ),
+            wraplength=500,
+            justify=tk.LEFT,
+            font=("TkDefaultFont", self.font_size)
+        )
+        description_label.pack(pady=self.padding_y, padx=self.padding_x, fill=tk.BOTH, expand=True)
+        
+        # Separator
+        separator = ttk.Separator(main_frame, orient="vertical")
+        separator.pack(side=tk.LEFT, fill=tk.Y, padx=self.padding_x)
+        
+        # Right Frame for Weather Information
+        right_frame = ttk.Frame(main_frame, borderwidth=2, relief="groove")
+        right_frame.pack(side=tk.RIGHT, padx=self.padding_x, pady=self.padding_y, fill=tk.BOTH, expand=True)
+        
+        # Weather Info Label
+        self.weather_info_label = ttk.Label(
+            right_frame,
+            text=self.weather_info,
+            wraplength=500,
+            justify=tk.LEFT,
+            font=("TkDefaultFont", self.font_size)
+        )
+        self.weather_info_label.pack(pady=self.padding_y, padx=self.padding_x, fill=tk.BOTH, expand=True)
+        
+        # Frame for Buttons
+        button_frame = ttk.Frame(self.tab_weather)
+        button_frame.pack(pady=10)
+        
+        # Button to update weather and time
+        update_button = ttk.Button(button_frame, text="Update Weather and Time", command=self.update_weather_and_time)
+        update_button.pack(side=tk.LEFT, padx=5)
+        
+        # Exit Button
+        exit_button = ttk.Button(button_frame, text="Exit", command=self.exit_app)
+        exit_button.pack(side=tk.LEFT, padx=5)
+    
+    def get_git_log(self, format_str="%h : %s"):
         try:
-            result = run_command("git log --pretty=format:'%h - %an, %ar : %s' -n 3")
+            result = run_command(f"git log --pretty=format:'{format_str}' -n 3")
             if result.returncode == 0:
                 commits = result.stdout.strip().split('\n')
-                commits.reverse() # Reverse the order of commits
+                commits.reverse()  # Reverse the order of commits
                 return "Recent Commits:\n" + "\n".join(commits)
             else:
                 return "No Git repository found or unable to retrieve commits."
         except Exception as e:
             return f"Error retrieving Git log: {e}"
+    
+    def update_weather_and_time(self):
+        locations = ["paris", "new+york"]
+        weather_info = ""
+        
+        for location in locations:
+            weather_info += get_weather_and_time(location)
+        
+        self.weather_info = weather_info
+        self.weather_info_label.config(text=self.weather_info)
     
     def browse_build_script(self):
         file_path = filedialog.askopenfilename(filetypes=[("Python Scripts", "*.py")])
