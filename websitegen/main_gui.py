@@ -22,35 +22,20 @@ def run_command(command, check=True):
 def get_weather_and_time(location):
     """Get weather and time for a given location using web scraping with wttr.in."""
     try:
-        url = f"https://wttr.in/{location}" 
+        url = f"https://wttr.in/{location}?format=j1"
         response = requests.get(url)
         response.raise_for_status()
         
-        soup = BeautifulSoup(response.content, 'html.parser')
+        weather_data = response.json()
         
-        # Extract the text content
-        pre_tag = soup.find('pre')
-        if pre_tag is None:
-            return f"Error retrieving weather data for {location}: <pre> tag not found"
+        # Get current time 
+        current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         
-        weather_text = pre_tag.text.strip()
+        # Get current temperature
+        current_temp = weather_data['current_condition'][0].get('temp_C', "Temperature not available") + "°C"
         
-        # Split the text to extract relevant information
-        lines = weather_text.split('\n')
-        
-        # Extract time and weather condition
-        time_line = lines[0].strip()
-        condition_line = lines[1].strip()
-        temp_line = lines[2].strip()
-        
-        # Extract time from the time line
-        current_time = time_line.split(': ')[1] if ': ' in time_line else "Time not available"
-        
-        # Extract temperature from the temp line
-        current_temp = temp_line.split(': ')[1] if ': ' in temp_line else "Temperature not available"
-        
-        # Extract condition from the condition line
-        current_condition = condition_line.split(': ')[1] if ': ' in condition_line else "Condition not available"
+        # Get weather condition
+        current_condition = weather_data['current_condition'][0].get('weatherDesc', [{}])[0].get('value', "Condition not available")
         
         return f"Location: {location.replace('+', ' ').title()}\nTime: {current_time}\nTemperature: {current_temp}\nCondition: {current_condition}\n\n"
     except Exception as e:
@@ -316,7 +301,7 @@ class AcademicWebsiteBuilder:
             if result.returncode == 0:
                 commits = result.stdout.strip().split('\n')
                 commits.reverse()  # Reverse the order of commits
-                return "Recent Commits:\n" + "\n".join(commits)
+                return "Recent Commits:\n\n" + "\n".join(commits)
             else:
                 return "No Git repository found or unable to retrieve commits."
         except Exception as e:
