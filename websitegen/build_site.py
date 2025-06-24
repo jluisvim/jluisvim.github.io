@@ -361,16 +361,25 @@ class NewsGenerator:
         self.config = config
     
     def load_news(self):
-        """Carga CSV con eventos y links separados"""
+        """Load CSV with events and links separated"""
         try:
             with open(self.config['NEWS_CSV'], mode='r', encoding='utf-8') as csvfile:
-                return sorted([
+                news_items = [
                     {
                         'date': datetime.strptime(row['date'], '%Y-%m-%d'),
                         'event': row['event'].strip(),
                         'link': row.get('link', '').strip()
                     } for row in csv.DictReader(csvfile)
-                ], key=lambda x: x['date'], reverse=False)[:3]
+                ]
+                
+                # Filter out news items with dates in the past
+                future_news_items = [item for item in news_items if item['date'].date() >= datetime.now().date()]
+                
+                # Sort the remaining news items by date
+                future_news_items.sort(key=lambda x: x['date'], reverse=False)
+                
+                # Return only the first 3 future news items
+                return future_news_items[:3]
         except FileNotFoundError:
             return []
 
@@ -412,13 +421,13 @@ class PresentationGenerator:
         with open(self.config['PRESENTATIONS_CSV'], mode='r', encoding='utf-8') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                year = row['Año']
+                year = row['Year']
                 presentations_by_year[year].append({
-                    'title': row['Título'],
-                    'event': row['Evento'],
-                    'location': row['Lugar'],
-                    'month': row['Mes'],
-                    'authors': row['Autores']
+                    'title': row['Title'],
+                    'event': row['Event'],
+                    'location': row['Place'],
+                    'month': row['Month'],
+                    'authors': row['Authors']
                 })
         
         return dict(presentations_by_year)
