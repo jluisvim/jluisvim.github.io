@@ -70,7 +70,7 @@ if $GIT_OPERATION; then
 
     # Pause before git add
     read -p "Ready to perform 'git add .'. Press Enter to continue or Ctrl+C to abort..."
-    git add .
+    git add -A
     if [ $? -ne 0 ]; then
         echo "Git add failed. Exiting."
         exit 1
