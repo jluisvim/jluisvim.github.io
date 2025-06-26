@@ -308,7 +308,7 @@ class AcademicWebsiteBuilder:
             return f"Error retrieving Git log: {e}"
     
     def update_weather_and_time(self):
-        locations = ["paris", "new+york"]
+        locations = ["ensenada", "new+york", "brest"]
         weather_info = ""
         
         for location in locations:

@@ -1,0 +1,94 @@
+
+Theme: Logic
+CSL 2026	34th EACSL Annual Conference on Computer Science Logic	Paris, France	Jul 21, 2025	Feb 23, 2026	logic in computer science, formal methods and verification, automata and games, rewriting
+OVERLAY 2025	7th International Workshop on Artificial Intelligence and fOrmal VERification, Logic, Automata, and sYnthesis	Bologna, Italy	Jul 12, 2025	Oct 25, 2025	artificial intelligence, formal verification, logic, machine learning
+SYNASC 2025	27th International Symposium on Symbolic and Numeric Algorithms for Scientific Computing	Timisoara, Romania	Jul 6, 2025	Sep 22, 2025	distributed computing, symbolic and numerical computing, logic and programming, artificial intelligence
+IWLP-4	The Fourth International Workshop on Logic and Philosophy: Social Norms: Logical Structures and Philosophical Foundations	Beijing, China	Jul 4, 2025	Nov 1, 2025	origin of norms, norms in social network, agency and norms, norms for ai agents
+LOGICPRIZE-2025	Bimal Krishna Matilal Logic Prize 2025	Cusco, Peru	Jun 30, 2025	N/A	philosophical logic, non classical logic, logic for computer science, algebraic logic
+PEG 2025	3rd Prolog Education Workshop 2025	Rende, Italy	Jun 29, 2025	Sep 12, 2025	teaching prolog and logic programming, teaching other subjects through prolog, teaching materials and tools, teaching experiences including statistical evaluations
+OHAAI-Vol.5	Online Handbook of Argumentation for AI Volume 5		N/A	N/A	argumentation, natural language processing, logic, reasoning
+QPL 2025	22nd International Conference on Quantum Physics and Logic	Varna, Bulgaria	N/A	Jul 14, 2025	N/A
+LOPSTR2025	International Symposium on Logic-Based Program Synthesis and Transformation	Rende, Italy	N/A	Sep 9, 2025	N/A
+ICLP25	The 41st International Conference on Logic Programming	Rende, Italy	N/A	Sep 12, 2025	N/A
+
+Theme: AI
+Greenearth1234AI	Greenearth1234 Journal of Artificial Intelligence	Pune, India	May 30, 2026	N/A	artificial intelligence, machine learning, deep learning, ai applications
+IAQVEC 2026	Indoor Air Quality, Ventilation and Energy Conservation in Buildings 2026	Los Angeles, CA, United States	Dec 15, 2025	May 18, 2026	indoor air quality and ventilation, energy conservation in buildings, generative ai in sustainability, climate change adaptation and resilience
+AIMS 2025	Artificial Intelligence and Mathematical Sciences	Shkodra, Albania	Oct 15, 2025	Dec 15, 2025	neurosymbolic ai, galois theory and ai, graded neural networks, data fabrics
+ICAIC2025	International Conference on Artificial Intelligence (AI) and Cybersecurity	Manitoba, Canada	Oct 10, 2025	Oct 17, 2025	engineering, information technology, computer science, management information systems
+LNGAI2025	Fifth International Workshop on Logics for New-Generation Artificial Intelligence	Belval, Luxembourg	Sep 23, 2025	Dec 1, 2025	artificial intelligence reasoning, neuro symbolic ai, knowledge representation and reasoning, legal informatics and ai ethics
+CEII 2025	The 8th Asia Conference on Cognitive Engineering and Intelligent Interaction	Hong Kong, China	Sep 20, 2025	Dec 19, 2025	artificial intelligence and soft computing, cognitive science and computational biology, human ai teaming, extended interaction
+AISTEMEDU-2025	IEEE International Conference on AI-Driven STEM Education and Learning Technologies	Al Khobar, Saudi Arabia	Sep 15, 2025	Dec 29, 2025	transform stem education with ai, innovate computational and mathematical modeling, promote ai for sustainability, impacts of ai
+BCK25	Blockchain Kaigi 2025	Mumbai, India	Sep 15, 2025	Dec 4, 2025	blockchain foundations technology and applications, smart contracts and their verification, decentralised finance and privacy, ai/ml applications to blockchain technology
+TechLING'25	TechLING'25	Besançon, France	Sep 5, 2025	Oct 2, 2025	ai supported language learning, language technologies, digital arts, cultural inclusion and diversity
+CONVERSATIONS 2025	CONVERSATIONS 2025 - International Symposium on Chatbots and Human-centred AI	Lübeck, Germany	Sep 3, 2025	Nov 12, 2025	chatbots, conversational ai, trustworthy ai, human centred ai
+ICWL2025	The 24th International Conference on Web-Based Learning	Hong Kong, China	Sep 3, 2025	Nov 30, 2025	educational technologies, game based learning, gen ai in education, web learning and learning analytics
+17 IHRM	The 17th Biennial Conference on International Human Resource Management	Dubai, UAE	Sep 1, 2025	Oct 28, 2025	ai powered hr, migration and future of work, mobility and future of work, ethics leadership and ihrm
+NAIM 2025	Nordic AI Meet 2025	Norrköping, Sweden	Sep 1, 2025	Nov 26, 2025	artificial intelligence, machine learning, robotics, nlp and other related topics
+IG2025	2025 International Conference on Innovate Green	San Diego, CA, United States	Aug 31, 2025	Oct 10, 2025	sustainable technologies and clean energy, ai and data science, climate action and environmental innovation, green finance and social sustainability
+29th Colloquium	Cybersecurity Education in the Age of AI and Automation & Ambiguity	Seattle, WA, United States	Aug 31, 2025	Nov 12, 2025	cybersecurity, artificial intelligence, quantum computing, emerging technologies
+AI-Scities 2025	1st International Conference on Artificial Intelligence and Sustainable Cities 2025	Bognor Regis, UK	Aug 30, 2025	Oct 29, 2025	artificial intelligence, ai for sustainable cities, ai for sustainability governance, ai in energy
+Software Industry Transformation 2025	Software Industry Transformation through Generative Artificial Intelligence	Raleigh, NC, United States	Aug 30, 2025	N/A	software development transformation, gen ai in software development, automation in software development, ai software in autonomous systems
+NCRTHT 2025	National Conference on Recent Trends in Humanitarian Technology	Thiruvananthapuram, Kerala, India	Aug 30, 2025	Oct 30, 2025	assistive technology, biomedical, wearable devices, ai
+Identity-Aware AI 2025	Identity-Aware AI 2025	Bologna, Italy	Aug 29, 2025	Oct 25, 2025	N/A
+SITAIBA 2025	2025 International Conference on Security and Information Technologies with AI, Internet Computing and Big-data Applications	New Taipei City, Taiwan	Aug 29, 2025	Nov 20, 2025	information security, information processing, ai and deep learning applications, cyber security and evidence investigations
+
+Theme: Knowledge Representation
+LNGAI2025	Fifth International Workshop on Logics for New-Generation Artificial Intelligence	Belval, Luxembourg	Sep 23, 2025	Dec 1, 2025	artificial intelligence reasoning, neuro symbolic ai, knowledge representation and reasoning, legal informatics and ai ethics
+CSNT'2025	Computer Science and New Technologies Workshop	Mostaganem, Algeria	Sep 15, 2025	Dec 7, 2025	machine learning and deep learning, data science, massive data, representation and management of knowledge
+OCTA’2025	International Multi-Conference on "Organization of Knowledge and Advanced Technologies"	Tunis, Tunisia	Sep 7, 2025	Nov 6, 2025	knowledge organization, big data analytics, information systems and economic intelligence, digital sciences and advanced technologies
+SOCTHADICKconf'25	2025 5th International Conference of the Society for the Advancement of Ict & Comparative Knowledge	Ibadan, Nigeria	Sep 1, 2025	Nov 16, 2025	artificial intelligence, software engineering, cybersecurity, data/information science
+AKR³ 2025	2nd International Workshop on Actionable Knowledge Representation and Reasoning for Robots	Nara, Japan	Aug 2, 2025	Nov 2, 2025	knowledge representation for robotics, knowledge enhanced robotics, multi modal reasoning for robotics, knowledge grounding
+RAGE-KG 2025	Retrieval-Augmented Generation Enabled by Knowledge Graphs	Nara, Japan	Aug 2, 2025	Nov 2, 2025	retrieval augmented generation, knowledge graphs, large language models, semantic web
+KICSS2025	The 20th International Conference on Knowledge, Information and Creativity Support Systems	Nagaoka, Japan	Aug 1, 2025	Dec 3, 2025	N/A
+KSE 2025	The 17th International Conference on Knowledge and Systems Engineering	Dalat, Viet Nam	Jul 15, 2025	Nov 6, 2025	cloud computing, ai/machine learning, software and systems, bioinformatics and computational biology
+ANSyA 2025	1st International Workshop on Advanced Neuro-Symbolic Applications	Bologna, Italy	Jul 14, 2025	Oct 25, 2025	neuro symbolic ai, informed machine learning, symbolic knowledge extraction or injection, ai trustworthiness
+SCI-K 2025	5th International Workshop on Scientific Knowledge: Representation, Discovery, and Assessment	Nara, Japan	Jul 11, 2025	Nov 2, 2025	N/A
+ISIC 2025	International Semantic Intelligence Conference 2025	Lübeck, Germany	Jul 10, 2025	Oct 6, 2025	artificial intelligence and machine learning, knowledge representation and semantic engineering, case studies and tools, multimodal and multilingual computing
+ONTOBRAS 2025	18th Seminar on Ontology Research in Brazil	São José dos Campos, SP, Brazil	Jul 6, 2025	Sep 29, 2025	semantic web, knowledge organization, ontology engineering, machine learning and artificial intelligence
+FCR 2025	11th Workshop on Formal and Cognitive Reasoning	Potsdam, Germany	Jul 4, 2025	Aug 17, 2025	cognition, knowledge representation
+KG-NeSy 2025	Second Workshop on Knowledge Graphs and Neurosymbolic AI	Vienna, Austria	Jul 4, 2025	Sep 3, 2025	N/A
+ISKE 2025	2025 the 20th International Conference on Intelligent Systems and Knowledge Engineering	Shunde, China	Jun 30, 2025	Nov 21, 2025	knowledge engineering, speech recognition, intelligent robot, intelligent game
+GC-ARMC-1	THE GLOBAL CONNECT - ADVANCING RESEARCH METHODOLOGY CONFERENCE	Johannesburg, South Africa	Jun 30, 2025	Sep 24, 2025	social sciences, education and management sciences, 4 ir and innovative technologies, indigenous knowledge systems
+HyperAgents 2025	Second International Workshop on Hypermedia Multi-Agent Systems	Bologna, Italy	Jun 30, 2025	Oct 25, 2025	autonomous agents, multi agent systems, web of things, knowledge graphs
+WSSE 2025	2025 the 7th World Symposium on Software Engineering	Okayama, Japan	Jun 30, 2025	Oct 24, 2025	artificial intelligence, requirements engineering, knowledge recovery, healthcare engineering
+NeLaMKRR 2025	Second International Workshop on Next-Generation Language Models for Knowledge Representation and Reasoning	Melbourne, Australia	N/A	Nov 11, 2025	N/A
+ISKO-Maghreb'2025	International Symposium of ISKO-Maghreb Society on Digital Sciences: Impacts and Challenges on Knowledge Organization	Tunis, Tunisia	N/A	Nov 6, 2025	knowledge organization and digital sciences, collaborative knowledge organization systems (kos), ai assisted virtual libraries, knowledge organization visualization
+
+Theme: Non-Monotonic Reasoning
+LNGAI2025	Fifth International Workshop on Logics for New-Generation Artificial Intelligence	Belval, Luxembourg	Sep 23, 2025	Dec 1, 2025	artificial intelligence reasoning, neuro symbolic ai, knowledge representation and reasoning, legal informatics and ai ethics
+HC@AIxIA + HYDRA 2025	nternational Joint Workshop of Artificial Intelligence for Healthcare (HC@AIxIA) and HYbrid Models for Coupling Deductive and Inductive ReAsoning (HYDRA)	Bologna, Italy	Sep 12, 2025	Oct 25, 2025	artificial intelligence, medicine, hybrid models, multidisciplinary
+AKR³ 2025	2nd International Workshop on Actionable Knowledge Representation and Reasoning for Robots	Nara, Japan	Aug 2, 2025	Nov 2, 2025	knowledge representation for robotics, knowledge enhanced robotics, multi modal reasoning for robotics, knowledge grounding
+GenPhyAIR-25	Generative Physical AI for Robotics - Workshop CASE 2025	Los Angeles, CA, United States	Jul 20, 2025	N/A	generative ai, reasoning, reinforcement learning
+NMR 2025	The 23rd International Workshop on Nonmonotonic Reasoning	Melbourne, Australia	Jul 17, 2025	Nov 11, 2025	N/A
+FCR 2025	11th Workshop on Formal and Cognitive Reasoning	Potsdam, Germany	Jul 4, 2025	Aug 17, 2025	cognition, knowledge representation
+OHAAI-Vol.5	Online Handbook of Argumentation for AI Volume 5		N/A	N/A	argumentation, natural language processing, logic, reasoning
+NeLaMKRR 2025	Second International Workshop on Next-Generation Language Models for Knowledge Representation and Reasoning	Melbourne, Australia	N/A	Nov 11, 2025	N/A
+
+Theme: Robotics
+ICCECE 2026	International Conference on Computer, Electrical & Communication Engineering	Kolkata, India	Dec 20, 2025	Feb 6, 2026	cloud computing, robotics, signal processing, bio technology
+EECR 2026	2026 12th International Conference on Electrical Engineering, Control and Robotics	Taicang, China	Dec 1, 2025	Apr 17, 2026	electrical engineering, control theory, robotics, power market
+ANTS 2026	15th International Conference on Swarm Intelligence	Darmstadt, Germany	Nov 10, 2025	Jun 8, 2026	swarm intelligence, robotics, optimization, network science
+ICCAE 2026	2026 18th International Conference on Computer and Automation Engineering	Sydney, Australia	Oct 20, 2025	Mar 12, 2026	communication systems, robotics, decision making, information retrieval
+IRIM-3D 2025	7th Italian Conference on Robotics and Intelligent Machines	Rome, Italy	Sep 23, 2025	Oct 17, 2025	robotics, intelligent machines, artificial intelligence, automation
+AIS 2025	20th International Symposium on Applied Informatics and Related Areas	Székesfehérvár, Hungary	Sep 21, 2025	Nov 13, 2025	computer systems and information society, robotics and artificial intelligence, geodesy and geoinformatics, enterprise and economics
+ICARA 2026	The 12th International Conference on Automation, Robotics and Applications	Istanbul, Turkey	Sep 10, 2025	Feb 5, 2026	artificial intelligence, genetic algorithm, path planning, virtual systems
+NAIM 2025	Nordic AI Meet 2025	Norrköping, Sweden	Sep 1, 2025	Nov 26, 2025	artificial intelligence, machine learning, robotics, nlp and other related topics
+CSEI25	VII Congress of Computer, Electronic, and Industrial Science	Ambato, Ecuador	Aug 31, 2025	Nov 10, 2025	digital technologies and informatics, intelligent and connected systems, virtual reality and immersive technologies, industrial automation robotics and mechatronics
+OCEANTECH-25	Marine Robotics & Science Workshop	Hangzhou, China	Aug 20, 2025	N/A	underwater localization, biologging and target localization, multivehicle coordination, bio inspired underwater robots
+ICoIAS' 2025	2025 the 7th International Conference on Intelligent Autonomous Systems	Osaka, Japan	Aug 15, 2025	Dec 26, 2025	motion planning, deep learning, fuzzy, intelligent robotics
+ICAMEROB 2025	7th International Conference on Automation, Mechatronics, and Robotics	Malay, Philippines	Aug 8, 2025	Sep 24, 2025	automation engineering and information technology, mechatronics engineering and technology, robotics engineering and technology, industry 4.0 innovations and applications
+icaars2025	International Conference on Advancements in Automation, Robotics and Sensing	Coimbatore, India	Aug 8, 2025	Dec 12, 2025	automation, robotics, sensors
+ICMRE 2026	2026 the 12th International Conference on Mechatronics and Robotics Engineering	Oldenburg,, Germany	Aug 5, 2025	Feb 5, 2026	robotics, control systems, sensing technology, intelligent mechatronics
+HEAR2025	Workshop on "Enhancing Human Engagement in Social Assistive Robotics: Exploring Interaction, Cognitive Load, and Adaptive Support"	Hangzhou, China	Aug 3, 2025	Oct 20, 2025	human robot interaction
+AKR³ 2025	2nd International Workshop on Actionable Knowledge Representation and Reasoning for Robots	Nara, Japan	Aug 2, 2025	Nov 2, 2025	knowledge representation for robotics, knowledge enhanced robotics, multi modal reasoning for robotics, knowledge grounding
+RAAI 2025	2025 5th International Conference on Robotics, Automation, and Artificial Intelligence	Singapore, Singapore	Aug 1, 2025	Dec 18, 2025	robotics, control systems, artificial intelligence, signal processing
+EduRobotX 2025	Educational Robots and Robotics 2025	Durham, UK	Jul 31, 2025	Sep 15, 2025	educational robotics, social robots, humanoid robots, educational robots
+RfH 2025	Robots for Humans: Empowerment Through Co-Creative and Social Robots!	Eindhoven University of Technology, Netherlands	Jul 25, 2025	Aug 29, 2025	human robot interaction, empowerment, design, social robotics
+CRC 2025	2025 10th International Conference on Control, Robotics and Cybernetics	Shenzhen, China	Jul 25, 2025	Dec 12, 2025	intelligent agents, signal processing, decision analysis, energy systems
+
+Theme: Programming
+CompilerTech-2025	Innovations In Compiler Technology Workshop	Bangalore, India	Jul 15, 2025	Sep 28, 2025	compiler, programming languages, verification, security
+SYNASC 2025	27th International Symposium on Symbolic and Numeric Algorithms for Scientific Computing	Timisoara, Romania	Jul 6, 2025	Sep 22, 2025	distributed computing, symbolic and numerical computing, logic and programming, artificial intelligence
+PEG 2025	3rd Prolog Education Workshop 2025	Rende, Italy	Jun 29, 2025	Sep 12, 2025	teaching prolog and logic programming, teaching other subjects through prolog, teaching materials and tools, teaching experiences including statistical evaluations
+ICLP25	The 41st International Conference on Logic Programming	Rende, Italy	N/A	Sep 12, 2025	N/A

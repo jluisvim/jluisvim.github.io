@@ -1,0 +1,945 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CJR Track – Conference & Journal Finder</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                font-size: 12px;
+            }
+            h1 {
+                color: #333;
+                font-size: 20px;
+                border-bottom: 2px solid #ddd;
+                padding-bottom: 5px;
+            }
+            h2 {
+                color: #555;
+                font-size: 16px;
+                margin-top: 20px;
+            }
+            ul {
+                list-style-type: disc;
+            }
+            li {
+                margin-bottom: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+                font-size: 12px;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+            tr:hover {
+                background-color: #f5f5f5;
+            }
+            a {
+                color: #007BFF;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            .metrics {
+                margin-top: 20px;
+                padding: 10px;
+                background-color: #f9f9f9;
+                border: 1px solid #ddd;
+                font-size: 12px;
+            }
+            .theme_header {
+                background-color: #e0e0e0;
+                font-weight: bold;
+            }
+            .footer {
+                margin-top: 40px;
+                text-align: center;
+                font-size: 10px;
+                color: #888;
+            }
+            .cc-license {
+                margin-top: 10px;
+                text-align: center;
+                font-size: 10px;
+                color: #888;
+            }
+            .table-of-contents {
+                list-style-type: disc;
+                border-bottom: 2px solid #ddd;
+                padding-bottom: 5px;
+            }
+            .section-title {
+                margin-top: 30px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CJR Track – Conference & Journal Finder</h1>
+        <p>A minimalistic academic tool to track and rank conferences and journals by topic, submission deadline, and start date.</p>
+        <p><strong>Author:</strong> <a href="https://github.com/jlvm" target="_blank">JLVM</a></p>
+        
+    <h2 class="section-title">Table of Contents</h2>
+    <ul class="table-of-contents">
+        <li><a href="#theme_logic">Logic</a></li><li><a href="#theme_ai">AI</a></li><li><a href="#theme_knowledge_representation">Knowledge Representation</a></li><li><a href="#theme_non-monotonic_reasoning">Non-Monotonic Reasoning</a></li><li><a href="#theme_robotics">Robotics</a></li><li><a href="#theme_programming">Programming</a></li>
+    </ul>
+    
+        <h2 id="theme_logic">Logic</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 10%;">Acronym</th>
+                    <th style="width: 30%;">Name</th>
+                    <th style="width: 8%;">Location</th>
+                    <th style="width: 8%;">Submission Deadline</th>
+                    <th style="width: 8%;">Start Date</th>
+                    <th style="width: 100%;">Topics</th>
+                </tr>
+            </thead>
+            <tbody>
+        
+                <tr>
+                    <td><a href="https://easychair.org/cfp/csl2026"  target="_blank">CSL 2026</a></td>
+                    <td>34th EACSL Annual Conference on Computer Science Logic</td>
+                    <td>Paris, France</td>
+                    <td>Jul 21, 2025</td>
+                    <td style="padding-left: 20px;">Feb 23, 2026</td>
+                    <td style="padding-right: 20px;">logic in computer science, formal methods and verification, automata and games, rewriting</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/OVERLAY-2025"  target="_blank">OVERLAY 2025</a></td>
+                    <td>7th International Workshop on Artificial Intelligence and fOrmal VERification, Logic, Automata, and sYnthesis</td>
+                    <td>Bologna, Italy</td>
+                    <td>Jul 12, 2025</td>
+                    <td style="padding-left: 20px;">Oct 25, 2025</td>
+                    <td style="padding-right: 20px;">artificial intelligence, formal verification, logic, machine learning</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/SYNASC2025"  target="_blank">SYNASC 2025</a></td>
+                    <td>27th International Symposium on Symbolic and Numeric Algorithms for Scientific Computing</td>
+                    <td>Timisoara, Romania</td>
+                    <td>Jul 6, 2025</td>
+                    <td style="padding-left: 20px;">Sep 22, 2025</td>
+                    <td style="padding-right: 20px;">distributed computing, symbolic and numerical computing, logic and programming, artificial intelligence</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/IWLP4"  target="_blank">IWLP-4</a></td>
+                    <td>The Fourth International Workshop on Logic and Philosophy: Social Norms: Logical Structures and Philosophical Foundations</td>
+                    <td>Beijing, China</td>
+                    <td>Jul 4, 2025</td>
+                    <td style="padding-left: 20px;">Nov 1, 2025</td>
+                    <td style="padding-right: 20px;">origin of norms, norms in social network, agency and norms, norms for ai agents</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/LOGICPRIZE-2025"  target="_blank">LOGICPRIZE-2025</a></td>
+                    <td>Bimal Krishna Matilal Logic Prize 2025</td>
+                    <td>Cusco, Peru</td>
+                    <td>Jun 30, 2025</td>
+                    <td style="padding-left: 20px;">N/A</td>
+                    <td style="padding-right: 20px;">philosophical logic, non classical logic, logic for computer science, algebraic logic</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/PEG2025"  target="_blank">PEG 2025</a></td>
+                    <td>3rd Prolog Education Workshop 2025</td>
+                    <td>Rende, Italy</td>
+                    <td>Jun 29, 2025</td>
+                    <td style="padding-left: 20px;">Sep 12, 2025</td>
+                    <td style="padding-right: 20px;">teaching prolog and logic programming, teaching other subjects through prolog, teaching materials and tools, teaching experiences including statistical evaluations</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/OHAAI-Vol5"  target="_blank">OHAAI-Vol.5</a></td>
+                    <td>Online Handbook of Argumentation for AI Volume 5</td>
+                    <td></td>
+                    <td>N/A</td>
+                    <td style="padding-left: 20px;">N/A</td>
+                    <td style="padding-right: 20px;">argumentation, natural language processing, logic, reasoning</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/QPL2025"  target="_blank">QPL 2025</a></td>
+                    <td>22nd International Conference on Quantum Physics and Logic</td>
+                    <td>Varna, Bulgaria</td>
+                    <td>N/A</td>
+                    <td style="padding-left: 20px;">Jul 14, 2025</td>
+                    <td style="padding-right: 20px;">N/A</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/LOPSTR2025"  target="_blank">LOPSTR2025</a></td>
+                    <td>International Symposium on Logic-Based Program Synthesis and Transformation</td>
+                    <td>Rende, Italy</td>
+                    <td>N/A</td>
+                    <td style="padding-left: 20px;">Sep 9, 2025</td>
+                    <td style="padding-right: 20px;">N/A</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/ICLP25"  target="_blank">ICLP25</a></td>
+                    <td>The 41st International Conference on Logic Programming</td>
+                    <td>Rende, Italy</td>
+                    <td>N/A</td>
+                    <td style="padding-left: 20px;">Sep 12, 2025</td>
+                    <td style="padding-right: 20px;">N/A</td>
+                </tr>
+            
+            </tbody>
+        </table>
+        
+        <h2 id="theme_ai">AI</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 10%;">Acronym</th>
+                    <th style="width: 30%;">Name</th>
+                    <th style="width: 8%;">Location</th>
+                    <th style="width: 8%;">Submission Deadline</th>
+                    <th style="width: 8%;">Start Date</th>
+                    <th style="width: 100%;">Topics</th>
+                </tr>
+            </thead>
+            <tbody>
+        
+                <tr>
+                    <td><a href="https://easychair.org/cfp/Greenearth1234AI"  target="_blank">Greenearth1234AI</a></td>
+                    <td>Greenearth1234 Journal of Artificial Intelligence</td>
+                    <td>Pune, India</td>
+                    <td>May 30, 2026</td>
+                    <td style="padding-left: 20px;">N/A</td>
+                    <td style="padding-right: 20px;">artificial intelligence, machine learning, deep learning, ai applications</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/IAQVEC2026"  target="_blank">IAQVEC 2026</a></td>
+                    <td>Indoor Air Quality, Ventilation and Energy Conservation in Buildings 2026</td>
+                    <td>Los Angeles, CA, United States</td>
+                    <td>Dec 15, 2025</td>
+                    <td style="padding-left: 20px;">May 18, 2026</td>
+                    <td style="padding-right: 20px;">indoor air quality and ventilation, energy conservation in buildings, generative ai in sustainability, climate change adaptation and resilience</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/aims2025"  target="_blank">AIMS 2025</a></td>
+                    <td>Artificial Intelligence and Mathematical Sciences</td>
+                    <td>Shkodra, Albania</td>
+                    <td>Oct 15, 2025</td>
+                    <td style="padding-left: 20px;">Dec 15, 2025</td>
+                    <td style="padding-right: 20px;">neurosymbolic ai, galois theory and ai, graded neural networks, data fabrics</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/ICAIC-2025"  target="_blank">ICAIC2025</a></td>
+                    <td>International Conference on Artificial Intelligence (AI) and Cybersecurity</td>
+                    <td>Manitoba, Canada</td>
+                    <td>Oct 10, 2025</td>
+                    <td style="padding-left: 20px;">Oct 17, 2025</td>
+                    <td style="padding-right: 20px;">engineering, information technology, computer science, management information systems</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/LNGAI2025"  target="_blank">LNGAI2025</a></td>
+                    <td>Fifth International Workshop on Logics for New-Generation Artificial Intelligence</td>
+                    <td>Belval, Luxembourg</td>
+                    <td>Sep 23, 2025</td>
+                    <td style="padding-left: 20px;">Dec 1, 2025</td>
+                    <td style="padding-right: 20px;">artificial intelligence reasoning, neuro symbolic ai, knowledge representation and reasoning, legal informatics and ai ethics</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/CEII2025"  target="_blank">CEII 2025</a></td>
+                    <td>The 8th Asia Conference on Cognitive Engineering and Intelligent Interaction</td>
+                    <td>Hong Kong, China</td>
+                    <td>Sep 20, 2025</td>
+                    <td style="padding-left: 20px;">Dec 19, 2025</td>
+                    <td style="padding-right: 20px;">artificial intelligence and soft computing, cognitive science and computational biology, human ai teaming, extended interaction</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/AISTEMEDU-2025"  target="_blank">AISTEMEDU-2025</a></td>
+                    <td>IEEE International Conference on AI-Driven STEM Education and Learning Technologies</td>
+                    <td>Al Khobar, Saudi Arabia</td>
+                    <td>Sep 15, 2025</td>
+                    <td style="padding-left: 20px;">Dec 29, 2025</td>
+                    <td style="padding-right: 20px;">transform stem education with ai, innovate computational and mathematical modeling, promote ai for sustainability, impacts of ai</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/BCK25"  target="_blank">BCK25</a></td>
+                    <td>Blockchain Kaigi 2025</td>
+                    <td>Mumbai, India</td>
+                    <td>Sep 15, 2025</td>
+                    <td style="padding-left: 20px;">Dec 4, 2025</td>
+                    <td style="padding-right: 20px;">blockchain foundations technology and applications, smart contracts and their verification, decentralised finance and privacy, ai/ml applications to blockchain technology</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/TechLING_25"  target="_blank">TechLING'25</a></td>
+                    <td>TechLING'25</td>
+                    <td>Besançon, France</td>
+                    <td>Sep 5, 2025</td>
+                    <td style="padding-left: 20px;">Oct 2, 2025</td>
+                    <td style="padding-right: 20px;">ai supported language learning, language technologies, digital arts, cultural inclusion and diversity</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/conversations2025"  target="_blank">CONVERSATIONS 2025</a></td>
+                    <td>CONVERSATIONS 2025 - International Symposium on Chatbots and Human-centred AI</td>
+                    <td>Lübeck, Germany</td>
+                    <td>Sep 3, 2025</td>
+                    <td style="padding-left: 20px;">Nov 12, 2025</td>
+                    <td style="padding-right: 20px;">chatbots, conversational ai, trustworthy ai, human centred ai</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/icwl2025"  target="_blank">ICWL2025</a></td>
+                    <td>The 24th International Conference on Web-Based Learning</td>
+                    <td>Hong Kong, China</td>
+                    <td>Sep 3, 2025</td>
+                    <td style="padding-left: 20px;">Nov 30, 2025</td>
+                    <td style="padding-right: 20px;">educational technologies, game based learning, gen ai in education, web learning and learning analytics</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/17th_Biennial_IHRM"  target="_blank">17 IHRM</a></td>
+                    <td>The 17th Biennial Conference on International Human Resource Management</td>
+                    <td>Dubai, UAE</td>
+                    <td>Sep 1, 2025</td>
+                    <td style="padding-left: 20px;">Oct 28, 2025</td>
+                    <td style="padding-right: 20px;">ai powered hr, migration and future of work, mobility and future of work, ethics leadership and ihrm</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/NAIM2025"  target="_blank">NAIM 2025</a></td>
+                    <td>Nordic AI Meet 2025</td>
+                    <td>Norrköping, Sweden</td>
+                    <td>Sep 1, 2025</td>
+                    <td style="padding-left: 20px;">Nov 26, 2025</td>
+                    <td style="padding-right: 20px;">artificial intelligence, machine learning, robotics, nlp and other related topics</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/IG2025"  target="_blank">IG2025</a></td>
+                    <td>2025 International Conference on Innovate Green</td>
+                    <td>San Diego, CA, United States</td>
+                    <td>Aug 31, 2025</td>
+                    <td style="padding-left: 20px;">Oct 10, 2025</td>
+                    <td style="padding-right: 20px;">sustainable technologies and clean energy, ai and data science, climate action and environmental innovation, green finance and social sustainability</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/29thcisse"  target="_blank">29th Colloquium</a></td>
+                    <td>Cybersecurity Education in the Age of AI and Automation & Ambiguity</td>
+                    <td>Seattle, WA, United States</td>
+                    <td>Aug 31, 2025</td>
+                    <td style="padding-left: 20px;">Nov 12, 2025</td>
+                    <td style="padding-right: 20px;">cybersecurity, artificial intelligence, quantum computing, emerging technologies</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/ai-scities2025"  target="_blank">AI-Scities 2025</a></td>
+                    <td>1st International Conference on Artificial Intelligence and Sustainable Cities 2025</td>
+                    <td>Bognor Regis, UK</td>
+                    <td>Aug 30, 2025</td>
+                    <td style="padding-left: 20px;">Oct 29, 2025</td>
+                    <td style="padding-right: 20px;">artificial intelligence, ai for sustainable cities, ai for sustainability governance, ai in energy</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/software-industry-transformation-2025"  target="_blank">Software Industry Transformation 2025</a></td>
+                    <td>Software Industry Transformation through Generative Artificial Intelligence</td>
+                    <td>Raleigh, NC, United States</td>
+                    <td>Aug 30, 2025</td>
+                    <td style="padding-left: 20px;">N/A</td>
+                    <td style="padding-right: 20px;">software development transformation, gen ai in software development, automation in software development, ai software in autonomous systems</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/NCRTHT-2025"  target="_blank">NCRTHT 2025</a></td>
+                    <td>National Conference on Recent Trends in Humanitarian Technology</td>
+                    <td>Thiruvananthapuram, Kerala, India</td>
+                    <td>Aug 30, 2025</td>
+                    <td style="padding-left: 20px;">Oct 30, 2025</td>
+                    <td style="padding-right: 20px;">assistive technology, biomedical, wearable devices, ai</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/IdentityAwareAI2025"  target="_blank">Identity-Aware AI 2025</a></td>
+                    <td>Identity-Aware AI 2025</td>
+                    <td>Bologna, Italy</td>
+                    <td>Aug 29, 2025</td>
+                    <td style="padding-left: 20px;">Oct 25, 2025</td>
+                    <td style="padding-right: 20px;">N/A</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/SITAIBA2025"  target="_blank">SITAIBA 2025</a></td>
+                    <td>2025 International Conference on Security and Information Technologies with AI, Internet Computing and Big-data Applications</td>
+                    <td>New Taipei City, Taiwan</td>
+                    <td>Aug 29, 2025</td>
+                    <td style="padding-left: 20px;">Nov 20, 2025</td>
+                    <td style="padding-right: 20px;">information security, information processing, ai and deep learning applications, cyber security and evidence investigations</td>
+                </tr>
+            
+            </tbody>
+        </table>
+        
+        <h2 id="theme_knowledge_representation">Knowledge Representation</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 10%;">Acronym</th>
+                    <th style="width: 30%;">Name</th>
+                    <th style="width: 8%;">Location</th>
+                    <th style="width: 8%;">Submission Deadline</th>
+                    <th style="width: 8%;">Start Date</th>
+                    <th style="width: 100%;">Topics</th>
+                </tr>
+            </thead>
+            <tbody>
+        
+                <tr>
+                    <td><a href="https://easychair.org/cfp/LNGAI2025"  target="_blank">LNGAI2025</a></td>
+                    <td>Fifth International Workshop on Logics for New-Generation Artificial Intelligence</td>
+                    <td>Belval, Luxembourg</td>
+                    <td>Sep 23, 2025</td>
+                    <td style="padding-left: 20px;">Dec 1, 2025</td>
+                    <td style="padding-right: 20px;">artificial intelligence reasoning, neuro symbolic ai, knowledge representation and reasoning, legal informatics and ai ethics</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/csnt2025"  target="_blank">CSNT'2025</a></td>
+                    <td>Computer Science and New Technologies Workshop</td>
+                    <td>Mostaganem, Algeria</td>
+                    <td>Sep 15, 2025</td>
+                    <td style="padding-left: 20px;">Dec 7, 2025</td>
+                    <td style="padding-right: 20px;">machine learning and deep learning, data science, massive data, representation and management of knowledge</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/OCTA2025"  target="_blank">OCTA’2025</a></td>
+                    <td>International Multi-Conference on "Organization of Knowledge and Advanced Technologies"</td>
+                    <td>Tunis, Tunisia</td>
+                    <td>Sep 7, 2025</td>
+                    <td style="padding-left: 20px;">Nov 6, 2025</td>
+                    <td style="padding-right: 20px;">knowledge organization, big data analytics, information systems and economic intelligence, digital sciences and advanced technologies</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/socthadickconf25"  target="_blank">SOCTHADICKconf'25</a></td>
+                    <td>2025 5th International Conference of the Society for the Advancement of Ict & Comparative Knowledge</td>
+                    <td>Ibadan, Nigeria</td>
+                    <td>Sep 1, 2025</td>
+                    <td style="padding-left: 20px;">Nov 16, 2025</td>
+                    <td style="padding-right: 20px;">artificial intelligence, software engineering, cybersecurity, data/information science</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/akr3_2025"  target="_blank">AKR³ 2025</a></td>
+                    <td>2nd International Workshop on Actionable Knowledge Representation and Reasoning for Robots</td>
+                    <td>Nara, Japan</td>
+                    <td>Aug 2, 2025</td>
+                    <td style="padding-left: 20px;">Nov 2, 2025</td>
+                    <td style="padding-right: 20px;">knowledge representation for robotics, knowledge enhanced robotics, multi modal reasoning for robotics, knowledge grounding</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/rage-kg-2025"  target="_blank">RAGE-KG 2025</a></td>
+                    <td>Retrieval-Augmented Generation Enabled by Knowledge Graphs</td>
+                    <td>Nara, Japan</td>
+                    <td>Aug 2, 2025</td>
+                    <td style="padding-left: 20px;">Nov 2, 2025</td>
+                    <td style="padding-right: 20px;">retrieval augmented generation, knowledge graphs, large language models, semantic web</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/KICSS2025"  target="_blank">KICSS2025</a></td>
+                    <td>The 20th International Conference on Knowledge, Information and Creativity Support Systems</td>
+                    <td>Nagaoka, Japan</td>
+                    <td>Aug 1, 2025</td>
+                    <td style="padding-left: 20px;">Dec 3, 2025</td>
+                    <td style="padding-right: 20px;">N/A</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/KSE-2025"  target="_blank">KSE 2025</a></td>
+                    <td>The 17th International Conference on Knowledge and Systems Engineering</td>
+                    <td>Dalat, Viet Nam</td>
+                    <td>Jul 15, 2025</td>
+                    <td style="padding-left: 20px;">Nov 6, 2025</td>
+                    <td style="padding-right: 20px;">cloud computing, ai/machine learning, software and systems, bioinformatics and computational biology</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/ansya-2025"  target="_blank">ANSyA 2025</a></td>
+                    <td>1st International Workshop on Advanced Neuro-Symbolic Applications</td>
+                    <td>Bologna, Italy</td>
+                    <td>Jul 14, 2025</td>
+                    <td style="padding-left: 20px;">Oct 25, 2025</td>
+                    <td style="padding-right: 20px;">neuro symbolic ai, informed machine learning, symbolic knowledge extraction or injection, ai trustworthiness</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/scik2025"  target="_blank">SCI-K 2025</a></td>
+                    <td>5th International Workshop on Scientific Knowledge: Representation, Discovery, and Assessment</td>
+                    <td>Nara, Japan</td>
+                    <td>Jul 11, 2025</td>
+                    <td style="padding-left: 20px;">Nov 2, 2025</td>
+                    <td style="padding-right: 20px;">N/A</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/ISIC2025"  target="_blank">ISIC 2025</a></td>
+                    <td>International Semantic Intelligence Conference 2025</td>
+                    <td>Lübeck, Germany</td>
+                    <td>Jul 10, 2025</td>
+                    <td style="padding-left: 20px;">Oct 6, 2025</td>
+                    <td style="padding-right: 20px;">artificial intelligence and machine learning, knowledge representation and semantic engineering, case studies and tools, multimodal and multilingual computing</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/ontobras2025"  target="_blank">ONTOBRAS 2025</a></td>
+                    <td>18th Seminar on Ontology Research in Brazil</td>
+                    <td>São José dos Campos, SP, Brazil</td>
+                    <td>Jul 6, 2025</td>
+                    <td style="padding-left: 20px;">Sep 29, 2025</td>
+                    <td style="padding-right: 20px;">semantic web, knowledge organization, ontology engineering, machine learning and artificial intelligence</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/FCR2025"  target="_blank">FCR 2025</a></td>
+                    <td>11th Workshop on Formal and Cognitive Reasoning</td>
+                    <td>Potsdam, Germany</td>
+                    <td>Jul 4, 2025</td>
+                    <td style="padding-left: 20px;">Aug 17, 2025</td>
+                    <td style="padding-right: 20px;">cognition, knowledge representation</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/kgnesy2025"  target="_blank">KG-NeSy 2025</a></td>
+                    <td>Second Workshop on Knowledge Graphs and Neurosymbolic AI</td>
+                    <td>Vienna, Austria</td>
+                    <td>Jul 4, 2025</td>
+                    <td style="padding-left: 20px;">Sep 3, 2025</td>
+                    <td style="padding-right: 20px;">N/A</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/ISKE2025"  target="_blank">ISKE 2025</a></td>
+                    <td>2025 the 20th International Conference on Intelligent Systems and Knowledge Engineering</td>
+                    <td>Shunde, China</td>
+                    <td>Jun 30, 2025</td>
+                    <td style="padding-left: 20px;">Nov 21, 2025</td>
+                    <td style="padding-right: 20px;">knowledge engineering, speech recognition, intelligent robot, intelligent game</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/gcarmc1"  target="_blank">GC-ARMC-1</a></td>
+                    <td>THE GLOBAL CONNECT - ADVANCING RESEARCH METHODOLOGY CONFERENCE</td>
+                    <td>Johannesburg, South Africa</td>
+                    <td>Jun 30, 2025</td>
+                    <td style="padding-left: 20px;">Sep 24, 2025</td>
+                    <td style="padding-right: 20px;">social sciences, education and management sciences, 4 ir and innovative technologies, indigenous knowledge systems</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/HyperAgents2025"  target="_blank">HyperAgents 2025</a></td>
+                    <td>Second International Workshop on Hypermedia Multi-Agent Systems</td>
+                    <td>Bologna, Italy</td>
+                    <td>Jun 30, 2025</td>
+                    <td style="padding-left: 20px;">Oct 25, 2025</td>
+                    <td style="padding-right: 20px;">autonomous agents, multi agent systems, web of things, knowledge graphs</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/WSSE2025"  target="_blank">WSSE 2025</a></td>
+                    <td>2025 the 7th World Symposium on Software Engineering</td>
+                    <td>Okayama, Japan</td>
+                    <td>Jun 30, 2025</td>
+                    <td style="padding-left: 20px;">Oct 24, 2025</td>
+                    <td style="padding-right: 20px;">artificial intelligence, requirements engineering, knowledge recovery, healthcare engineering</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/NeLaMKRR2025"  target="_blank">NeLaMKRR 2025</a></td>
+                    <td>Second International Workshop on Next-Generation Language Models for Knowledge Representation and Reasoning</td>
+                    <td>Melbourne, Australia</td>
+                    <td>N/A</td>
+                    <td style="padding-left: 20px;">Nov 11, 2025</td>
+                    <td style="padding-right: 20px;">N/A</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/isko-maghreb2025"  target="_blank">ISKO-Maghreb'2025</a></td>
+                    <td>International Symposium of ISKO-Maghreb Society on Digital Sciences: Impacts and Challenges on Knowledge Organization</td>
+                    <td>Tunis, Tunisia</td>
+                    <td>N/A</td>
+                    <td style="padding-left: 20px;">Nov 6, 2025</td>
+                    <td style="padding-right: 20px;">knowledge organization and digital sciences, collaborative knowledge organization systems (kos), ai assisted virtual libraries, knowledge organization visualization</td>
+                </tr>
+            
+            </tbody>
+        </table>
+        
+        <h2 id="theme_non-monotonic_reasoning">Non-Monotonic Reasoning</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 10%;">Acronym</th>
+                    <th style="width: 30%;">Name</th>
+                    <th style="width: 8%;">Location</th>
+                    <th style="width: 8%;">Submission Deadline</th>
+                    <th style="width: 8%;">Start Date</th>
+                    <th style="width: 100%;">Topics</th>
+                </tr>
+            </thead>
+            <tbody>
+        
+                <tr>
+                    <td><a href="https://easychair.org/cfp/LNGAI2025"  target="_blank">LNGAI2025</a></td>
+                    <td>Fifth International Workshop on Logics for New-Generation Artificial Intelligence</td>
+                    <td>Belval, Luxembourg</td>
+                    <td>Sep 23, 2025</td>
+                    <td style="padding-left: 20px;">Dec 1, 2025</td>
+                    <td style="padding-right: 20px;">artificial intelligence reasoning, neuro symbolic ai, knowledge representation and reasoning, legal informatics and ai ethics</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/HC-AIxIA-HYDRA-2025"  target="_blank">HC@AIxIA + HYDRA 2025</a></td>
+                    <td>nternational Joint Workshop of Artificial Intelligence for Healthcare (HC@AIxIA) and HYbrid Models for Coupling Deductive and Inductive ReAsoning (HYDRA)</td>
+                    <td>Bologna, Italy</td>
+                    <td>Sep 12, 2025</td>
+                    <td style="padding-left: 20px;">Oct 25, 2025</td>
+                    <td style="padding-right: 20px;">artificial intelligence, medicine, hybrid models, multidisciplinary</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/akr3_2025"  target="_blank">AKR³ 2025</a></td>
+                    <td>2nd International Workshop on Actionable Knowledge Representation and Reasoning for Robots</td>
+                    <td>Nara, Japan</td>
+                    <td>Aug 2, 2025</td>
+                    <td style="padding-left: 20px;">Nov 2, 2025</td>
+                    <td style="padding-right: 20px;">knowledge representation for robotics, knowledge enhanced robotics, multi modal reasoning for robotics, knowledge grounding</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/genphyair25"  target="_blank">GenPhyAIR-25</a></td>
+                    <td>Generative Physical AI for Robotics - Workshop CASE 2025</td>
+                    <td>Los Angeles, CA, United States</td>
+                    <td>Jul 20, 2025</td>
+                    <td style="padding-left: 20px;">N/A</td>
+                    <td style="padding-right: 20px;">generative ai, reasoning, reinforcement learning</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/NMR2025"  target="_blank">NMR 2025</a></td>
+                    <td>The 23rd International Workshop on Nonmonotonic Reasoning</td>
+                    <td>Melbourne, Australia</td>
+                    <td>Jul 17, 2025</td>
+                    <td style="padding-left: 20px;">Nov 11, 2025</td>
+                    <td style="padding-right: 20px;">N/A</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/FCR2025"  target="_blank">FCR 2025</a></td>
+                    <td>11th Workshop on Formal and Cognitive Reasoning</td>
+                    <td>Potsdam, Germany</td>
+                    <td>Jul 4, 2025</td>
+                    <td style="padding-left: 20px;">Aug 17, 2025</td>
+                    <td style="padding-right: 20px;">cognition, knowledge representation</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/OHAAI-Vol5"  target="_blank">OHAAI-Vol.5</a></td>
+                    <td>Online Handbook of Argumentation for AI Volume 5</td>
+                    <td></td>
+                    <td>N/A</td>
+                    <td style="padding-left: 20px;">N/A</td>
+                    <td style="padding-right: 20px;">argumentation, natural language processing, logic, reasoning</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/NeLaMKRR2025"  target="_blank">NeLaMKRR 2025</a></td>
+                    <td>Second International Workshop on Next-Generation Language Models for Knowledge Representation and Reasoning</td>
+                    <td>Melbourne, Australia</td>
+                    <td>N/A</td>
+                    <td style="padding-left: 20px;">Nov 11, 2025</td>
+                    <td style="padding-right: 20px;">N/A</td>
+                </tr>
+            
+            </tbody>
+        </table>
+        
+        <h2 id="theme_robotics">Robotics</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 10%;">Acronym</th>
+                    <th style="width: 30%;">Name</th>
+                    <th style="width: 8%;">Location</th>
+                    <th style="width: 8%;">Submission Deadline</th>
+                    <th style="width: 8%;">Start Date</th>
+                    <th style="width: 100%;">Topics</th>
+                </tr>
+            </thead>
+            <tbody>
+        
+                <tr>
+                    <td><a href="https://easychair.org/cfp/ICCECE-2026"  target="_blank">ICCECE 2026</a></td>
+                    <td>International Conference on Computer, Electrical & Communication Engineering</td>
+                    <td>Kolkata, India</td>
+                    <td>Dec 20, 2025</td>
+                    <td style="padding-left: 20px;">Feb 6, 2026</td>
+                    <td style="padding-right: 20px;">cloud computing, robotics, signal processing, bio technology</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/EECR2026"  target="_blank">EECR 2026</a></td>
+                    <td>2026 12th International Conference on Electrical Engineering, Control and Robotics</td>
+                    <td>Taicang, China</td>
+                    <td>Dec 1, 2025</td>
+                    <td style="padding-left: 20px;">Apr 17, 2026</td>
+                    <td style="padding-right: 20px;">electrical engineering, control theory, robotics, power market</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/ants2026"  target="_blank">ANTS 2026</a></td>
+                    <td>15th International Conference on Swarm Intelligence</td>
+                    <td>Darmstadt, Germany</td>
+                    <td>Nov 10, 2025</td>
+                    <td style="padding-left: 20px;">Jun 8, 2026</td>
+                    <td style="padding-right: 20px;">swarm intelligence, robotics, optimization, network science</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/ICCAE2026"  target="_blank">ICCAE 2026</a></td>
+                    <td>2026 18th International Conference on Computer and Automation Engineering</td>
+                    <td>Sydney, Australia</td>
+                    <td>Oct 20, 2025</td>
+                    <td style="padding-left: 20px;">Mar 12, 2026</td>
+                    <td style="padding-right: 20px;">communication systems, robotics, decision making, information retrieval</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/irim3d_2025"  target="_blank">IRIM-3D 2025</a></td>
+                    <td>7th Italian Conference on Robotics and Intelligent Machines</td>
+                    <td>Rome, Italy</td>
+                    <td>Sep 23, 2025</td>
+                    <td style="padding-left: 20px;">Oct 17, 2025</td>
+                    <td style="padding-right: 20px;">robotics, intelligent machines, artificial intelligence, automation</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/AIS_2025"  target="_blank">AIS 2025</a></td>
+                    <td>20th International Symposium on Applied Informatics and Related Areas</td>
+                    <td>Székesfehérvár, Hungary</td>
+                    <td>Sep 21, 2025</td>
+                    <td style="padding-left: 20px;">Nov 13, 2025</td>
+                    <td style="padding-right: 20px;">computer systems and information society, robotics and artificial intelligence, geodesy and geoinformatics, enterprise and economics</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/ICARA2026"  target="_blank">ICARA 2026</a></td>
+                    <td>The 12th International Conference on Automation, Robotics and Applications</td>
+                    <td>Istanbul, Turkey</td>
+                    <td>Sep 10, 2025</td>
+                    <td style="padding-left: 20px;">Feb 5, 2026</td>
+                    <td style="padding-right: 20px;">artificial intelligence, genetic algorithm, path planning, virtual systems</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/NAIM2025"  target="_blank">NAIM 2025</a></td>
+                    <td>Nordic AI Meet 2025</td>
+                    <td>Norrköping, Sweden</td>
+                    <td>Sep 1, 2025</td>
+                    <td style="padding-left: 20px;">Nov 26, 2025</td>
+                    <td style="padding-right: 20px;">artificial intelligence, machine learning, robotics, nlp and other related topics</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/csei25"  target="_blank">CSEI25</a></td>
+                    <td>VII Congress of Computer, Electronic, and Industrial Science</td>
+                    <td>Ambato, Ecuador</td>
+                    <td>Aug 31, 2025</td>
+                    <td style="padding-left: 20px;">Nov 10, 2025</td>
+                    <td style="padding-right: 20px;">digital technologies and informatics, intelligent and connected systems, virtual reality and immersive technologies, industrial automation robotics and mechatronics</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/OCEANTECH25"  target="_blank">OCEANTECH-25</a></td>
+                    <td>Marine Robotics & Science Workshop</td>
+                    <td>Hangzhou, China</td>
+                    <td>Aug 20, 2025</td>
+                    <td style="padding-left: 20px;">N/A</td>
+                    <td style="padding-right: 20px;">underwater localization, biologging and target localization, multivehicle coordination, bio inspired underwater robots</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/ICoIAS2025"  target="_blank">ICoIAS' 2025</a></td>
+                    <td>2025 the 7th International Conference on Intelligent Autonomous Systems</td>
+                    <td>Osaka, Japan</td>
+                    <td>Aug 15, 2025</td>
+                    <td style="padding-left: 20px;">Dec 26, 2025</td>
+                    <td style="padding-right: 20px;">motion planning, deep learning, fuzzy, intelligent robotics</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/icamerob2025"  target="_blank">ICAMEROB 2025</a></td>
+                    <td>7th International Conference on Automation, Mechatronics, and Robotics</td>
+                    <td>Malay, Philippines</td>
+                    <td>Aug 8, 2025</td>
+                    <td style="padding-left: 20px;">Sep 24, 2025</td>
+                    <td style="padding-right: 20px;">automation engineering and information technology, mechatronics engineering and technology, robotics engineering and technology, industry 4.0 innovations and applications</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/icaars2025"  target="_blank">icaars2025</a></td>
+                    <td>International Conference on Advancements in Automation, Robotics and Sensing</td>
+                    <td>Coimbatore, India</td>
+                    <td>Aug 8, 2025</td>
+                    <td style="padding-left: 20px;">Dec 12, 2025</td>
+                    <td style="padding-right: 20px;">automation, robotics, sensors</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/ICMRE2026"  target="_blank">ICMRE 2026</a></td>
+                    <td>2026 the 12th International Conference on Mechatronics and Robotics Engineering</td>
+                    <td>Oldenburg,, Germany</td>
+                    <td>Aug 5, 2025</td>
+                    <td style="padding-left: 20px;">Feb 5, 2026</td>
+                    <td style="padding-right: 20px;">robotics, control systems, sensing technology, intelligent mechatronics</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/HEAR2025"  target="_blank">HEAR2025</a></td>
+                    <td>Workshop on "Enhancing Human Engagement in Social Assistive Robotics: Exploring Interaction, Cognitive Load, and Adaptive Support"</td>
+                    <td>Hangzhou, China</td>
+                    <td>Aug 3, 2025</td>
+                    <td style="padding-left: 20px;">Oct 20, 2025</td>
+                    <td style="padding-right: 20px;">human robot interaction</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/akr3_2025"  target="_blank">AKR³ 2025</a></td>
+                    <td>2nd International Workshop on Actionable Knowledge Representation and Reasoning for Robots</td>
+                    <td>Nara, Japan</td>
+                    <td>Aug 2, 2025</td>
+                    <td style="padding-left: 20px;">Nov 2, 2025</td>
+                    <td style="padding-right: 20px;">knowledge representation for robotics, knowledge enhanced robotics, multi modal reasoning for robotics, knowledge grounding</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/RAAI2025"  target="_blank">RAAI 2025</a></td>
+                    <td>2025 5th International Conference on Robotics, Automation, and Artificial Intelligence</td>
+                    <td>Singapore, Singapore</td>
+                    <td>Aug 1, 2025</td>
+                    <td style="padding-left: 20px;">Dec 18, 2025</td>
+                    <td style="padding-right: 20px;">robotics, control systems, artificial intelligence, signal processing</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/EduRobotX2025"  target="_blank">EduRobotX 2025</a></td>
+                    <td>Educational Robots and Robotics 2025</td>
+                    <td>Durham, UK</td>
+                    <td>Jul 31, 2025</td>
+                    <td style="padding-left: 20px;">Sep 15, 2025</td>
+                    <td style="padding-right: 20px;">educational robotics, social robots, humanoid robots, educational robots</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/RfH2025"  target="_blank">RfH 2025</a></td>
+                    <td>Robots for Humans: Empowerment Through Co-Creative and Social Robots!</td>
+                    <td>Eindhoven University of Technology, Netherlands</td>
+                    <td>Jul 25, 2025</td>
+                    <td style="padding-left: 20px;">Aug 29, 2025</td>
+                    <td style="padding-right: 20px;">human robot interaction, empowerment, design, social robotics</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/CRC2025"  target="_blank">CRC 2025</a></td>
+                    <td>2025 10th International Conference on Control, Robotics and Cybernetics</td>
+                    <td>Shenzhen, China</td>
+                    <td>Jul 25, 2025</td>
+                    <td style="padding-left: 20px;">Dec 12, 2025</td>
+                    <td style="padding-right: 20px;">intelligent agents, signal processing, decision analysis, energy systems</td>
+                </tr>
+            
+            </tbody>
+        </table>
+        
+        <h2 id="theme_programming">Programming</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 10%;">Acronym</th>
+                    <th style="width: 30%;">Name</th>
+                    <th style="width: 8%;">Location</th>
+                    <th style="width: 8%;">Submission Deadline</th>
+                    <th style="width: 8%;">Start Date</th>
+                    <th style="width: 100%;">Topics</th>
+                </tr>
+            </thead>
+            <tbody>
+        
+                <tr>
+                    <td><a href="https://easychair.org/cfp/CompilerTech-2025"  target="_blank">CompilerTech-2025</a></td>
+                    <td>Innovations In Compiler Technology Workshop</td>
+                    <td>Bangalore, India</td>
+                    <td>Jul 15, 2025</td>
+                    <td style="padding-left: 20px;">Sep 28, 2025</td>
+                    <td style="padding-right: 20px;">compiler, programming languages, verification, security</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/SYNASC2025"  target="_blank">SYNASC 2025</a></td>
+                    <td>27th International Symposium on Symbolic and Numeric Algorithms for Scientific Computing</td>
+                    <td>Timisoara, Romania</td>
+                    <td>Jul 6, 2025</td>
+                    <td style="padding-left: 20px;">Sep 22, 2025</td>
+                    <td style="padding-right: 20px;">distributed computing, symbolic and numerical computing, logic and programming, artificial intelligence</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/PEG2025"  target="_blank">PEG 2025</a></td>
+                    <td>3rd Prolog Education Workshop 2025</td>
+                    <td>Rende, Italy</td>
+                    <td>Jun 29, 2025</td>
+                    <td style="padding-left: 20px;">Sep 12, 2025</td>
+                    <td style="padding-right: 20px;">teaching prolog and logic programming, teaching other subjects through prolog, teaching materials and tools, teaching experiences including statistical evaluations</td>
+                </tr>
+            
+                <tr>
+                    <td><a href="https://easychair.org/cfp/ICLP25"  target="_blank">ICLP25</a></td>
+                    <td>The 41st International Conference on Logic Programming</td>
+                    <td>Rende, Italy</td>
+                    <td>N/A</td>
+                    <td style="padding-left: 20px;">Sep 12, 2025</td>
+                    <td style="padding-right: 20px;">N/A</td>
+                </tr>
+            
+            </tbody>
+        </table>
+        
+        <div class="footer">
+            <p>© 2025 CJR Track. All rights reserved.</p>
+            <p class="cc-license">This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</p>
+        </div>
+    </body>
+    </html>
+    
