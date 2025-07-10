@@ -530,6 +530,10 @@ class SiteBuilder:
 #         template = template.replace("<!-- PRES_STATS -->", self.pres_gen.generate_stats_html(pres_stats))
         template = template.replace("<!-- PRES_SCRIPTS -->", self.pres_gen.generate_tab_script())
 
+        # Generate update
+        current_date = datetime.now().strftime("%B %d, %Y")
+        template = template.replace("<!-- LAST_UPDATED -->", current_date)
+
         # Write output file
         output_path = os.path.join(self.config['OUTPUT_DIR'], "index.html")
         with open(output_path, "w", encoding="utf-8") as f:
