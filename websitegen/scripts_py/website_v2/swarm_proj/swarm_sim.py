@@ -10,7 +10,7 @@ from sklearn.cluster import DBSCAN  # For sub-swarm detection
 # Configuration
 NUM_AGENTS = 30
 WORLD_SIZE = 50
-NEIGHBOR_RADIUS = 12
+NEIGHBOR_RADIUS = 10
 ENERGY_DECAY = 0.05  # Energy lost per step
 DEBUG = True
 METRICS = True
