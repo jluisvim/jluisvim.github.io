@@ -30,9 +30,9 @@ FEEDS = {
     "The Guardian (MX)": "https://www.theguardian.com/world/mexico/rss",
     "SCMP": "https://www.scmp.com/rss/5/feed/",
     "Al Jazeera": "https://www.aljazeera.com/xml/rss/all.xml",
-#     "Politico": "http://www.politico.com/rss/politicopicks.xml",
-#     "Reuters Top": "http://feeds.reuters.com/reuters/topNews",  # Main headlines
-#     "Reuters World": "http://feeds.reuters.com/Reuters/worldNews",  # World-specific
+    "HongKong press": "https://hongkongfp.com/feed/",
+    "FR24": "https://www.france24.com/en/rss",
+    "Moscow": "https://www.themoscowtimes.com/rss/news",
 }
 
 # Timezone normalization
