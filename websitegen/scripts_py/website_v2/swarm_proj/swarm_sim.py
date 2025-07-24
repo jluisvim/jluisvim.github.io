@@ -34,25 +34,6 @@ for i in range(NUM_AGENTS):
     prolog.assertz(f"energia({i}, 100.0)")  # Starting energy
     positions_history[i].append((x, y))
 
-# --- Energy Rules in Prolog (add to agents.pl) ---
-"""
-% Energy decays each step
-decay_energy(AgentID, Decay) :-
-    energia(AgentID, E),
-    NewE is E - Decay,
-    retract(energia(AgentID, _)),
-    assertz(energia(AgentID, NewE)).
-
-% Gain energy when near food (example rule)
-gain_energy(AgentID, Amount) :-
-    posicion(AgentID, X, Y),
-    comida(X, Y),  % Hypothetical food fact
-    energia(AgentID, E),
-    NewE is E + Amount,
-    retract(energia(AgentID, _)),
-    assertz(energia(AgentID, NewE)).
-"""
-
 def calculate_structural_resilience(positions, neighbor_radius):
     """Measure connectivity and fragmentation resistance using graph theory"""
     positions = np.array(positions)
