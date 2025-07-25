@@ -10,10 +10,17 @@ from sklearn.cluster import DBSCAN  # For sub-swarm detection
 # Configuration
 NUM_AGENTS = 30
 WORLD_SIZE = 50
-NEIGHBOR_RADIUS = 10
+NEIGHBOR_RADIUS = 15
 ENERGY_DECAY = 0.05  # Energy lost per step
 DEBUG = True
 METRICS = True
+
+# Obstacles definition
+OBSTACLES = [
+        (25, 25, 6), # (x, y, radius)
+        (10, 40, 4),
+        (40, 10, 3)
+        ]
 
 # Initialize Prolog
 prolog = Prolog()
@@ -22,6 +29,10 @@ prolog.consult("agents.pl")
 # Agent setup
 agent_colors = plt.cm.tab20(np.linspace(0, 1, NUM_AGENTS))
 positions_history = defaultdict(list)
+
+# After agent setup, before animation
+for idx, (ox, oy, r) in enumerate(OBSTACLES):
+    prolog.assertz(f"obstaculo({idx}, {ox}, {oy}, {r})")
 
 # Initialize agents with energy
 for i in range(NUM_AGENTS):
@@ -221,6 +232,11 @@ def update(frame):
                   f"(S={resilience['structural']:.2f}, "
                   f"E={resilience['energy']:.2f}, "
                   f"A={resilience['adaptive']:.2f})")
+
+    # Inside update(), after plt.clf() and before scatter
+    for ox, oy, r in OBSTACLES:
+        circle = plt.Circle((ox, oy), r, color='gray', alpha=0.3, zorder=0)
+        plt.gca().add_patch(circle)
 
     # --- Visualization ---
     if x:

@@ -2,6 +2,21 @@
 :- dynamic posicion/3.
 :- dynamic velocidad/3.
 :- dynamic vecino/3.
+:- dynamic obstable/4.
+
+% Obstacle avoidance
+avoid_obstacle(AgentID, RepelX, RepelY) :-
+    posicion(AgentID, AX, AY),
+    obstaculo(_, OX, OY, OR),
+    Dist is sqrt((OX - AX)^2 + (OY - AY)^2),
+    SafeDistance is OR + 5,  % Keep 5 units away
+    Dist < SafeDistance,
+    RepelFactor is (SafeDistance - Dist) * 0.1,  % Stronger when closer
+    RepelX is (AX - OX) * RepelFactor,
+    RepelY is (AY - OY) * RepelFactor,
+    !.  % Use first obstacle (or sum all with findall)
+
+avoid_obstacle(_, 0, 0).  % No obstacle → no repulsion
 
 % Energy decays each step
 decay_energy(AgentID, Decay) :-
@@ -61,9 +76,16 @@ actualizar_direccion(AgentID, NewVX, NewVY) :-
         NewSepVY is SumSepVY * 0.05
     ;   NewSepVX = 0, NewSepVY = 0),
 
-    % Combine rules (weighted sum)
-    NewVX is NewAlignVX + NewCohesionVX + NewSepVX,
-    NewVY is NewAlignVY + NewCohesionVY + NewSepVY.
+%     % Combine rules (weighted sum)
+%     NewVX is NewAlignVX + NewCohesionVX + NewSepVX,
+%     NewVY is NewAlignVY + NewCohesionVY + NewSepVY.
+
+    % Obstacle avoidance
+    avoid_obstacle(AgentID, ObsVX, ObsVY),
+
+    % Combine all components
+    NewVX is NewAlignVX + NewCohesionVX + NewSepVX + ObsVX,
+    NewVY is NewAlignVY + NewCohesionVY + NewSepVY + ObsVY.
 
 % Helper predicates
 sum_velocidades([], 0, 0).
