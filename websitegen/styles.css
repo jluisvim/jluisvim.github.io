@@ -904,6 +904,7 @@ main section h2::before {
     box-shadow: 0 1px 3px rgba(0, 68, 153, 0.1);
 }
 
+
 /* ===== Responsive Design ===== */
 @media (max-width: 768px) {
     .container {

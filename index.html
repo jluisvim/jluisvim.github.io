@@ -20,11 +20,8 @@
                     <h1 class="profile-name">José-Luis<br>Vilchis Medina</h1>
                     <p class="profile-affiliation">Researcher in Computer Science</p>
                     <p class="profile-affiliation">ENSTA-IPP, Lab-STICC, Robex team</p>
-<!--                     <p class="profile-affiliation"><i class="fa-solid -->
-<!--                               fa-envelope-circle-check"></i>: jose.vilchis@ensta.fr</p> -->
-<!--                     <p class="profile-affiliation">Ph.D. in Computer Science</p> -->
-<!--                     <p class="profile-affiliation">M.Sc. in Electrical and -->
-<!--                     Automation Eng.</p> -->
+
+
                     <div class="social-icons">
                         <a href="https://www.researchgate.net/profile/Jose-Luis-Vilchis-Medina-2" 
                            target="_blank"><i class="ai ai-researchgate"></i></a>
@@ -33,10 +30,20 @@
                         <a href="https://scholar.google.com/citations?user=CbKFbtkAAAAJ&hl=en" 
                            target="_blank"><i class="ai ai-google-scholar"></i></a>
                     </div>
+
+                    <p class="profile-affiliation"><i class="fa-solid
+                              fa-envelope-circle-check"></i>:
+                          <em>
+                          <strong>jose</strong>[dot]<strong>vilchis</strong>[at]<strong>ensta</strong>[dot]<strong>fr</strong>
+                          </em>
+                          </p>
+                    <p class="profile-affiliation"><em>(Replace [dot] with .
+                        and [at] with @)</em></p>
+                    
+
                 </div>
                 <nav class="sidebar-nav">
                     <ul>
-<!--                         <li><a href="#academic-background" class="active"><i class="fas fa-university"></i> Academic Background</a></li> -->
                         <li><a href="#academic-background" class="active">
                                 <i class="fas fa-graduation-cap"></i>
                                 About me</a></li>
@@ -53,6 +60,7 @@
                     
                     
                 </nav>
+
 
                 <!-- New/Updates Section -->
                 
@@ -1060,6 +1068,7 @@ My approach to selecting and using free tools is shaped by a focus on accessibil
 
         </main>
     </div>
+
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const sections = document.querySelectorAll(".main-content section");
@@ -1124,6 +1133,14 @@ My approach to selecting and using free tools is shaped by a focus on accessibil
             showSection("academic-background"); // Sección por defecto
         }
     });
+</script>
+<script>
+  const email = "jose.vilchis@ensta.fr";
+  document.getElementById("contact-link").innerHTML = `
+    <a href="mailto:${email}">
+      <i class="fas fa-envelope"></i> Contact
+    </a>
+  `;
 </script>
 </body>
 </html>
