@@ -58,7 +58,7 @@
                 
 
                <div class="copyright">
-                   <p>Last updated: July 25, 2025</p>
+                   <p>Last updated: July 29, 2025</p>
                 <p>
                     <a href="https://creativecommons.org/licenses/by/4.0/"  
                        target="_blank" rel="license noopener noreferrer">
@@ -917,14 +917,6 @@ l'Apprentissage pour la conduite de systèmes (JFPDA 2017)</div>
     <a href="https://en.wikipedia.org/wiki/Beamer_(LaTeX)"  target="_blank">Beamer</a>,  
     a powerful LaTeX class that enables the creation of professional slides with full support for mathematical content.
 
-<!--                            <em>If you would like to be part of the Vim world, these tutorials can be a great help, in my opinion they -->
-<!--                             are very educational:</em>  -->
-<!--                             <a href="https://www.youtube.com/c/ThePrimeagen/videos" -->
-<!--                                target="_blank">ThePrimeagen</a>,  -->
-<!--                             <a href="https://www.youtube.com/c/LukeSmithxyz/featured" -->
-<!--                                target="_blank">LukeSmith</a>. -->
-<!--                             </p> -->
-<!--                             <p> -->
 For spellchecking and language support, the following tools are highly recommended:  
 <!--     <a href="https://www.deepl.com/translator"  target="_blank">DeepL</a>,   -->
     <a href="https://www.merriam-webster.com/"  target="_blank">Merriam-Webster</a>, and  
@@ -1063,68 +1055,75 @@ My approach to selecting and using free tools is shaped by a focus on accessibil
                         </td>
                     </tr>
 
-<!--                     <tr> -->
-<!--                         <td class="text-cell"> -->
-<!--                             <h3>&#x1F5FA <b>Concerning languages...</b></h3> -->
-<!--                             <p> -->
-<!--                             I have always had a great interest for the -->
-<!--                             variations of spoken languages among the different -->
-<!--                             countries around the world. -->
-<!--                             While my mother tongue is Español, however, I -->
-<!--                             consider myself fluent in English and also in -->
-<!--                             Français. -->
-<!--                             </p> -->
-<!--  -->
-<!--                             <p> -->
-<!--                             In recent years I have been interested in learning -->
-<!--                             Português (basic notions), and I'm currently -->
-<!--                             learning Pусский. -->
-<!--                             </p> -->
-<!--                         </td> -->
-<!--                         <td class="image-cell"> -->
-<!--                             <img src="https://media.giphy.com/media/3o6Ztjglr8MMPCxVxC/giphy.gif" class="image-cell-format"> -->
-<!--                             </img> -->
-<!--                         </td> -->
-<!--                     </tr> -->
                 </table>
             </section>
 
         </main>
     </div>
-    <script>
-        // Script to handle section links
-        document.addEventListener("DOMContentLoaded", function() {
-            var links = document.querySelectorAll('.sidebar-nav a');
-            links.forEach(function(link) {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    var targetId = this.getAttribute('href').substring(1);
-                    var targetSection = document.getElementById(targetId);
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll(".main-content section");
+        const navLinks = document.querySelectorAll(".sidebar-nav a");
 
-                    // Remove active class from all links
-                    links.forEach(function(l) {
-                        l.classList.remove('active');
-                    });
-
-                    // Add active class to clicked link
-                    this.classList.add('active');
-
-                    // Scroll to the target section
-                    targetSection.scrollIntoView({ behavior: 'smooth' });
-                });
+        // Función para mostrar una sección específica
+        function showSection(targetId) {
+            // Ocultar todas las secciones
+            sections.forEach(section => {
+                section.classList.remove("active");
             });
 
-            // Set the first section as active by default
-            var firstLink = document.querySelector('.sidebar-nav a');
-            if (firstLink) {
-                firstLink.classList.add('active');
-                var firstSectionId = firstLink.getAttribute('href').substring(1);
-                var firstSection = document.getElementById(firstSectionId);
-                if (firstSection) {
-                    firstSection.scrollIntoView();
+            // Mostrar solo la sección objetivo
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.classList.add("active");
+            }
+
+            // Actualizar enlaces del menú
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === `#${targetId}`) {
+                    link.classList.add("active");
                 }
+            });
+
+            // Opcional: desplazar suavemente
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+
+            // Actualizar URL sin recargar
+            history.pushState(null, null, `#${targetId}`);
+        }
+
+        // Manejar clics en los enlaces del menú
+        navLinks.forEach(link => {
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute("href").substring(1);
+                showSection(targetId);
+            });
+        });
+
+        // Soporte para botón "atrás" del navegador
+        window.addEventListener("hashchange", function () {
+            let hash = window.location.hash.substring(1);
+            if (hash) {
+                showSection(hash);
             }
         });
-    </script>
+
+        // Carga inicial: mostrar sección desde URL o por defecto
+        if (window.location.hash) {
+            const hash = window.location.hash.substring(1);
+            if (document.getElementById(hash)) {
+                showSection(hash);
+            } else {
+                showSection("academic-background");
+            }
+        } else {
+            showSection("academic-background"); // Sección por defecto
+        }
+    });
+</script>
 </body>
 </html>

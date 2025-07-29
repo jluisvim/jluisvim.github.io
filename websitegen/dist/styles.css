@@ -867,8 +867,42 @@ main section h2::before {
     border-radius: 2px;
 }
 
+/* ===== TRANSICIÓN ENTRE SECCIONES: OPACIDAD ===== */
 
+/* Contenedor principal de secciones */
+.main-content {
+    position: relative;
+}
 
+/* Todas las secciones empiezan opacas */
+.main-content section {
+    opacity: 0.4;
+    transition: opacity 0.4s ease;
+    pointer-events: none; /* Evita interacción con secciones inactivas */
+    transform: scale(0.99); /* Evita que el borde inferior se vea débil */
+}
+
+/* Sección activa: completamente visible e interactuable */
+.main-content section.active {
+    opacity: 1;
+    pointer-events: auto;
+    border-bottom-color: #3498db !important; /* Refuerza el borde inferior */
+}
+
+/* Refuerza el título de la sección activa */
+.main-content section.active h2 {
+    color: #2c3e50;
+}
+
+/* ===== RESALTAR ENLACE ACTIVO EN BARRA LATERAL ===== */
+.sidebar-nav a.active {
+    background-color: #e0f2ff;
+    color: #004499;
+    font-weight: 500;
+    border-radius: 6px;
+    padding: 0.3rem 1rem;
+    box-shadow: 0 1px 3px rgba(0, 68, 153, 0.1);
+}
 
 /* ===== Responsive Design ===== */
 @media (max-width: 768px) {
