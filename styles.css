@@ -905,6 +905,35 @@ main section h2::before {
     box-shadow: 0 1px 3px rgba(0, 68, 153, 0.1);
 }
 
+/* ===== Project Status Indicators ===== */
+.status-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.status-indicator.active {
+    background-color: #43A047; /* Verde esmeralda: activo y mantenido */
+    box-shadow: 0 0 4px rgba(67, 160, 71, 0.4);
+}
+
+.status-indicator.inactive {
+    background-color: #E53935; /* Rojo: completado o inactivo */
+    box-shadow: 0 0 4px rgba(229, 57, 53, 0.4);
+}
+
+.status-label {
+    margin-left: 6px;
+    font-size: 0.8rem;
+    color: #666;
+    font-weight: 400;
+    font-style: italic;
+    vertical-align: middle;
+}
+
 
 /* ===== Responsive Design ===== */
 @media (max-width: 768px) {
