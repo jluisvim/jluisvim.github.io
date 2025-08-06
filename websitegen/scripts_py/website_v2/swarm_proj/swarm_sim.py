@@ -8,7 +8,7 @@ from collections import defaultdict
 from sklearn.cluster import DBSCAN  # For sub-swarm detection
 
 # Configuration
-NUM_AGENTS = 30
+NUM_AGENTS = 10
 WORLD_SIZE = 50
 NEIGHBOR_RADIUS = 15
 ENERGY_DECAY = 0.05  # Energy lost per step
