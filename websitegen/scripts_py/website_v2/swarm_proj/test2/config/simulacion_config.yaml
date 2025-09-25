@@ -1,0 +1,46 @@
+# Configuración de la simulación
+parametros_generales:
+  pasos_simulacion: 100
+  delay_paso: 0.5
+  modo_interactivo: false
+  visualizacion: true
+  guardar_metricas: true
+  nivel_log: "INFO"
+
+# Parámetros de emergencia
+emergencias:
+  probabilidad_emergencia: 0.2
+  intensidad_maxima_emergencia: 0.8
+  duracion_minima_emergencia: 3
+  duracion_maxima_emergencia: 10
+
+# Parámetros de amenazas
+amenazas:
+  probabilidad_amenaza: 0.3
+  radio_propagacion_amenaza: 2
+  incremento_amenaza_temporal: 0.1
+  decremento_amenaza_natural: 0.05
+
+# Configuración de agentes
+agentes:
+  salud_inicial: 1.0
+  salud_minima: 0.1
+  recuperacion_salud: 0.1
+  deterioro_salud_emergencia: 0.2
+  experiencia_inicial: 5
+  aprendizaje_por_paso: 0.1
+
+# Configuración de comunicación
+comunicacion:
+  perdida_senal_probabilidad: 0.1
+  delay_comunicacion: 0.2
+  max_intentos_comunicacion: 3
+
+# Configuración de visualización
+visualizacion:
+  mostrar_posiciones: true
+  mostrar_trayectorias: true
+  mostrar_areas_influencia: true
+  mostrar_niveles_amenaza: true
+  actualizar_en_tiempo_real: true
+  tamano_celda: 40

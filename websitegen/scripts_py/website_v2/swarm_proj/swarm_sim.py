@@ -17,7 +17,7 @@ METRICS = True
 
 # Obstacles definition
 OBSTACLES = [
-        (25, 25, 6), # (x, y, radius)
+        (25, 25, 5), # (x, y, radius)
         (10, 40, 4),
         (40, 10, 3)
         ]

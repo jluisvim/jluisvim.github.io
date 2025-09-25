@@ -1,0 +1,31 @@
+simulacion:
+  ancho_mapa: 10
+  alto_mapa: 10
+  pasos_total: 20
+  delay_paso: 0.5
+  mostrar_mapa: true
+
+agentes:
+  - id: 1
+    perfil: guardian_perimetro
+    posicion: [0, 0]
+    
+  - id: 2
+    perfil: explorador_riesgo
+    posicion: [9, 0]
+    
+  - id: 3
+    perfil: coordinador
+    posicion: [5, 5]
+    
+  - id: 4
+    perfil: soporte_rapido
+    posicion: [0, 9]
+    
+  - id: 5
+    perfil: observador
+    posicion: [9, 9]
+
+amenazas:
+  probabilidad: 0.4
+  intensidad_maxima: 0.8
