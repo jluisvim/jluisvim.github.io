@@ -9,8 +9,8 @@ html {
 /*     font-family: 'Helvetica Neue', Arial, sans-serif; */
 /*     font-family: Verdana, Arial, Helvetica, sans-serif; */
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-/*     font-size: 14px; */
-    line-height: 1.6;
+    font-size: 16px;
+    line-height: 1.5;
     color: #333;
     background-color: #fff;
     scroll-behavior: auto;
