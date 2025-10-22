@@ -435,64 +435,84 @@ My approach to selecting and using free tools is shaped by a focus on accessibil
         const sections = document.querySelectorAll(".main-content section");
         const navLinks = document.querySelectorAll(".sidebar-nav a");
 
-        // Función para mostrar una sección específica
-        function showSection(targetId) {
-            // Ocultar todas las secciones
+        // Función para activar una sección con scroll
+        function activateSection(sectionId, scrollToSection = true) {
+            console.log("Activando sección:", sectionId);
+            
+            // Desactivar todas las secciones
             sections.forEach(section => {
                 section.classList.remove("active");
             });
-
-            // Mostrar solo la sección objetivo
-            const targetSection = document.getElementById(targetId);
+            
+            // Activar la sección seleccionada
+            const targetSection = document.getElementById(sectionId);
             if (targetSection) {
                 targetSection.classList.add("active");
+                
+                // Desplazamiento suave a la sección
+                if (scrollToSection) {
+                    setTimeout(() => {
+                        targetSection.scrollIntoView({ 
+                            behavior: 'smooth', 
+                            block: 'start' 
+                        });
+                    }, 100);
+                }
             }
-
-            // Actualizar enlaces del menú
+            
+            // Actualizar navegación
             navLinks.forEach(link => {
                 link.classList.remove("active");
-                if (link.getAttribute("href") === `#${targetId}`) {
+                if (link.getAttribute("href") === `#${sectionId}`) {
                     link.classList.add("active");
                 }
             });
-
-            // Opcional: desplazar suavemente
-            if (targetSection) {
-                targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
-            }
-
-            // Actualizar URL sin recargar
-            history.pushState(null, null, `#${targetId}`);
+            
+            // Actualizar URL
+            history.pushState(null, null, `#${sectionId}`);
         }
 
-        // Manejar clics en los enlaces del menú
+        // Configurar clics en el menú lateral
         navLinks.forEach(link => {
             link.addEventListener("click", function (e) {
                 e.preventDefault();
                 const targetId = this.getAttribute("href").substring(1);
-                showSection(targetId);
+                activateSection(targetId, true); // Con scroll
             });
         });
 
-        // Soporte para botón "atrás" del navegador
-        window.addEventListener("hashchange", function () {
-            let hash = window.location.hash.substring(1);
-            if (hash) {
-                showSection(hash);
+        // Configurar clics en las secciones
+        sections.forEach(section => {
+            // Hacer el título clickeable
+            const sectionHeader = section.querySelector('h2');
+            if (sectionHeader) {
+                sectionHeader.style.cursor = 'pointer';
+                sectionHeader.addEventListener('click', function() {
+                    activateSection(section.id, false); // Sin scroll (ya estamos ahí)
+                });
+            }
+            
+            // Hacer toda la sección clickeable
+            section.style.cursor = 'pointer';
+            section.addEventListener('click', function(e) {
+                // Solo activar si no se hizo clic en un enlace
+                if (!e.target.closest('a') && e.target.tagName !== 'A') {
+                    activateSection(section.id, false); // Sin scroll (ya estamos ahí)
+                }
+            });
+        });
+
+        // Manejar cambios en la URL (navegación con botones atrás/adelante)
+        window.addEventListener('popstate', function() {
+            const hash = window.location.hash.substring(1);
+            if (hash && document.getElementById(hash)) {
+                activateSection(hash, true);
             }
         });
 
-        // Carga inicial: mostrar sección desde URL o por defecto
-        if (window.location.hash) {
-            const hash = window.location.hash.substring(1);
-            if (document.getElementById(hash)) {
-                showSection(hash);
-            } else {
-                showSection("academic-background");
-            }
-        } else {
-            showSection("academic-background"); // Sección por defecto
-        }
+        // Inicializar
+        const initialSection = window.location.hash.substring(1) || 'academic-background';
+        activateSection(initialSection, true);
     });
 </script>
 <script>
