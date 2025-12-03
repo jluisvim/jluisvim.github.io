@@ -1,64 +1,70 @@
-/* ===== Minimalist CSS Reset ===== */
+/* ===== CSS RESET MINIMALISTA ===== */
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     animation: none !important;
     transition: none !important;
 }
 
-/* ===== Base Typography ===== */
-html {
-/*     font-family: 'Helvetica Neue', Arial, sans-serif; */
-/*     font-family: Verdana, Arial, Helvetica, sans-serif; */
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-    background-color: #fff;
-    scroll-behavior: auto;
+/* ===== TIPOGRAFÍA BASE ===== */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --text-color: #333;
+    --light-gray: #f5f5f5;
+    --medium-gray: #ddd;
+    --dark-gray: #666;
+    --red-dalton: #c62828;
+    --blue-dalton: #1565c0;
+    --green-dalton: #2e7d32;
+    --brown-dalton: #5d4037;
 }
 
-/* ===== Layout Structure ===== */
+html {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px; /* Reducido de 16px */
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: #fff;
+}
+
+/* ===== ESTRUCTURA PRINCIPAL ===== */
 .container {
     display: flex;
     max-width: 1100px;
     margin: 0 auto;
-/*     padding: 2rem 1.5rem; */
+    padding: 1rem;
+    gap: 2rem;
 }
 
-/* ===== Sidebar Styles ===== */
+/* ===== SIDEBAR ===== */
 .sidebar {
-    width: 250px;
-    padding-right: 2rem;
+    width: 220px;
+    padding-right: 1rem;
     position: sticky;
-    top: 2rem;
-    height: calc(100vh - 4rem);
-/*     display: flex; */
-/*     flex-direction: column; */
+    top: 1rem;
+    height: fit-content;
 }
 
 .sidebar-content {
-/*     display: flex; */
-/*     flex-direction: column; */
-/*      align-items: flex-start;  */
-    width: 100%; /* Ocupa todo el ancho del sidebar */
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alinea todo a la izquierda */
-    gap: 1rem; /* Espacio consistente entre elementos */
+    gap: 1.2rem;
 }
 
+/* Perfil */
 .profile {
-    text-align: center; /* Center the profile content */
-/*     margin-bottom: 0.5rem;  */
-    width: 100%; /* Ensure it takes full width */
+    text-align: center;
 }
 
 .profile-photo {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     overflow: hidden;
-    border: 1px solid #f0f0f0;
-    margin: 0 auto 1rem; /* Center the photo */
+    margin: 0 auto 0.8rem;
+    border: 1px solid var(--medium-gray);
 }
 
 .profile-photo img {
@@ -68,620 +74,315 @@ html {
 }
 
 .profile-name {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: #222;
+    margin-bottom: 0.3rem;
+    color: var(--primary-color);
 }
 
 .profile-affiliation {
     font-size: 0.8rem;
-    color: #666;
-    margin: 0.1rem;
+    color: var(--dark-gray);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+/* Iconos sociales */
+.social-icons {
+    margin: 0.8rem 0;
     text-align: center;
 }
 
-.social-icons {
-    margin-top: 0.6rem;
-    margin-bottom: 0.6rem;
-    text-align: center; /* Center the social icons */
-}
-
 .social-icons a {
-    margin: 0 0.5rem;
-    color: #333;
-    transition: color 0.2s ease;
-    font-size: 1.4rem; /*Icon size*/
+    margin: 0 0.4rem;
+    color: var(--text-color);
+    font-size: 1.2rem;
 }
 
 .social-icons a:hover {
-    color: #004499;
+    color: var(--secondary-color);
 }
 
-/* .sidebar-nav { */
-/*     width: var(--profile-affiliation, 200px); */
-/*     min-width: inherit; */
-/*     max-width: inherit; */
-/* } */
-
+/* Navegación */
 .sidebar-nav ul {
     list-style: none;
     padding: 0;
-    margin: 0; 
 }
 
 .sidebar-nav li {
-    margin-bottom: 0.3rem; /* Reduced margin between items */
+    margin-bottom: 0.2rem;
 }
 
 .sidebar-nav a {
-    color: #333;
-    text-decoration: none;
-    transition: color 0.2s ease;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.3rem 1rem;
-    border-radius: 4px;
-    font-size: 0.8rem; /* Reduced font size */
+    padding: 0.5rem 0.7rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
 }
 
-/* .sidebar-nav a:hover, */
-/* .sidebar-nav a.active { */
-/*     background-color: #f0f0f0; */
-/*     color: #004499; */
-/* } */
+.sidebar-nav a:hover {
+    background-color: #e0f2ff;
+    color: var(--secondary-color);
+}
+
+/* Highlight para sección activa en scroll */
+.sidebar-nav a.active {
+    background-color: #e0f2ff;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
 
 .sidebar-nav a i {
-    font-size: 1rem;
-}
-
-
-/* ===== Main Content Styles ===== */
-.main-content {
-    flex: 1;
-}
-
-.main-content section {
-    margin-bottom: 1rem; 
-     padding-bottom: 0.5rem;
-    border-bottom: 1px solid #f5f5f5; /* Línea casi invisible */
-}
-
-.main-content ul {
-    margin-bottom: 1rem; 
-    padding: 0 1rem;
-    font-size: 0.85rem;
-}
-
-.main-content li {
-    margin: 0rem; 
-    text-align: justify;
-    text-justify: inter-word;
-}
-
-/* Elimina el borde de la última sección */
-.main-content section:last-child {
-    border-bottom: none;
-}
-
-.main-content h2 {
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-bottom: 0.7rem;
-    color: #222;
-}
-
-.main-content h3 {
     font-size: 0.9rem;
-    font-weight: 500;
-/*     margin: 1.5rem 0 0.8rem; */
-    color: #222;
+    width: 18px;
+    text-align: center;
 }
 
-p {
-    margin-bottom: 1rem;
-    font-size: 0.85rem;
-    color: #444;
-    text-align: justify;
-    text-justify: inter-word;
-/*     hyphens: auto; */
-}
-
-/* ===== Lists ===== */
-ul {
-    list-style-position: inside;
-    margin: 0;
-}
-
-li {
-    margin-bottom: 0.5rem;
-    color: #444;
-}
-
-
-/* ===== Estilo principal para títulos ===== */
-main section h2 {
-    font-weight: 400;
-    font-size: 1.8rem;
-    color: #2c3e50;
-    margin: 0 0 1.5rem 0;
-    padding: 0 0 0.8rem 0;
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    letter-spacing: -0.02em;
-}
-
-
-/* Línea decorativa bajo el título */
-main section h2::after {
-    content: "";
-    position: absolute;
-    left: 32px; /* Ajuste para alinear con el icono */
-    bottom: 0;
-    width: 50px;
-    height: 2px;
-    background: #3498db;
-    transition: width 0.3s ease;
-}
-
-main section:hover h2::after {
-    width: 80px;
-}
-
-/* Iconos específicos para cada sección */
-#academic-background h2::before {
-    content: "\f19d"; /* Graduation cap */
-}
-
-#research-fields h2::before {
-    content: "\f5da"; /* Research icon */
-}
-
-#publications h2::before {
-    content: "\f02d"; /* Book icon */
-}
-
-#teaching h2::before {
-    content: "\f51c"; /* Chalkboard */
-}
-
-#projects h2::before {
-    content: "\f542"; /* Project diagram */
-}
-
-#presentations h2::before {
-    content: "\e53d"; /* Presentation */
-}
-
-#miscellaneous h2::before {
-    content: "\f7d9"; /* screwdriver-wrench     */
-}
-
-main section h2::before {
-    /* Mantén las propiedades base */
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    font-size: 1.2rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    padding: 5px;
-    
-    /* Cambios para resaltar */
-    background: #3498db; /* Fondo azul sólido */
-    color: white; /* Icono blanco */
-    box-shadow: 0 2px 5px rgba(52, 152, 219, 0.3);
-    margin-right: 10px;
-}
-
-
-/* ===== Publications Section ===== */
-.stats-panel {
-    background: #f9f9f9;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    border: 1px solid #eee;
-}
-
-.stat-item {
-    display: inline-block;
-    margin-right: 1.5rem;
-}
-
-.stat-number {
-    font-size: 1.2rem;
-    font-weight: 400;
-}
-
-.stat-label {
-    font-size: 0.85rem;
-    color: #666;
-}
-
-.year-group {
-    margin-bottom: 2.5rem;
-}
-
-.year-header {
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: #333;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-/* ===== TEACHING SECTION - ESTILO MINIMALISTA ===== */
-.courses-container {
-    margin: 3rem 0;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-/* Pestañas de años */
-.course-tabs {
-    display: flex;
-    border-bottom: 1px solid #e0e0e0;
-/*     margin-bottom: 1.5rem; */
-    overflow-x: auto;
-}
-
-.course-tab {
-    padding: 0.7rem 1.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 0.95rem;
-    color: #666;
-    border-bottom: 2px solid transparent;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-}
-
-.course-tab:hover {
-    color: #333;
-}
-
-.course-tab.active {
-    color: #222;
-    font-weight: 500;
-    border-bottom-color: #2c3e50;
-}
-
-/* Contenido por año */
-.course-content {
-    display: none;
-    animation: fadeIn 0.4s ease;
-}
-
-.course-content.active {
-    display: block;
-}
-
-.institution {
-    font-size: 0.95rem;
-    color: #666;
-    margin-bottom: 1rem;
-    font-style: italic;
-}
-
-.course-separator {
-    border: 0;
-/*     height: 1px; */
-    background: #eee;
-}
-
-/* Tabla de cursos */
-.course-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 1rem;
-
-    font-size: 0.95rem;
-    color: #666;
-/*     margin-bottom: 1rem; */
-/*     font-style: italic; */
-}
-
-.course-table tr {
-    border-bottom: 1px solid #f5f5f5;
-}
-
-.course-table tr:last-child {
-    border-bottom: none;
-}
-
-.course-table td {
-/*     padding: 0.8rem 0.5rem; */
-    vertical-align: top;
-}
-
-.course-type {
-    width: 25%;
-    color: #555;
-    font-size: 0.9rem;
-    font-weight: 400;
-}
-
-.course-name {
-/*     width: 55%; */
-/*     padding-left: 1rem !important; */
-    font-size: 0.95rem;
-/*     color: #333; */
-    line-height: 1.5;
-    font-style: italic;
-}
-
-.course-duration {
-    width: 20%;
-    color: #666;
-    font-size: 0.9rem;
-    text-align: right;
-}
-
-/* ===== ESTRUCTURA MINIMALISTA PARA PUBLICACIONES ===== */
-.publications-container {
-    margin: 3rem 0;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.publications-container .publication .publication-title {
-/*     color: #0066cc; */
-/*     color: #1a1a1a; */
-    color: #383e42;
-    font-weight: bold;
-}
-
-/* Pestañas de años */
-.publication-tabs {
-    display: flex;
-    border-bottom: 1px solid #e0e0e0;
-/*     margin-bottom: 2rem; */
-    overflow-x: auto;
-}
-
-.publication-tab {
-    padding: 0.7rem 1.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 0.95rem;
-    color: #666;
-    border-bottom: 2px solid transparent;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-}
-
-.publication-tab:hover {
-    color: #333;
-}
-
-.publication-tab.active {
-    color: #222;
-    font-weight: 500;
-    border-bottom-color: #2c3e50;
-}
-
-/* Contenido por año */
-.publication-content {
-    display: none;
-    animation: fadeIn 0.4s ease;
-}
-
-.publication-content.active {
-    display: block;
-}
-
-.year-header {
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: #333;
-    margin: 2rem 0 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid #eee;
-}
-
-/* Items de publicación */
-/* .publication { */
-/*     margin-bottom: 2rem; */
-/*     padding-bottom: 1.5rem; */
-/*     border-bottom: 1px solid #f0f0f0; */
-/* } */
-
-.publication:last-child {
-    border-bottom: none;
-}
-
-.publication-title {
-    margin-bottom: 0.4rem;
-    font-size: 1.10rem;
-    font-weight: 500;
-    color: #0066cc;
-    margin-bottom: 0.4rem;
-    line-height: 1.4;
-}
-
-.publication-title::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0.55em;
-    width: 0.8rem;
-    height: 0.8rem;
-    border-radius: 2px;
-}
-
-.publication-authors {
-    font-style: normal;
-    color: #555;
-/*     margin-bottom: 0.4rem; */
-    font-size: 0.95rem;
-}
-
-.publication-authors em {
-    font-weight: 500;
-    color: #333;
-    font-style: normal;
-}
-
-.publication-venue {
-    font-size: 0.92rem;              /* Tamaño compacto */
-    color: #666;                     /* Gris más claro */
-    line-height: 1.4;
-    margin-bottom: 0.8rem;
-    font-style: italic;              /* Estilo académico tradicional */
-    position: relative;              /* Para decoración opcional */
-}
-
-/* .publication-keywords { */
-/*     font-size: 0.85rem; */
-/*     color: #555; */
-/*     margin: 0.5rem 0; */
-/*     line-height: 1.4; */
-/* } */
-/*  */
-/* .publication-keywords strong { */
-/*     color: #333; */
-/*     font-weight: 500; */
-/* } */
-/* .publication-venue::before { */
-/*     content: "— "; */
-/*     color: #999; */
-/* } */
-
-.publication-links {
-/*     margin-top: 0.8rem; */
-    display: flex;
-    gap: 1.2rem;
-}
-
-.publication-link {
-    font-size: 0.85rem;
-    color: #0066cc;
-    text-decoration: none;
-    transition: all 0.2s ease;
-    display: inline-flex;
-    align-items: center;
-    box-shadow: 0 0 0 1px #0066cc; /* Simula un borde con sombra */
-    padding: 4px 6px;
-    border-radius: 4px;
-}
-
-.publication-link:hover {
-    color: #d35400;                  /* Naranja al hover para contraste */
-    text-decoration: underline;
-}
-
-/* Indicador de color */
-.color-indicator {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin-right: 10px;
-    flex-shrink: 0; /* Evita que se encoja */
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.1); /* Borde sutil */
-}
-
-/* Colores específicos para cada tipo */
-.color-indicator.journal {
-    background-color: #E53935; /* Azul para journals */
-}
-
-.color-indicator.conference-int {
-    background-color: #FFB300; /* Verde para conferencias internacionales */
-}
-
-.color-indicator.conference-nat {
-    background-color: #43A047; /* Naranja para conferencias nacionales */
-}
-
-.color-indicator.preprint {
-    background-color: #6D4C41; /* Gris para preprints */
-}
-
-
-/* Legend styles */
-.legend {
-    display: flex;
-    gap: 1.5rem;
-/*     margin: 0.5rem 0 1.5rem; */
-    padding: 0.8rem 1rem;
-    background: #f8f8f8;
-    border-radius: 4px;
-    flex-wrap: wrap;
-    font-size: 0.85rem;
-}
-
-.legend-item {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-}
-
-.legend-color {
-    width: 0.8rem;
-    height: 0.8rem;
-    border-radius: 2px;
-}
-
-/* Specific legend colors */
-/* .journal-color { background-color: #0066cc; } */
-/* .conference-int-color { background-color: #00a859; } */
-/* .conference-nat-color { background-color: #ff9500; } */
-/* .preprint-color { background-color: #666666; } */
-.journal-color       { background-color: #E53935; }  /* Rojo intenso (como Nature) */  
-.conference-int-color { background-color: #FFB300; }  /* Amarillo mostaza (ej. IEEE) */  
-.conference-nat-color { background-color: #43A047; }  /* Verde esmeralda */  
-.preprint-color      { background-color: #6D4C41; }  /* Marrón café (como arXiv) */  
-
-/* ===== News Section ===== */
-
-/* Ajustes para los elementos del sidebar */
-.sidebar-nav, 
-.updates, 
-.copyright {
-    width: 100%; /* Ocupan todo el ancho disponible */
-    box-sizing: border-box; /* Incluye padding en el ancho */
-    align-self: flex-start; /* Alinea el resto a la izquierda */
-}
-
-/* Ajuste específico para el copyright */
-.copyright {
-    margin-top: auto; /* Lo empuja hacia abajo */
-    text-align: center; /* Alineación consistente */
-}
-
-/* Ajuste para updates */
+/* News */
 .updates {
-    text-align: left; /* Alineación consistente */
     font-size: 0.8rem;
-    color: #777;
-    padding: 0;
 }
 
-.updates  ul{
+.updates h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.updates ul {
+    list-style: none;
     padding: 0;
 }
 
 .updates li {
-    margin: 0;
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--light-gray);
+    line-height: 1.4;
 }
 
-.updates h2 {
-    margin: 0.2rem;
+.updates li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.updates a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.updates a:hover {
+    text-decoration: underline;
+}
+
+/* Copyright */
+.copyright {
+    font-size: 0.7rem;
+    color: var(--dark-gray);
     text-align: center;
+    margin-top: auto;
+    padding-top: 0.8rem;
+    border-top: 1px solid var(--light-gray);
 }
 
-/*  ==== Misc Design ==== */
+/* ===== CONTENIDO PRINCIPAL ===== */
+.main-content {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Todas las secciones visibles en columna CON OPACIDAD */
+.main-content section {
+    margin-bottom: 1.5rem;
+    padding: 1.2rem;
+    border-bottom: 1px solid var(--light-gray);
+    display: block; /* Siempre visible */
+    opacity: 0.5; /* Opacidad por defecto para secciones no activas */
+    transition: opacity 0.3s ease, border-color 0.3s ease;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.main-content section:hover {
+    opacity: 0.7;
+    background-color: rgba(0, 0, 0, 0.01);
+}
+
+/* Sección activa - completa visibilidad */
+.main-content section.active {
+    opacity: 1;
+    border-color: var(--secondary-color);
+    background-color: rgba(52, 152, 219, 0.02);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.main-content section:last-child {
+    border-bottom: none;
+}
+
+/* Títulos de sección */
+.main-content h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.4rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: color 0.3s ease;
+}
+
+/* Título más destacado en sección activa */
+.main-content section.active h2 {
+    color: var(--secondary-color);
+}
+
+.main-content h2::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--light-gray);
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+/* Icono destacado en sección activa */
+.main-content section.active h2::before {
+    background: var(--secondary-color);
+    color: white;
+    box-shadow: 0 2px 4px rgba(52, 152, 219, 0.3);
+}
+
+.main-content h2::after {
+    content: "";
+    position: absolute;
+    left: 32px;
+    bottom: 0;
+    width: 30px;
+    height: 1.5px;
+    background: var(--medium-gray);
+    transition: all 0.3s ease;
+}
+
+/* Línea destacada en sección activa */
+.main-content section.active h2::after {
+    width: 50px;
+    background: var(--secondary-color);
+    height: 2px;
+}
+
+/* Iconos específicos */
+#academic-background h2::before { content: "\f19d"; }
+#research-fields h2::before { content: "\f5da"; }
+#publications h2::before { content: "\f02d"; }
+#teaching h2::before { content: "\f51c"; }
+#projects h2::before { content: "\f542"; }
+#presentations h2::before { content: "\e53d"; }
+#miscellaneous h2::before { content: "\f7d9"; }
+
+/* ===== TEXTO DE SECCIONES JUSTIFICADO ===== */
+.main-content p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+    color: var(--text-color);
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    transition: color 0.3s ease;
+}
+
+/* Texto más legible en sección activa */
+.main-content section.active p {
+    color: var(--text-color);
+}
+
+/* Texto menos visible en secciones no activas */
+.main-content section:not(.active) p {
+    color: rgba(51, 51, 51, 0.7);
+}
+
+.main-content ul, 
+.main-content ol {
+    padding-left: 1.2rem;
+    margin-bottom: 0.8rem;
+    font-size: 0.85rem;
+    transition: opacity 0.3s ease;
+}
+
+.main-content li {
+    margin-bottom: 0.4rem;
+    color: var(--text-color);
+    line-height: 1.5;
+    text-align: justify;
+    text-justify: inter-word;
+    transition: color 0.3s ease;
+}
+
+/* Listas menos visibles en secciones no activas */
+.main-content section:not(.active) li {
+    color: rgba(51, 51, 51, 0.7);
+}
+
+/* Tablas dentro de secciones */
+.main-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.8rem 0;
+    font-size: 0.85rem;
+    transition: opacity 0.3s ease;
+}
+
+.main-content table td {
+    padding: 0.4rem;
+    vertical-align: top;
+    border-bottom: 1px solid var(--light-gray);
+    text-align: justify;
+}
+
+/* ===== GIFS E IMÁGENES REDUCIDAS ===== */
+.main-content img,
+.main-content .gif-container {
+    max-width: 100%;
+    height: auto;
+    margin: 0.5rem 0;
+    border-radius: 3px;
+    border: 1px solid var(--medium-gray);
+    transition: opacity 0.3s ease, border-color 0.3s ease;
+}
+
+/* Imágenes menos visibles en secciones no activas */
+.main-content section:not(.active) img,
+.main-content section:not(.active) .gif-container {
+    opacity: 0.6;
+    border-color: rgba(221, 221, 221, 0.5);
+}
+
+/* Tamaños específicos para diferentes tipos de imágenes */
+.main-content img[src*=".gif"],
+.main-content .gif-container img {
+    max-width: 200px !important; /* Máximo 300px para GIFs */
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Para tablas con imágenes */
 .table-image {
     width: 100%;
     border-collapse: collapse;
@@ -689,373 +390,591 @@ main section h2::before {
 
 .text-cell {
     vertical-align: top;
-    padding-right: 20px;
+    padding-right: 15px;
 }
 
 .image-cell {
     vertical-align: middle;
     text-align: center;
+    width: 150px; /* Reducido */
 }
 
-.image-cell-format {
-    max-width: 200px;
+.image-cell img {
+    max-width: 140px !important;
     height: auto;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
-
-/* ===== PRESENTATIONS SECTION - Estilo consistente con el resto ===== */
-.presentations-container {
-    margin: 3rem 0;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    max-width: 900px;
-    margin: 0 auto;
+/* ===== PUBLICACIONES ===== */
+.publications-container {
+    margin-top: 0.8rem;
+    transition: opacity 0.3s ease;
 }
 
-/* Pestañas de años - Estilo consistente con publicaciones y cursos */
-.presentation-tabs {
+/* Contenido de publicaciones menos visible en sección no activa */
+.main-content section:not(.active) .publications-container {
+    opacity: 0.7;
+}
+
+/* Leyenda */
+.legend {
     display: flex;
-    border-bottom: 1px solid #e0e0e0;
-    overflow-x: auto;
-/*     margin-bottom: 1.0rem; */
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    padding: 0.6rem;
+    background: var(--light-gray);
+    border-radius: 3px;
+    font-size: 0.8rem;
 }
 
-.presentation-tab {
-    padding: 0.7rem 1.5rem;
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.legend-color {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+}
+
+/* Colores para daltonismo */
+.journal-color { background-color: var(--red-dalton); }
+.conference-int-color { background-color: var(--blue-dalton); }
+.conference-nat-color { background-color: var(--green-dalton); }
+.preprint-color { background-color: var(--brown-dalton); }
+
+/* Pestañas */
+.publication-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--medium-gray);
+    margin-bottom: 1rem;
+    overflow-x: auto;
+    font-size: 0.85rem;
+}
+
+.publication-tab {
+    padding: 0.5rem 1rem;
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 0.95rem;
-    color: #666;
+    color: var(--dark-gray);
     border-bottom: 2px solid transparent;
-    transition: all 0.3s ease;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.publication-tab:hover {
+    color: var(--text-color);
+}
+
+.publication-tab.active {
+    color: var(--primary-color);
+    font-weight: 500;
+    border-bottom-color: var(--secondary-color);
+}
+
+/* Contenido por año */
+.publication-content {
+    display: none;
+}
+
+.publication-content:first-of-type {
+    display: block;
+}
+
+/* Items de publicación */
+.publication {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.publication:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+/* Encabezado de publicación */
+.publication-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-bottom: 0.4rem;
+}
+
+.color-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    margin-top: 0.3rem;
+    flex-shrink: 0;
+}
+
+.color-indicator.journal { background-color: var(--red-dalton); }
+.color-indicator.conference-int { background-color: var(--blue-dalton); }
+.color-indicator.conference-nat { background-color: var(--green-dalton); }
+.color-indicator.preprint { background-color: var(--brown-dalton); }
+
+.publication-title {
+    flex: 1;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* Contenedor de iconos */
+.title-icons-container {
+    display: flex;
+    gap: 0.4rem;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+/* Iconos minimalistas */
+.link-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    background: transparent;
+    border: 1px solid var(--medium-gray);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.link-icon:hover {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.link-icon svg {
+    width: 12px;
+    height: 12px;
+}
+
+/* Colores específicos para daltonismo */
+.link-icon.pdf svg {
+    stroke: var(--red-dalton);
+    fill: none;
+}
+
+.link-icon.doi svg {
+    stroke: var(--blue-dalton);
+    fill: none;
+}
+
+.link-icon.arxiv svg {
+    stroke: var(--green-dalton);
+    fill: none;
+}
+
+/* Metadatos de publicación */
+.publication-meta {
+    font-size: 0.8rem;
+    color: var(--dark-gray);
+    line-height: 1.4;
+    padding-left: 1.3rem;
+}
+
+.publication-authors {
+    margin-bottom: 0.2rem;
+}
+
+.publication-authors u {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.publication-venue {
+    font-style: italic;
+}
+
+/* ===== ESTADÍSTICAS ===== */
+.stats-panel {
+    background: var(--light-gray);
+    padding: 1rem;
+    border-radius: 3px;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--medium-gray);
+    font-size: 0.85rem;
+}
+
+.stats-panel h3 {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    color: var(--primary-color);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.8rem;
+}
+
+.stat {
+    text-align: center;
+    padding: 0.6rem;
+    background: white;
+    border-radius: 3px;
+    border: 1px solid var(--light-gray);
+}
+
+.stat-value {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 0.2rem;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--dark-gray);
+}
+
+/* ===== TEACHING ===== */
+.courses-container {
+    margin-top: 0.8rem;
+}
+
+/* Pestañas */
+.course-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--medium-gray);
+    margin-bottom: 1rem;
+    overflow-x: auto;
+    font-size: 0.85rem;
+}
+
+.course-tab {
+    padding: 0.5rem 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--dark-gray);
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+}
+
+.course-tab:hover {
+    color: var(--text-color);
+}
+
+.course-tab.active {
+    color: var(--primary-color);
+    font-weight: 500;
+    border-bottom-color: var(--secondary-color);
+}
+
+/* Contenido */
+.course-content {
+    display: none;
+}
+
+.course-content:first-of-type {
+    display: block;
+}
+
+.institution {
+    font-style: italic;
+    color: var(--dark-gray);
+    margin-bottom: 0.8rem;
+    font-size: 0.85rem;
+}
+
+.course-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.course-table tr {
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.course-table tr:last-child {
+    border-bottom: none;
+}
+
+.course-table td {
+    padding: 0.5rem 0;
+    vertical-align: top;
+}
+
+.course-type {
+    width: 30%;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.course-name {
+    width: 50%;
+    font-style: italic;
+    text-align: justify;
+}
+
+.course-duration {
+    width: 20%;
+    text-align: right;
+    color: var(--dark-gray);
+    font-size: 0.8rem;
+}
+
+/* ===== PRESENTACIONES ===== */
+.presentations-container {
+    margin-top: 0.8rem;
+}
+
+/* Pestañas */
+.presentation-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--medium-gray);
+    margin-bottom: 1rem;
+    overflow-x: auto;
+    font-size: 0.85rem;
+}
+
+.presentation-tab {
+    padding: 0.5rem 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--dark-gray);
+    border-bottom: 2px solid transparent;
     white-space: nowrap;
 }
 
 .presentation-tab:hover {
-    color: #333;
+    color: var(--text-color);
 }
 
 .presentation-tab.active {
-    color: #222;
+    color: var(--primary-color);
     font-weight: 500;
-    border-bottom-color: #2c3e50;
+    border-bottom-color: var(--secondary-color);
 }
 
-/* Contenido por año */
+/* Contenido */
 .presentation-content {
     display: none;
-    animation: fadeIn 0.4s ease;
 }
 
-.presentation-content.active {
+.presentation-content:first-of-type {
     display: block;
 }
 
-/* Items de presentación */
 .presentation-item {
     margin-bottom: 0.8rem;
-/*     padding-bottom: 0.8rem; */
-    border-bottom: 1px solid #f0f0f0;
-/*     position: relative; */
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--light-gray);
 }
 
 .presentation-item:last-child {
     border-bottom: none;
     margin-bottom: 0;
-    padding-bottom: 0;
 }
 
 .presentation-title {
-/*     margin: 0 0 0.5rem 0; */
-    font-size: 1.10rem;
-    font-weight: 500;
-    color: #383e42;
-    line-height: 1.4;
-}
-
-.presentation-authors {
-    font-style: normal;
-    color: #555;
     font-size: 0.95rem;
-    margin-bottom: 0.5rem;
-}
-
-.presentation-authors u {
-    font-weight: 500;
-    color: #333;
-    text-decoration: none;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.3rem;
+    line-height: 1.3;
 }
 
 .presentation-meta {
-    font-size: 0.92rem;
-    color: #666;
-/*     line-height: 1.4; */
+    font-size: 0.8rem;
+    color: var(--dark-gray);
     display: flex;
     flex-wrap: wrap;
-    gap: 0.8rem;
-    margin-bottom: 1.0rem;
-}
-
-.presentation-meta span {
-    display: flex;
-    align-items: center;
-}
-
-.presentation-meta span::before {
-/*     content: "•"; */
-    margin-right: 0.8rem;
-    color: #bbb;
-}
-
-.presentation-meta span:first-child::before {
-    display: none;
-}
-
-/* Indicador de color para tipos de presentación */
-.presentation-type-indicator {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin-right: 10px;
-    border-radius: 2px;
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
-    vertical-align: middle;
-}
-
-/* Colores para tipos de presentación */
-.presentation-type-indicator.conference {
-    background-color: #FFB300; /* Amarillo para conferencias */
-}
-
-.presentation-type-indicator.seminar {
-    background-color: #43A047; /* Verde para seminarios */
-}
-
-.presentation-type-indicator.academic {
-    background-color: #6D4C41; /* Marrón para académico */
-}
-
-.presentation-type-indicator.symposium {
-    background-color: #E53935; /* Rojo para simposios */
-}
-
-.presentation-type-indicator.other {
-    background-color: #666666; /* Gris para otros */
-}
-
-/* Leyenda de tipos */
-.presentation-legend {
-    display: flex;
-    gap: 1.5rem;
-    margin: 0 0 1.5rem;
-    padding: 0.8rem 1rem;
-    background: #f8f8f8;
-    border-radius: 4px;
-    flex-wrap: wrap;
-    font-size: 0.85rem;
-}
-
-.presentation-legend-item {
-    display: flex;
-    align-items: center;
     gap: 0.6rem;
 }
 
-.presentation-legend-color {
-    width: 0.8rem;
-    height: 0.8rem;
-    border-radius: 2px;
+.presentation-meta span {
+    display: inline-block;
 }
 
-/* ===== TRANSICIÓN ENTRE SECCIONES: OPACIDAD ===== */
-
-/* Contenedor principal de secciones */
-.main-content {
-    position: relative;
-}
-
-/* Todas las secciones empiezan opacas */
-.main-content section {
-    opacity: 0.4;
-    transition: opacity 0.4s ease;
-    pointer-events: none; /* Evita interacción con secciones inactivas */
-    transform: scale(0.99); /* Evita que el borde inferior se vea débil */
-}
-
-/* Sección activa: completamente visible e interactuable */
-.main-content section.active {
-    opacity: 1;
-    pointer-events: auto;
-    border-bottom-color: #3498db !important; /* Refuerza el borde inferior */
-}
-
-/* Refuerza el título de la sección activa */
-.main-content section.active h2 {
-    color: #2c3e50;
-}
-
-/* ===== RESALTAR ENLACE ACTIVO EN BARRA LATERAL ===== */
-.sidebar-nav a.active {
-    background-color: #e0f2ff;
-    color: #004499;
-    font-weight: 500;
-    border-radius: 6px;
-    padding: 0.3rem 1rem;
-    box-shadow: 0 1px 3px rgba(0, 68, 153, 0.1);
-}
-
-/* ===== Project Status Indicators ===== */
+/* ===== PROYECTOS ===== */
 .status-indicator {
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
-    margin-left: 8px;
-    vertical-align: middle;
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.1); /* Borde sutil para todos */
-}
-
-/* Estado: Activo (en desarrollo) */
-.status-indicator.active {
-    background-color: #43A047; /* Verde esmeralda */
-}
-
-/* Estado: Mantenimiento (estable, solo parches) */
-.status-indicator.maintenance {
-    background-color: #1E88E5; /* Azul profesional */
-}
-
-/* Estado: Inactivo/Completado */
-.status-indicator.inactive {
-    background-color: #E53935; /* Rojo para finalizado */
-}
-
-/* Estado: Experimental (alfa, beta) */
-.status-indicator.experimental {
-    background-color: #FFB300; /* Amarillo mostaza */
-}
-
-/* Estado: Planeado (próximamente) */
-.status-indicator.planned {
-    background-color: #90A4AE; /* Gris azulado neutro */
-}
-
-/* Etiqueta de texto pequeña */
-.status-label {
     margin-left: 6px;
-    font-size: 0.8rem;
-    color: #666;
-    font-weight: 400;
+    vertical-align: middle;
+}
+
+.status-indicator.active { background-color: #43A047; }
+.status-indicator.maintenance { background-color: #1E88E5; }
+.status-indicator.inactive { background-color: #E53935; }
+.status-indicator.experimental { background-color: #FFB300; }
+.status-indicator.planned { background-color: #90A4AE; }
+
+.status-label {
+    margin-left: 4px;
+    font-size: 0.75rem;
+    color: var(--dark-gray);
     font-style: italic;
     vertical-align: middle;
 }
 
-/*  === LEGEND CONFIGURATION === */
 .status-legend {
-    margin-top: 1.5rem;
-    padding: 0.8rem;
-    background: #f8f8f8;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    color: #555;
+    margin-top: 1rem;
+    padding: 0.6rem;
+    background: var(--light-gray);
+    border-radius: 3px;
+    font-size: 0.75rem;
+    color: var(--dark-gray);
     display: flex;
-    gap: 1.5rem;
+    gap: 1.2rem;
     flex-wrap: wrap;
 }
 
 .status-legend p {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.4rem;
     margin: 0;
 }
 
-
-/* ===== TRANSICIÓN ENTRE SECCIONES: OPACIDAD ===== */
+/* ===== HOVER PARA MEJOR INTERACCIÓN ===== */
 .main-content section {
-    opacity: 0.4;
-    transition: opacity 0.4s ease;
-    pointer-events: auto; /* Permitir clics en todas las secciones */
-    cursor: pointer; /* Indicar que son clickeables */
+    position: relative;
 }
 
-.main-content section.active {
-    opacity: 1;
-    border-bottom-color: #3498db !important;
+/* Efecto sutil al hacer clic en una sección */
+.main-content section:active {
+    transform: translateY(1px);
 }
 
-/* Mejorar el hover para indicar que son clickeables */
-.main-content section:not(.active):hover {
-    opacity: 0.7;
-    background-color: #f9f9f9;
+/* Indicador visual de sección activa */
+.main-content section.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: var(--secondary-color);
+    border-radius: 3px 0 0 3px;
 }
 
-/*  */
-
-
-/* ===== Responsive Design ===== */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+    
     .container {
         flex-direction: column;
+        padding: 0.8rem;
+        gap: 1rem;
     }
-
+    
     .sidebar {
         width: 100%;
         position: static;
         padding-right: 0;
     }
-
-    .main-content {
-        margin-top: 2rem;
-    }
-
-    .header-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .header-photo {
-        margin: 1rem auto;
-    }
-
-    .split-section {
-        flex-direction: column;
-        gap: 0;
-    }
-
-    .publication-tabs {
-        overflow-x: auto;
-        white-space: nowrap;
-        padding-bottom: 0.2rem;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .publication-tab {
-        padding: 0.5rem 0.8rem;
-        font-size: 0.9rem;
-    }
-
-    .publication-title {
-        font-size: 1rem;
-    }
-
-    .publication-authors, 
-    .publication-venue {
-        font-size: 0.9rem;
-    }
-
-    .publication-links {
-        gap: 0.6rem;
-    }
-
-    .legend {
-        gap: 1rem;
-        padding: 0.6rem;
+    
+    .profile-photo {
+        width: 90px;
+        height: 90px;
     }
     
-    .publication-title::before {
-        width: 0.7rem;
-        height: 0.7rem;
+    .publication-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+    }
+    
+    .title-icons-container {
+        margin-left: 0;
+        align-self: flex-start;
+    }
+    
+    .publication-meta {
+        padding-left: 0;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+    }
+    
+    .legend {
+        justify-content: center;
+        gap: 0.8rem;
+    }
+    
+    .publication-tabs,
+    .course-tabs,
+    .presentation-tabs {
+        font-size: 0.8rem;
+    }
+    
+    .publication-tab,
+    .course-tab,
+    .presentation-tab {
+        padding: 0.4rem 0.8rem;
+    }
+    
+    /* Ajustes para imágenes en móvil */
+    .main-content img[src*=".gif"],
+    .main-content .gif-container img {
+        max-width: 200px !important;
+    }
+    
+    .image-cell {
+        width: 120px;
+    }
+    
+    .image-cell img {
+        max-width: 110px !important;
+    }
+    
+    /* Ajuste de opacidad en móvil */
+    .main-content section {
+        opacity: 0.7; /* Menos opaco en móvil para mejor legibilidad */
+    }
+    
+    .main-content section.active {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 13px;
+    }
+    
+    .publication-title {
+        font-size: 0.9rem;
+    }
+    
+    .link-icon {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .link-icon svg {
+        width: 10px;
+        height: 10px;
+    }
+    
+    /* GIFs más pequeños en móviles muy pequeños */
+    .main-content img[src*=".gif"],
+    .main-content .gif-container img {
+        max-width: 150px !important;
+    }
+    
+    /* Más opacidad en móviles muy pequeños */
+    .main-content section {
+        opacity: 0.8;
     }
 }
