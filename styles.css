@@ -375,7 +375,7 @@ html {
 /* Tamaños específicos para diferentes tipos de imágenes */
 .main-content img[src*=".gif"],
 .main-content .gif-container img {
-    max-width: 200px !important; /* Máximo 300px para GIFs */
+    max-width: 160px !important; /* Máximo 300px para GIFs */
     height: auto;
     display: block;
     margin-left: auto;
