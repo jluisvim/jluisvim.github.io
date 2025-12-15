@@ -8,134 +8,139 @@
 
 %% Saved with string encoding Unicode (UTF-8) 
 
+%+----------------+-------------------+------------------+----------------------------------------+
+%| Type           | Entry Type        | Required Field   | Key Indicators                         |
+%+----------------+-------------------+------------------+----------------------------------------+
+%| journal        | @article          | journal          | peer-reviewed journal                  |
+%| conf-int       | @inproceedings    | booktitle        | IEEE, ACM, International, SIG, World   |
+%| conf-nat       | @inproceedings    | booktitle        | national/local scope, no int. markers  |
+%| preprint        | @article/@misc    | —                | arXiv/bioRxiv, "preprint", "to appear" |
+%| other          | any               | —                | thesis, report, book, etc.             |
+%+----------------+-------------------+------------------+----------------------------------------+
+%
+
+
 @article{vilchis25c,
-    title={ORONER: An Ontology for Representing interOrganizational NEtworks Resilience. A Building Block Towards Adaptive Network Reconfiguration},
-    author={Marisnel Olivares and Ayoub Laouni and José-Luis Vilchis Medina and Eric Saux},
-    journal={Knowledge-Based Systems (KBS)},
-    year={2025},
-    publisher={Elsevier},
-    keywords={Ontology,KRR},
-    url={https://www.sciencedirect.com/science/article/pii/S0950705125020398},
-    doi={10.1016/j.knosys.2025.115001}
+title = {ORONER: An Ontology for Representing interOrganizational Networks Resilience. A building block towards adaptive network reconfiguration},
+journal = {Knowledge-Based Systems},
+volume = {333},
+pages = {115001},
+year = {2025},
+issn = {0950-7051},
+doi = {https://doi.org/10.1016/j.knosys.2025.115001},
+url = {https://www.sciencedirect.com/science/article/pii/S0950705125020398},
+author = {Marisnel {Olivares Amaro} and Mohamed Ayoub Laouni and {\textbf{José-Luis {Vilchis Medina}}} and Éric Saux},
+keywords = {Organizational resilience, Knowledge representation and reasoning, Ontologies, Interorganizational network, Crisis management},
+abstract = {Organizations are regularly affected by crises (e.g., pandemics, financial crises, natural disasters) to which they must respond appropriately in order to maintain their functioning and prevent decline and failure. A possible direction to achieve this is to develop their resilience in order to mitigate, anticipate, respond to and recover from adversity through the creation of interorganizational networks. This article aims to contribute to the understanding and modeling of how a network of interdependent organizations can collectively develop their resilience and how to infer the possible resource sharing between them. This study is undertaken through a strong coupling between social sciences (organization studies) and computer sciences (knowledge representation). We propose an ontological model, named ORONER, which is able to represent such organizational networks configurations with two future objectives: (1) analyzing the resources distribution within a network over a crisis period, and (2) reorganizing it to develop collective resilience. This domain ontology is based on the consideration of knowledge about organizations: the missions, interactions, crisis management, spatial-temporal entities as well as human and material resources necessary to operate organizations. Concepts are formalized using description logic and a set of rules is defined to infer some possible resource sharing. The evaluation of ORONER is performed through a case study and a list of competency questions, which exhibit initial and inferred interactions between organizations (e.g., municipalities, hospitals and schools) during the COVID-19 crisis.}
 }
 
 @inproceedings{vilchis25b,
     title={Un cadre paraconsistant pour l'évaluation de similarité dans les bases de connaissances},
-    author={José-Luis Vilchis-Medina},
+    author={{\textbf{José-Luis Vilchis Medina}}},
     booktitle={Journées d'Intelligence Artificielle Fondamentale (JIAF)},
     year={2025},
-    keywords={Logic,Similarity,NMR},
-    url={https://pfia2025.u-bourgogne.fr/Articles/Docs/Un%20cadre%20paraconsistant%20pour%20l%C3%A9valuation%20de%20similarit%C3%A9%20dans%20les%20bases%20de%20connaissances.pdf}
+url={https://pfia2025.u-bourgogne.fr/Articles/Docs/Un%20cadre%20paraconsistant%20pour%20l%C3%A9valuation%20de%20similarit%C3%A9%20dans%20les%20bases%20de%20connaissances.pdf},
 }
 
 @inproceedings{vilchis25,
     title={Dynamic Swarming Autonomous Underwater Vehicles through Behavioral Rules using Declarative Programming},
-    author={José-Luis Vilchis-Medina and Benoit Zerr},
-    booktitle={OCEANS 2025},
+    author={{\textbf{José-Luis Vilchis Medina}} and Benoit Zerr},
+    booktitle={OCEANS},
     year={2025},
-    publisher={IEEE},
-    keywords={Prolog,Robotics,Simulation,world,ieee},
-    doi={10.1109/OCEANS58557.2025.11104631}
+    keywords={Prolog,Robotics,Simulation,world},
+url={https://ieeexplore.ieee.org/document/11104631},
 }
 
-@inproceedings{vilchis24,
+@article{vilchis24,
     title={Building Intelligent Databases through Similarity: Interaction of
         Logical and Qualitative Reasoning},
-    author={Vilchis-Medina, José-Luis},
-    booktitle={The 7th International Conference on Algorithms, Computing and Artificial Intelligence (ACAI)},
-    year={2024},
-    keywords = {Logic,Databases,Similarity,ieee},
-    doi={10.1109/ACAI63924.2024.10899649},
-    arxiv={2503.10231}
+    author={{\textbf{Vilchis Medina, Jos{\'e}-Luis}}},
+    booktitle={The 7th International Conference on Algorithms, Computing and Artificial Intelligence (ACAI), 2024},
+    Year={2024},
+    keywords={Prolog,Robotics,Simulation,world},
+url={https://ieeexplore.ieee.org/document/10899649},
 }
 
 @inproceedings{vilchis22,
     title={Evaluation and Identification of Properties in a Set of Information through
     Qualitative and Non-monotonic Reasoning},
-    author={Vilchis-Medina, José-Luis},
+    author={{\textbf{Vilchis Medina, Jos{\'e}-Luis}}},
 	booktitle = {The 6th International Conference on Computer Science and Artificial Intelligence (CSAI, abstract only)},
-	year = {2022},
-    note = {preprint},
-    keywords = {Qualitative Reasoning,Information,NMR,world},
+	Year = {2022},
+    keywords={Prolog,Robotics,Simulation,world},
 }
 @article{vilchis2021autonomous,
   title={Autonomous Decision-Making With Incomplete Information and Safety Rules Based on Non-Monotonic Reasoning},
-  author={Vilchis-Medina, José-Luis and Godary-Déjean, Karen and Lesire, Charles},
+  author={{\textbf{Vilchis Medina, Jos{\'e}-Luis}} and Godary-D{\'e}jean, Karen and Lesire, Charles},
   journal={IEEE Robotics and Automation Letters},
   volume={6},
   number={4},
   pages={8357--8362},
   year={2021},
   publisher={IEEE},
-  keywords = {NMR, Incomplete Information, Robotics},
-  doi={10.1109/lra.2021.3103048}
+url={https://ieeexplore.ieee.org/document/9511268},
 }
 
-@inproceedings{medinaresilient,
+@article{medinaresilient,
     title={A Resilient Behavior Approach Based on Non-monotonic Logic},
-    author={Vilchis-Medina, José-Luis and Siegel, Pierre and Risch, 
+    author={{\textbf{Vilchis Medina, Jos{\'e}-Luis}} and Siegel, Pierre and Risch, 
         Vincent and Doncescu, Andrei},
-	booktitle = {Journées d'Intelligence Artificielle Fondamentale (JIAF)},
+	booktitle = {Journ{\'e}es d'Intelligence Artificielle Fondamentale},
     pages={16},
-	year = {2020},
-    keywords = {NMR, Resilience, Logic},
+	Year = {2020},
+url={https://hal.science/hal-02951644},
 }
 @inproceedings{medina2019resilient,
   title={A Resilient Behavior Approach Based on Non-monotonic Logic},
-  author={Vilchis-Medina, José-Luis and Siegel, Pierre and Risch, Vincent and Doncescu, Andrei},
-  booktitle={Mexican International Conference on Artificial Intelligence (MICAI)},
+  author={{\textbf{Vilchis Medina, Jos{\'e}-Luis}} and Siegel, Pierre and Risch, Vincent and Doncescu, Andrei},
+  booktitle={Mexican International Conference on Artificial Intelligence},
   pages={403--413},
   year={2019},
+  keywords={Prolog,Robotics,Simulation,world},
   organization={Springer},
-  keywords = {NMR, Resilience, Logic,world},
-    doi={10.1007/978-3-030-33749-0_32}
+url={https://link.springer.com/chapter/10.1007/978-3-030-33749-0_32},
 }
-
 @inproceedings{medina2019,
   title={An Implementation of a Nonmonotonic Logic in an Embedded Computer for a Motor-glider},
-  author={José-Luis Vilchis-Medina and Pierre Siegel and Vincent Risch and Andrei Doncescu},
-  booktitle={The 35th International Conference on Logic Programming (ICLP)},
+  author={{\textbf{Jos{\'e}-Luis Vilchis Medina}} and Pierre Siegel and Vincent Risch and Andrei Doncescu},
+  booktitle={35th International Conference on Logic Programming (ICLP)},
   year={2019},
-  keywords = {NMR, Embedded System, Robotics,world},
-    doi={10.4204/eptcs.306.37}
+  organization={},
+    keywords={Prolog,Robotics,Simulation,world},
+url={https://arxiv.org/abs/1907.13305v2},
 }
-
 @inproceedings{medina2018intelligent,
   title={Intelligent and Adaptive System based on a Non-monotonic Logic for an Autonomous Motor-glider},
-  author={Vilchis-Medina, José-Luis and Siegel, Pierre and Risch, Vincent and Doncescu, Andrei},
-  booktitle={The 15th International Conference on Control, Automation, Robotics and Vision (ICARCV)},
+  author={{\textbf{Vilchis Medina, Jos{\'e}-Luis}} and Siegel, Pierre and Risch, Vincent and Doncescu, Andrei},
+  booktitle={2018 15th International Conference on Control, Automation, Robotics and Vision (ICARCV)},
   pages={442--447},
   year={2018},
+    keywords={Prolog,Robotics,Simulation,world},
   organization={IEEE},
-  keywords = {NMR, Robotics, Adaptative System,world},
-    doi={10.1109/icarcv.2018.8581107}
+url={https://ieeexplore.ieee.org/document/8581107},
 }
-
-@inproceedings{vmsd18,
-	author = {José-Luis Vilchis-Medina and Pierre Siegel and Andrei Doncescu},
-	booktitle = {Journées d'Intelligence Artificielle Fondamentale (JIAF)},
-	pages = {6},
-	title = {Non-monotonie et Resilience: Application au Pilotage d'un Motor-planeur Autonome},
-	volume = {12},
-	year = {2018},
-    keywords = {NMR, Resilience, Robotics},
+@article{vmsd18,
+	Author = {{\textbf{Jos{\'e}-Luis {Vilchis Medina}}} and Pierre Siegel and Andrei Doncescu},
+	booktitle = {Journ{\'e}es d'Intelligence Artificielle Fondamentale},
+	Pages = {6},
+	Title = {Non-monotonie et Resilience: Application au Pilotage d'un Motor-planeur Autonome},
+	Volume = {12},
+	Year = {2018},
+url={https://home.mis.u-picardie.fr/~evenement/JIAF2018/articles/JIAF_2018_papier_15.pdf},
 }
-
 @inproceedings{medina2017pilotage,
-	author = {Vilchis-Medina, José-Luis and Siegel, Pierre and Doncescu, Andrei},
-	booktitle = {Journées Francophones sur la Planification, la Décision et
-        l'Apprentissage pour la conduite de systèmes (JFPDA 2017)},
-    title={Contrôle de Vol d’un Planeur Basé sur une Logique Non-monotone},    
-	year = {2017},
-    keywords = {NMR, Robotics, Control},
+	Author = {{\textbf{Vilchis Medina, Jos{\'e}-Luis}} and Siegel, Pierre and Doncescu, Andrei},
+	Booktitle = {Journ{\'e}es Francophones sur la Planification, la D{\'e}cision et l'Apprentissage pour la conduite de syst{\`e}mes (JFPDA 2017)},
+    title={Contr{\^o}le de Vol d’un Planeur Bas{\'e} sur une Logique Non-monotone},    
+	Year = {2017},
+url={https://pfia2017.greyc.fr/share/actes/JFPDA/Vilchis_JFPDA_2017.pdf?tok=516d65&media=https%3A%2F%2Fpfia2017.greyc.fr%2Fshare%2Factes%2FJFPDA%2FVilchis_JFPDA_2017.pdf},
 }
-
 @inproceedings{medina2017autonomous,
-	author = {Vilchis-Medina, José-Luis and Siegel, Pierre and Doncescu, Andrei},
-	booktitle = {3rd International Conference on Vehicle Technology and Intelligent Transport Systems (VEHITS)},
-	pages = {6p},
-	title = {Autonomous Aerial Vehicle Based on Non-Monotonic Logic},
-    year = {2017},
-    keywords = {NMR, Robotics, Logic,world},
-    doi={10.5220/0006304002360241}
+	Author = {{\textbf{Vilchis Medina, José-Luis}} and Siegel, Pierre and Doncescu, Andrei},
+	Booktitle = {3rd International Conference on Vehicle Technology and Intelligent Transport Systems (VEHITS)},
+	Pages = {6p},
+	Title = {Autonomous Aerial Vehicle Based on Non-Monotonic Logic},
+    Year = {2017},
+    keywords={Prolog,Robotics,Simulation,world},
+url={https://www.scitepress.org/Link.aspx?doi=10.5220/0006304002360241},
 }

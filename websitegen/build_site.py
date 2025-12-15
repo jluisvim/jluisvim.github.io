@@ -7,6 +7,7 @@ import os
 import csv
 from collections import defaultdict
 import re
+import unicodedata
 
 # Configuration
 CONFIG = {
@@ -109,14 +110,24 @@ class PublicationGenerator:
         return "other"
     
     def build_venue_string(self, entry):
-        """Build formatted venue string"""
-        venue = entry.get("journal", entry.get("booktitle", ""))
+        """Build formatted venue string with proper Unicode accents"""
+        journal = entry.get("journal", "")
+        booktitle = entry.get("booktitle", "")
+        
+        # Use booktitle for conferences, journal for articles
+        raw_venue = journal if journal else booktitle
+        
+        # Convert LaTeX accents to Unicode
+        venue = self.latex_to_unicode(raw_venue)
+        
+        # Append volume, number, pages if available
         if "volume" in entry:
             venue += f", {entry['volume']}"
             if "number" in entry:
                 venue += f"({entry['number']})"
         if "pages" in entry:
             venue += f", pp. {entry['pages']}"
+        
         return sanitize_html(venue)
     
     def build_link_icons(self, entry):
@@ -173,6 +184,25 @@ class PublicationGenerator:
             </a>''')
         
         return links
+
+    def normalize_author_for_matching(self, name):
+        """Normalize for author matching: handle accents, braces, and name order."""
+        if not name:
+            return ""
+        # Remove \textbf{...}
+        name = re.sub(r'\\textbf\{([^}]*)\}', r'\1', name)
+        # Convert LaTeX accents to Unicode
+        name = self.latex_to_unicode(name)
+        # Remove diacritics for robust matching
+        name = ''.join(c for c in unicodedata.normalize('NFD', name)
+                       if unicodedata.category(c) != 'Mn')
+        name = name.strip().lower()
+        # Handle "Last, First"
+        if ',' in name:
+            last, first = [p.strip() for p in name.split(',', 1)]
+            name = f"{first} {last}".strip()
+        # Normalize whitespace
+        return re.sub(r'\s+', ' ', name)
     
     def normalize_name(self, name):
         """Normalize author name for comparison"""
@@ -181,30 +211,64 @@ class PublicationGenerator:
         name = re.sub(r'[^\w\s]', '', name.strip().lower())
         parts = sorted(name.split())
         return ' '.join(parts)
+
+    def latex_to_unicode(self, text):
+        """Convert common LaTeX accent commands to Unicode characters (including in titles)."""
+        if not text:
+            return text
+    
+        # Helper for accents
+        def replace_accent(match):
+            cmd, char = match.groups()
+            if cmd == "'":
+                return {'a': 'á', 'e': 'é', 'i': 'í', 'o': 'ó', 'u': 'ú',
+                        'A': 'Á', 'E': 'É', 'I': 'Í', 'O': 'Ó', 'U': 'Ú'}.get(char, char)
+            elif cmd == "`":
+                return {'a': 'à', 'e': 'è'}.get(char, char)
+            elif cmd == '"':
+                return {'a': 'ä', 'e': 'ë', 'i': 'ï', 'o': 'ö', 'u': 'ü'}.get(char, char)
+            elif cmd == "~":
+                return {'n': 'ñ', 'N': 'Ñ'}.get(char, char)
+            elif cmd == "^":  # ← Añadido: circumflex
+                return {'a': 'â', 'e': 'ê', 'i': 'î', 'o': 'ô', 'u': 'û',
+                        'A': 'Â', 'E': 'Ê', 'I': 'Î', 'O': 'Ô', 'U': 'Û'}.get(char, char)
+            return char
+    
+        # Replace \cmd{char} and \cmd char
+        text = re.sub(r"\\([`'\"~^])\{([aeiouAEIOU])\}", replace_accent, text)
+        text = re.sub(r"\\([`'\"~^])([aeiouAEIOU])", replace_accent, text)
+        # Cedilla
+        text = re.sub(r"\\c\{([cC])\}", lambda m: 'ç' if m.group(1) == 'c' else 'Ç', text)
+        # Remove protection braces
+        text = text.replace('{', '').replace('}', '')
+        return text
     
     def process_authors(self, authors_str):
-        """Process author string and highlight matching authors"""
+        """Process and highlight authors with proper LaTeX-to-Unicode conversion."""
         if not authors_str:
             return ""
         
-        author_list = authors_str.split(" and ")
-        highlighted_authors = []
+        author_list = [a.strip() for a in authors_str.split(" and ") if a.strip()]
+        normalized_variants = {
+            self.normalize_author_for_matching(var) for var in self.config.get('AUTHOR_VARIANTS', [])
+        }
         
+        highlighted = []
         for author in author_list:
-            normalized_author = self.normalize_name(author)
-            is_highlighted = False
+            # Use full Unicode for display
+            display_name = re.sub(r'\\textbf\{([^}]*)\}', r'\1', author)
+            display_name = self.latex_to_unicode(display_name)
             
-            for variant in self.config.get('AUTHOR_VARIANTS', []):
-                if self.normalize_name(variant) == normalized_author:
-                    is_highlighted = True
-                    break
+            # Normalize for comparison (accent-insensitive)
+            normalized = self.normalize_author_for_matching(author)
+            is_me = normalized in normalized_variants
             
-            if is_highlighted:
-                highlighted_authors.append(f'<u><strong>{sanitize_html(author)}</strong></u>')
+            if is_me:
+                highlighted.append(f'<u><strong>{sanitize_html(display_name)}</strong></u>')
             else:
-                highlighted_authors.append(sanitize_html(author))
+                highlighted.append(sanitize_html(display_name))
         
-        return ", ".join(highlighted_authors)
+        return ", ".join(highlighted)
     
     def generate_publications_html(self, bib_db, color_coded=True):
         """Generate HTML for publications"""
@@ -251,7 +315,11 @@ class PublicationGenerator:
             
             for entry in entries_by_year[year]:
                 pub_type = self.get_publication_type(entry) if color_coded else None
-                title = sanitize_html(entry.get("title", "Untitled"))
+#                 title = sanitize_html(entry.get("title", "Untitled"))
+                raw_title = entry.get("title", "Untitled")
+                clean_title = self.latex_to_unicode(raw_title)
+                title = sanitize_html(clean_title)
+
                 authors = self.process_authors(entry.get("author", ""))
                 venue = self.build_venue_string(entry)
                 link_icons = self.build_link_icons(entry)
