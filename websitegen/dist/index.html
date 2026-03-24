@@ -61,12 +61,13 @@
                     
                 </nav>
 
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
                 <!-- New/Updates Section -->
                 
 
                <div class="copyright">
-                   <p>Last updated: February 10, 2026</p>
+                   <p>Last updated: March 24, 2026</p>
                 <p>
                     <a href="https://creativecommons.org/licenses/by/4.0/"  
                        target="_blank" rel="license noopener noreferrer">
@@ -83,6 +84,8 @@
                </div>
             </div>
         </aside>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
         <!-- Main Content -->
         <main class="main-content">
@@ -143,15 +146,11 @@ I also hold a M.Sc. in Electrical and Automation Engineering from
 <a href="https://www.enseeiht.fr/fr/index.html" target="_blank">ENSEEIHT</a> (Toulouse).</p>
             </section>
 
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
             <!-- Research Fields Section -->
             <section id="research-fields">
                 <h2>Research</h2>
-<!--                 logic for mas -->
-<!--                 paraconsistent logic -->
-<!--                 logic programming -->
-<!--                 declarative programming -->
-<!--                 nonmonotonic reasoning -->
 
 <p>My research lies at the intersection of symbolic Artificial Intelligence and
 formal reasoning, with a strong emphasis on 
@@ -172,10 +171,8 @@ I specialy focus in
 
 <p>In addition to my research, I contribute to the academic community through
 peer review activities:
-<!-- My reviewing engagements include both voluntary conference reviewing and formal journal reviewing by editorial committee selection.</p> -->
 
 <h4>Journal Reviewer:</h4>
-<!-- <p>Selected by the editorial committee to serve as a peer reviewer for:</p> -->
 <ul>
     <li>
         <a href="https://www.hrpub.org/journals/jour_info.php?id=34"
@@ -184,7 +181,6 @@ peer review activities:
 </ul>
 
 <h4>Volunteer Conference Reviewer:</h4>
-<!-- <p>I have served as a volunteer peer reviewer for the following conferences:</p> -->
 
                 <ul>
                     <li><span title="International Conference on Principles of Knowledge Representation and Reasoning">KRR</span> in Planning & Scheduling:
@@ -202,6 +198,8 @@ peer review activities:
                 </ul>
 
             </section>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
             <!-- Publications Section -->
             <section id="publications">
@@ -228,7 +226,8 @@ peer review activities:
             </div>
             
 <div class="publication-tabs">
-<button class="publication-tab active" data-year="2025">2025</button>
+<button class="publication-tab active" data-year="2026">2026</button>
+<button class="publication-tab" data-year="2025">2025</button>
 <button class="publication-tab" data-year="2024">2024</button>
 <button class="publication-tab" data-year="2022">2022</button>
 <button class="publication-tab" data-year="2021">2021</button>
@@ -237,7 +236,24 @@ peer review activities:
 <button class="publication-tab" data-year="2018">2018</button>
 <button class="publication-tab" data-year="2017">2017</button>
 </div>
-<div id="pub-2025" class="publication-content" style="display:block">
+<div id="pub-2026" class="publication-content" style="display:block">
+
+                <div class="publication">
+                    <div class="publication-header">
+                        <span class="color-indicator conference-int"></span>
+                        <h3 class="publication-title">Towards Verifiable Multi-Robot Missions: From Logical
+Specifications to Behavior Trees</h3>
+                        
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors"><u><strong>José-Luis Vilchis Medina</strong></u></div>
+                        <div class="publication-venue">Autonomous Robots and Multirobot Systems (ARMS) @ AAMAS
+(Accepted)</div>
+                    </div>
+                </div>
+                
+</div>
+<div id="pub-2025" class="publication-content" style="display:none">
 
                 <div class="publication">
                     <div class="publication-header">
@@ -612,6 +628,8 @@ Vincent, Doncescu, Andrei</div>
         
             </section>
 
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
             <!-- Teaching Section -->
             <section id="teaching">
                 <h2>Teaching</h2>
@@ -861,6 +879,8 @@ Vincent, Doncescu, Andrei</div>
                 <!-- COURSES_SCRIPT -->
             </section>
 
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
             <!-- Projects Section -->
             <section id="projects">
 
@@ -948,10 +968,9 @@ Development of advanced control strategies to optimize energy flows according to
                 </s>
                 </p>
 
-
-
-
             </section>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
             <!-- Presentations Section -->
             <section id="presentations">
@@ -1212,6 +1231,8 @@ Development of advanced control strategies to optimize energy flows according to
                     <!-- PRES_SCRIPTS -->
             </section>
 
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
             <!-- Miscellaneous -->
 <section id="miscellaneous">
     <h2>Miscellaneous</h2>
@@ -1275,6 +1296,7 @@ Development of advanced control strategies to optimize energy flows according to
         </main>
     </div>
 
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const sections = document.querySelectorAll(".main-content section");
@@ -1359,14 +1381,6 @@ Development of advanced control strategies to optimize energy flows according to
         const initialSection = window.location.hash.substring(1) || 'academic-background';
         activateSection(initialSection, true);
     });
-</script>
-<script>
-  const email = "jose.vilchis@ensta.fr";
-  document.getElementById("contact-link").innerHTML = `
-    <a href="mailto:${email}">
-      <i class="fas fa-envelope"></i> Contact
-    </a>
-  `;
 </script>
 </body>
 </html>
