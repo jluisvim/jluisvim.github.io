@@ -71,14 +71,14 @@ html {
     width: 150%;
     height: 150%;
     object-fit: cover;
-    object-position: center 25%;
+    object-position: 35% 50%;
     transition: none !important;
     transform: none !important;
 }
 
-.profile-photo:hover img {
-transform: scale(1.15);
-}
+/* .profile-photo:hover img { */
+/* transform: scale(1.15); */
+/* } */
 
 .profile-name {
     font-size: 1.1rem;
