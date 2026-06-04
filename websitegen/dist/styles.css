@@ -21,9 +21,46 @@
     --brown-dalton: #5d4037;
 }
 
+/* ==========================================================================
+   🎛️ PANEL DE CONTROL DE TIPOGRAFÍA (GUÍA RÁPIDA DE AJUSTE)
+   ==========================================================================
+   Para cambiar los tamaños de texto de forma segura y proporcional, 
+   modifica SOLO los valores de esta sección. Evita cambiar los 'em' o 'rem' 
+   de los elementos individuales para no romper la armonía visual.
+
+   1. TAMAÑO BASE GLOBAL (Afecta a TODO el sitio como referencia)
+      Regla: html { font-size: 17px; }
+      👉 Ajuste: Sube a 18px para agrandar todo, o baja a 16px para reducir.
+
+   2. TEXTO DEL CONTENIDO PRINCIPAL (Párrafos, listas, tablas)
+      Regla: .main-content p, .main-content li, ... { font-size: 1rem; }
+      👉 Ajuste: '1rem' iguala al tamaño base del html. 
+                 Usa '1.05rem' o '1.1rem' si quieres que el texto de lectura 
+                 sea ligeramente más grande que el resto del sitio.
+
+   3. ESCALA DE LA BARRA LATERAL (Sidebar)
+      Regla: .sidebar { font-size: 0.9rem; }
+      👉 Ajuste: '0.9rem' hace que toda la barra sea el 90% del tamaño base.
+                 Usa '0.85rem' para hacerla más compacta, o '1rem' para igualarla al main.
+      
+      ⚠️ ¡IMPORTANTE SOBRE LA SIDEBAR! 
+      Los elementos dentro de ella (.profile-name, .sidebar-nav a, .copyright) 
+      usan la unidad 'em'. Esto significa que se calculan en base al '.sidebar', 
+      NO en base al 'html'. 
+      Ejemplo: Si '.sidebar' es 0.9rem, '.profile-name' (1.3em) será automáticamente 
+      1.3 * 0.9rem. ¡No necesitas tocar los 'em' de los hijos, solo ajusta el 
+      'font-size' del padre '.sidebar' y todo escalará en perfecta proporción!
+
+   4. TÍTULOS Y JERARQUÍA
+      Regla: .main-content h2 { font-size: 1.3rem; }  (Títulos de sección)
+      Regla: .main-content h3 { font-size: 1.1rem; }  (Subtítulos de items)
+      👉 Ajuste: Mantén esta diferencia de ~0.2rem entre H2 y H3 para conservar 
+                 la jerarquía visual clara.
+   ========================================================================== */
+
 html {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 15.5px; /* Reducido de 16px */
+    font-size: 17px; /* Reducido de 16px */
     line-height: 1.35;
     color: var(--text-color);
     background-color: #fff;
@@ -40,6 +77,7 @@ html {
 
 /* ===== SIDEBAR ===== */
 .sidebar {
+    font-size: 0.92rem;
     width: 220px;
     padding-right: 1rem;
     position: sticky;
@@ -67,15 +105,6 @@ html {
     border: 1px solid var(--medium-gray);
 }
 
-/* .profile-photo img { */
-/*     width: 150%; */
-/*     height: 150%; */
-/*     object-fit: cover; */
-/*     object-position: 35% 50%; */
-/*     transition: none !important; */
-/*     transform: none !important; */
-/* } */
-
 .profile-photo img {
     /* 1. La imagen ocupa el contenedor al 100% */
     width: 100%;
@@ -98,19 +127,15 @@ html {
     transition: none !important;
 }
 
-/* .profile-photo:hover img { */
-/* transform: scale(1.15); */
-/* } */
-
 .profile-name {
-    font-size: 1.1rem;
+    font-size: 1.2em;
     font-weight: 600;
     margin-bottom: 0.3rem;
     color: var(--primary-color);
 }
 
 .profile-affiliation {
-    font-size: 0.8rem;
+    font-size: 0.8em;
     color: var(--dark-gray);
     margin-bottom: 0.5rem;
     line-height: 1.3;
@@ -133,6 +158,10 @@ html {
 }
 
 /* Navegación */
+.sidebar-nav {
+    font-size: 0.9rem;
+}
+
 .sidebar-nav ul {
     list-style: none;
     padding: 0;
@@ -150,7 +179,7 @@ html {
     color: var(--text-color);
     text-decoration: none;
     border-radius: 3px;
-    font-size: 0.85rem;
+    font-size: 0.9em;
     transition: all 0.2s ease;
 }
 
@@ -167,14 +196,14 @@ html {
 }
 
 .sidebar-nav a i {
-    font-size: 0.9rem;
+    font-size: 0.9em;
     width: 18px;
     text-align: center;
 }
 
 /* News */
 .updates {
-    font-size: 0.8rem;
+    font-size: 0.8em;
 }
 
 .updates h3 {
@@ -212,7 +241,7 @@ html {
 
 /* Copyright */
 .copyright {
-    font-size: 0.7rem;
+    font-size: 0.7em;
     color: var(--dark-gray);
     text-align: center;
     margin-top: auto;
@@ -330,7 +359,7 @@ html {
 .main-content li,
 .main-content table,
 .institution {
-font-size: 0.85rem;
+font-size: 0.95rem;
 line-height: 1.4;
 margin-bottom: 0.7rem;
     text-align: justify;
