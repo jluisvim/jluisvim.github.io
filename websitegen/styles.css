@@ -68,10 +68,12 @@ html {
 }
 
 .profile-photo img {
-    width: 115%;
-    height: 115%;
+    width: 150%;
+    height: 150%;
     object-fit: cover;
-    object-position: center center;
+    object-position: center 25%;
+    transition: none !important;
+    transform: none !important;
 }
 
 .profile-photo:hover img {
