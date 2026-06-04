@@ -295,16 +295,37 @@ html {
 #miscellaneous h2::before { content: "\f7d9"; }
 
 /* ===== TEXTO DE SECCIONES JUSTIFICADO ===== */
-.main-content p {
-    font-size: 0.85rem;
-    line-height: 1.4;
-    margin-bottom: 0.8rem;
-    color: var(--text-color);
-    text-align: justify;
-    text-justify: inter-word;
-    hyphens: auto;
-    transition: color 0.3s ease;
+.main-content p,
+.main-content ul,
+.main-content ol,
+.main-content li,
+.main-content table,
+.institution {
+font-size: 1rem;
+line-height: 1.45;
+margin-bottom: 0.7rem;
 }
+
+.main-content ul,
+.main-content ol {
+padding-left: 1.2rem;
+margin-bottom: 0.7rem;
+}
+
+.main-content li {
+margin-bottom: 0.3rem;
+}
+
+/* .main-content p { */
+/*     font-size: 0.85rem; */
+/*     line-height: 1.4; */
+/*     margin-bottom: 0.8rem; */
+/*     color: var(--text-color); */
+/*     text-align: justify; */
+/*     text-justify: inter-word; */
+/*     hyphens: auto; */
+/*     transition: color 0.3s ease; */
+/* } */
 
 /* Texto más legible en sección activa */
 .main-content section.active p {
@@ -316,22 +337,22 @@ html {
     color: rgba(51, 51, 51, 0.7);
 }
 
-.main-content ul, 
-.main-content ol {
-    padding-left: 1.2rem;
-    margin-bottom: 0.6rem;
-    font-size: 0.85rem;
-    transition: opacity 0.3s ease;
-}
+/* .main-content ul,  */
+/* .main-content ol { */
+/*     padding-left: 1.2rem; */
+/*     margin-bottom: 0.6rem; */
+/*     font-size: 0.85rem; */
+/*     transition: opacity 0.3s ease; */
+/* } */
 
-.main-content li {
-    margin-bottom: 0.4rem;
-    color: var(--text-color);
-    line-height: 1.4;
-    text-align: justify;
-    text-justify: inter-word;
-    transition: color 0.3s ease;
-}
+/* .main-content li { */
+/*     margin-bottom: 0.4rem; */
+/*     color: var(--text-color); */
+/*     line-height: 1.4; */
+/*     text-align: justify; */
+/*     text-justify: inter-word; */
+/*     transition: color 0.3s ease; */
+/* } */
 
 /* Listas menos visibles en secciones no activas */
 .main-content section:not(.active) li {
@@ -339,13 +360,13 @@ html {
 }
 
 /* Tablas dentro de secciones */
-.main-content table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 0.8rem 0;
-    font-size: 0.85rem;
-    transition: opacity 0.3s ease;
-}
+/* .main-content table { */
+/*     width: 100%; */
+/*     border-collapse: collapse; */
+/*     margin: 0.8rem 0; */
+/*     font-size: 0.85rem; */
+/*     transition: opacity 0.3s ease; */
+/* } */
 
 .main-content table td {
     padding: 0.4rem;
