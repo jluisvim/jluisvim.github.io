@@ -301,9 +301,11 @@ html {
 .main-content li,
 .main-content table,
 .institution {
-font-size: 1rem;
-line-height: 1.45;
+font-size: 0.85rem;
+line-height: 1.4;
 margin-bottom: 0.7rem;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .main-content ul,
@@ -314,6 +316,7 @@ margin-bottom: 0.7rem;
 
 .main-content li {
 margin-bottom: 0.3rem;
+    text-align: justify;
 }
 
 /* .main-content p { */
