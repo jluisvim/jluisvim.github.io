@@ -67,13 +67,35 @@ html {
     border: 1px solid var(--medium-gray);
 }
 
+/* .profile-photo img { */
+/*     width: 150%; */
+/*     height: 150%; */
+/*     object-fit: cover; */
+/*     object-position: 35% 50%; */
+/*     transition: none !important; */
+/*     transform: none !important; */
+/* } */
+
 .profile-photo img {
-    width: 150%;
-    height: 150%;
+    /* 1. La imagen ocupa el contenedor al 100% */
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    object-position: 35% 50%;
+    
+    /* 2. LA MAGIA: Mover y hacer zoom en píxeles */
+    /* 
+       translate(X, Y): 
+       - X positivo (ej. 30px): Mueve la imagen a la DERECHA (para que se vea lo que está a la izquierda).
+       - X negativo (ej. -30px): Mueve la imagen a la IZQUIERDA (para que se vea lo que está a la derecha).
+       - Y negativo (ej. -40px): Mueve la imagen hacia ARRIBA (para que se vea el cuerpo que está abajo).
+       - Y positivo (ej. 40px): Mueve la imagen hacia ABAJO (para que se vea la cabeza que está arriba).
+       
+       scale(1.3): Hace un zoom del 30%. Ajusta este número si quieres más o menos acercamiento.
+    */
+    transform: translate(30px, -40px) scale(1.3);
+    
+    /* 3. Cero animaciones, como pediste */
     transition: none !important;
-    transform: none !important;
 }
 
 /* .profile-photo:hover img { */
