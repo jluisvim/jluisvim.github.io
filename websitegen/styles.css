@@ -59,7 +59,7 @@
 
 html {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 17px; /* Reducido de 16px */
+    font-size: 16px; /* Reducido de 16px */
     line-height: 1.35;
     color: var(--text-color);
     background-color: #fff;
@@ -174,7 +174,7 @@ html {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem 0.7rem;
+    padding: 0.3rem 0.6rem;
     color: var(--text-color);
     text-decoration: none;
     border-radius: 3px;
@@ -256,7 +256,7 @@ html {
 
 /* Todas las secciones visibles en columna CON OPACIDAD */
 .main-content section {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.4rem;
     padding: 1.2rem;
     border-bottom: 1px solid var(--light-gray);
     display: block; /* Siempre visible */
@@ -295,6 +295,10 @@ html {
     align-items: center;
     gap: 0.6rem;
     transition: color 0.3s ease;
+}
+
+.main-content h3 {
+    font-size: 1.05rem;
 }
 
 /* Título más destacado en sección activa */
@@ -358,9 +362,9 @@ html {
 .main-content li,
 .main-content table,
 .institution {
-font-size: 0.95rem;
-line-height: 1.4;
-margin-bottom: 0.7rem;
+    font-size: 0.95rem;
+    line-height: 1.3;
+    margin-bottom: 0.7rem;
     text-align: justify;
     text-justify: inter-word;
 }
