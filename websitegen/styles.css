@@ -59,7 +59,7 @@
 
 html {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px; /* Reducido de 16px */
+    font-size: 17px; /* Reducido de 16px */
     line-height: 1.35;
     color: var(--text-color);
     background-color: #fff;
@@ -76,9 +76,9 @@ html {
 
 /* ===== SIDEBAR ===== */
 .sidebar {
-    font-size: 0.99rem;
-    width: 220px;
-    padding-right: 1rem;
+    font-size: 0.98rem;
+    width: 235px;
+    padding-right: 0.4rem;
     position: sticky;
     top: 1rem;
     height: fit-content;
@@ -134,7 +134,7 @@ html {
 }
 
 .profile-affiliation {
-    font-size: 0.8em;
+    font-size: 0.82em;
     color: var(--dark-gray);
     margin-bottom: 0.5rem;
     line-height: 1.3;
@@ -142,14 +142,14 @@ html {
 
 /* Iconos sociales */
 .social-icons {
-    margin: 0.8rem 0;
+    margin: 0.6rem 0;
     text-align: center;
 }
 
 .social-icons a {
     margin: 0 0.4rem;
     color: var(--text-color);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .social-icons a:hover {
