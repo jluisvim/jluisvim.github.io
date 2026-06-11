@@ -556,7 +556,7 @@ class NewsGenerator:
         
         return f'''
 <div class="updates">
-    <h3>News & Updates</h3>
+    <h3>&#x2772 News & Updates &#x2773</h3>
         <ul>
             {"".join(items)}
         </ul>
