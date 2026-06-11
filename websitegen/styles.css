@@ -76,7 +76,7 @@ html {
 
 /* ===== SIDEBAR ===== */
 .sidebar {
-    font-size: 0.92rem;
+    font-size: 0.99rem;
     width: 220px;
     padding-right: 1rem;
     position: sticky;
@@ -178,7 +178,7 @@ html {
     color: var(--text-color);
     text-decoration: none;
     border-radius: 3px;
-    font-size: 0.9em;
+    font-size: 0.95em;
     transition: all 0.2s ease;
 }
 
