@@ -19,6 +19,7 @@ CONFIG = {
     'OUTPUT_DIR': "dist",
     'CSS_FILE': "styles.css",
     'IMG_DIR': "../../imgs",
+    'ABOUT_MD': "data/about.md",
     'AUTHOR_VARIANTS': [
         "José-Luis Vilchis-Medina",
         "José-Luis Vilchis Medina",
